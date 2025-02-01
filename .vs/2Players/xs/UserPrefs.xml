@@ -1,0 +1,78 @@
+﻿<Properties StartupConfiguration="{9E53B07A-52CB-0315-1CA6-29DAEBB99317}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SocketManager.cs">
+    <Files>
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPPt.cs" Line="1" Column="1" />
+      <File FileName="Assets/SearchingScript.cs" />
+      <File FileName="Assets/SearchingScriptfor2Players.cs" />
+      <File FileName="Assets/ClassicSearchingScriptfor2Player.cs" />
+      <File FileName="Assets/ClassicSearchingScript.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoRD.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/PP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/GM.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/RD.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/PPt.cs" />
+      <File FileName="Assets/Script/PlayerScript/PlayerPieces.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoBluePP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoYellowPP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoGreenPP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPOP.cs" />
+      <File FileName="Assets/SocketManager.cs" Line="17" Column="20" />
+      <File FileName="Assets/Script/CountdownTimer.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/GreenPP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/RedPP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/YellowPP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoRedPP.cs" />
+      <File FileName="Assets/2 Players/PathPointFor2Player.cs" />
+      <File FileName="Assets/2 Players/PathObjectParentFor2Player.cs" />
+      <File FileName="Assets/2 Players/LudoHomeFor2Player.cs" />
+      <File FileName="Assets/2 Players/GameManagerFor2Player.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/BluePP.cs" Line="95" Column="47" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoRed.cs" />
+      <File FileName="Assets/Script/HomePage/HomePageManager.cs" />
+      <File FileName="Assets/PayemtScript.cs" />
+      <File FileName="Assets/Cricket Scripts/BowlController.cs" />
+      <File FileName="Assets/GameFetcherScript.cs" />
+      <File FileName="Assets/searchingScriptforCricket.cs" />
+      <File FileName="Assets/Script/ManagerandController/GameManager.cs" />
+      <File FileName="Assets/GamemanagerfortwoPlayer.cs" />
+      <File FileName="Assets/Script/Sign In/LoginManager.cs" />
+      <File FileName="Assets/SpriteAnimator.cs" />
+      <File FileName="Assets/Script/Sign Up/SignUpController.cs" />
+      <File FileName="Assets/Script/OTP/OTPManager.cs" />
+      <File FileName="Assets/Profile.cs" />
+      <File FileName="Assets/EditProfile.cs" />
+      <File FileName="Assets/SettingsManager.cs" />
+      <File FileName="Assets/RazorpayPayment.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoGM.cs" />
+      <File FileName="Assets/LeaderBoardScript.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="2Players" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Classic Ludo" expanded="True">
+                <Node name="Scripts" expanded="True" />
+              </Node>
+              <Node name="Script" expanded="True">
+                <Node name="HomePage" expanded="True" />
+                <Node name="OTP" expanded="True" />
+              </Node>
+              <Node name="UniWebView" expanded="True">
+                <Node name="Script" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="53f4d726-d4ac-413f-b3a6-6efbcb65aaf4" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
