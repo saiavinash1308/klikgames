@@ -244,7 +244,8 @@ public class SocketManager : MonoBehaviour
     internal void InitializeSocket()
     {
         //var url = "http://localhost:3000/";
-        var url = "https://backend-production-2509b.up.railway.app/";
+        //  var url = "https://backend-production-2509b.up.railway.app/";
+        var url = "https://server.fivlog.space";
         var uri = new Uri(url);
         socket = new SocketIOUnity(uri, new SocketIOOptions
         {

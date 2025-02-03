@@ -9590,7 +9590,7 @@ MonoBehaviour:
     m_Bits: 0
   minMaxhitVel: {x: 10, y: 15}
   hitduration: 0.1
-  movespeed: 2
+  movespeed: 7
   swipeDistance: 1
   swipeDirection: {x: 0, y: 0}
   playermoveslider: {fileID: 622868447}

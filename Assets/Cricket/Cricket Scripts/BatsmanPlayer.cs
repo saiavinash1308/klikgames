@@ -260,12 +260,12 @@ public class BatsmanPlayer : MonoBehaviour
         if (moveLeft)
         {
             adjustedValue = 1; // Moving left
-            animationState = "Left"; 
+            animationState = "Right"; 
         }
         else if (moveRight)
         {
             adjustedValue = -1; // Moving right
-            animationState = "Right"; 
+            animationState = "Left"; 
         }
 
         if (adjustedValue != 0)
