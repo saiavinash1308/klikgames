@@ -335,9 +335,10 @@ public class SocketManager : MonoBehaviour
     public void OnStopSearch(SocketIOResponse res)
     {
         string stopData = res.GetValue<string>();
-        Debug.Log("Stop Searching" + stopData);
+        Debug.LogError("Stop Searching" + stopData);
         stopSearch = false;
     }
+
 
     public void OnWinner(SocketIOResponse res)
     {

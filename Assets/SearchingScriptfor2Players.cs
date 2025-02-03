@@ -9,7 +9,8 @@ public class SearchingScriptfor2Players : MonoBehaviour
     public Image loadingImage;
     public static SearchingScriptfor2Players Searching { get; private set; }
     private SocketManager socketManager;
-    public GameObject Loading;
+    public GameController gamecontroller;
+
     void Awake()
     {
         Searching = this;
@@ -31,7 +32,7 @@ public class SearchingScriptfor2Players : MonoBehaviour
     private IEnumerator SearchAndLoadCoroutine()
     {
         loadingImage.gameObject.SetActive(true); // Show loading image
-        Loading.gameObject.SetActive(true);
+
         while (socketManager != null && socketManager.stopSearch)
         {
             loadingImage.fillAmount = Mathf.PingPong(Time.time, 1f); // Smooth fill between 0 and 1
@@ -40,9 +41,9 @@ public class SearchingScriptfor2Players : MonoBehaviour
         }
 
         loadingImage.gameObject.SetActive(false);
-        Loading.gameObject.SetActive(false);
 
-        SceneManager.LoadScene("classicludo");
+        //  SceneManager.LoadScene("PLAYER1BAT");           // CRICKET TEST
+        gamecontroller.PlayButton();        // PLAYER1BAT OR PLAYER2BAT
     }
     public void StopSearching()
     {
