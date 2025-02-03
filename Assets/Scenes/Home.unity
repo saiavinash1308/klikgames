@@ -31744,9 +31744,9 @@ MonoBehaviour:
   LudoLoadingPanel: {fileID: 4507188804804498745}
   ClassicLudoLoadingPanel: {fileID: 2018246883}
   CricketLoadingPanel: {fileID: 696394422}
-  HomeMark: {fileID: 0}
-  WalletMark: {fileID: 0}
-  LeaderBoardMark: {fileID: 0}
+  HomeMark: {fileID: 3591871337057661211}
+  WalletMark: {fileID: 993095708}
+  LeaderBoardMark: {fileID: 1339180404}
   gameFetcher: {fileID: 2761576904225114845}
   userCountText: {fileID: 1502298527}
 --- !u!4 &758976871
@@ -53265,7 +53265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -539.99994, y: 231}
+  m_AnchoredPosition: {x: -540, y: 231}
   m_SizeDelta: {x: 1080, y: 460}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1300563555
@@ -76446,7 +76446,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 825946241}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99834836
+  m_Size: 0.9999899
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -90027,6 +90027,9 @@ MonoBehaviour:
   isSearching: 0
   loadingImage: {fileID: 7840282452744577704}
   Loading: {fileID: 0}
+  PopUp: {fileID: 0}
+  Quit: {fileID: 0}
+  Cancle: {fileID: 0}
 --- !u!224 &1966898138056524317
 RectTransform:
   m_ObjectHideFlags: 0
