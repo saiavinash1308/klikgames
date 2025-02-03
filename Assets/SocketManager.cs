@@ -178,6 +178,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 
 public class SocketManager : MonoBehaviour
 {
@@ -202,6 +203,7 @@ public class SocketManager : MonoBehaviour
     public BatController batcontroller;
     //internal bool stopSearch = true;
     public ScoreManager scoremanager;
+    private GameObject returnpanel;
 
     private void Awake()
     {
@@ -236,6 +238,7 @@ public class SocketManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(EmitAddUserEventWhenConnected());
+       
     }
 
     internal void InitializeSocket()
@@ -297,6 +300,9 @@ public class SocketManager : MonoBehaviour
 
     internal void AddListeners()
     {
+        socket.On("MATCH_MAKING_FAILED", onMatchMakingFailed);
+
+
         socket.On("STOP_SEARCH", OnStopSearch);
         socket.On("START_GAME", GameStarted);
         socket.On("CURRENT_TURN", OnPlayerTurn);
@@ -320,6 +326,7 @@ public class SocketManager : MonoBehaviour
         socket.On("WINNER", OnCricWinner);
         socket.On("CRICKET_IDLE", onCricketIdle);
         socket.On("BALL_HIT_POSITION", onBallHit);
+        
 
         //CLASSIC_LUDO...
 
@@ -337,6 +344,31 @@ public class SocketManager : MonoBehaviour
         string stopData = res.GetValue<string>();
         Debug.LogError("Stop Searching" + stopData);
         stopSearch = false;
+    }
+
+    public void onMatchMakingFailed(SocketIOResponse res)
+    {
+        string message = res.GetValue<string>();
+        Debug.LogWarning("Quit Room");
+        MainThreadDispatcher.Enqueue(() =>
+        {
+            returnpanel = GameObject.FindGameObjectWithTag("ReturnPanel");
+            if (returnpanel == null)
+            {
+                returnpanel = GameObject.FindGameObjectWithTag("ReturnPanel"); // if you need to handle search differently
+                                                                               // or use
+                returnpanel = GameObject.FindObjectsOfType<GameObject>(true)
+                                          .FirstOrDefault(obj => obj.CompareTag("ReturnPanel"));
+            }
+            returnpanel.SetActive(true);
+            Invoke("ReturnHome", 2f);
+        });
+    }
+
+    private void ReturnHome()
+    {
+        returnpanel.SetActive(false);
+        SceneManager.LoadScene("Home");
     }
 
 
