@@ -14,6 +14,10 @@ public class ClassicLudoGM : MonoBehaviour
 {
     public static ClassicLudoGM game { get; private set; }
     //public static ClassicLudoGM game;
+    public GameObject PopUp;
+    public Button Back;
+    public Button Quit;
+    public Button Cancle;
     public ClassicLudoRD rolingDice;
     public int numberofstepstoMove;
     public bool canPlayermove = false;
@@ -36,7 +40,7 @@ public class ClassicLudoGM : MonoBehaviour
     public AudioSource ads;
     public AudioSource centerPathAudioSource; // Add this reference
 
-    public float countdownTime = 10f; // Set the countdown time (10 seconds)
+    public float countdownTime = 15f; // Set the countdown time (10 seconds)
     private float currentCountdown; // To track the remaining time
     private Coroutine countdownCoroutine; // To handle the countdown coroutine
     //public Image countdownImage; // Reference to the circular countdown Image
@@ -378,16 +382,16 @@ public class ClassicLudoGM : MonoBehaviour
         if (players.Length == 2)
         {
             // Assign first player to Red and second player to Yellow
-            redPlayerIdText.text = players[0].socketId;
-            yellowPlayerIdText.text = players[1].socketId;
+            redPlayerIdText.text = players[0].username;
+            yellowPlayerIdText.text = players[1].username;
         }
         else if (players.Length == 4)
         {
             // Assign players to their respective colors for 4 players
-            bluePlayerIdText.text = players[0].socketId;
-            redPlayerIdText.text = players[1].socketId;
-            greenPlayerIdText.text = players[2].socketId;
-            yellowPlayerIdText.text = players[3].socketId;
+            bluePlayerIdText.text = players[0].username;
+            redPlayerIdText.text = players[1].username;
+            greenPlayerIdText.text = players[2].username;
+            yellowPlayerIdText.text = players[3].username;
         }
     }
 
@@ -1458,7 +1462,22 @@ public class ClassicLudoGM : MonoBehaviour
     }
 
 
+    public void EnablePopUp()
+    {
+        PopUp.SetActive(true);
+    }
 
+    public void QuitToHome()
+    {
+        SceneManager.LoadScene("Home"); // Change "HomeScene" to your actual scene name
+    }
+    public void ClosePopup()
+    {
+        if (PopUp != null)
+        {
+            PopUp.SetActive(false);
+        }
+    }
 
 
     public void PlayCenterPathAudio()

@@ -93,6 +93,7 @@ public class PaymentScript : MonoBehaviour
         webView.BackgroundColor = Color.clear;
         //webView.SetUseSafeArea(true);
         webView.SetShowToolbar(true, true); // Add a toolbar with a close button
+        webView.SetToolbarDoneButtonText("Done");
 
         // Get the correct path to the HTML file based on the platform
         string razorpayUrl;
@@ -115,6 +116,7 @@ public class PaymentScript : MonoBehaviour
         webView.Load(razorpayUrl);
         webView.Show();
         //CurrentPanel.SetActive(false);
+        EnablePanel(WalletPanel);
     }
 
 

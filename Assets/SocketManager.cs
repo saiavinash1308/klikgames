@@ -406,13 +406,15 @@ public class SocketManager : MonoBehaviour
             {
                 Debug.Log($"User {i}: Socket ID = {gameStartData.users[i]}");
                 User user;
-                if (socket.Id != gameStartData.users[i].socketId)
+                string socketId = gameStartData.users[i].socketId;
+                string username = gameStartData.users[i].username;
+                if (socket.Id != socketId)
                 {
-                    user = new User(gameStartData.users[i].socketId);
+                    user = new User(socketId, username);
                 }
                 else
                 {
-                    user = new User(gameStartData.users[i].socketId, true);
+                    user = new User(gameStartData.users[i].socketId, username, true);
                 }
                 //Debug.Log("userId " + user.userId);
                 Debug.Log("socketId " + user.socketId);
@@ -748,13 +750,15 @@ public class SocketManager : MonoBehaviour
             {
                 Debug.Log($"User {i}: Socket ID = {gameStartData.users[i]}");
                 User user;
-                if (socket.Id != gameStartData.users[i].socketId)
+                string socketId = gameStartData.users[i].socketId;
+                string username = gameStartData.users[i].username;
+                if (socket.Id != socketId)
                 {
-                    user = new User(gameStartData.users[i].socketId);
+                    user = new User(gameStartData.users[i].socketId, username);
                 }
                 else
                 {
-                    user = new User(gameStartData.users[i].socketId, true);
+                    user = new User(gameStartData.users[i].socketId,username, true);
                 }
                 //Debug.Log("userId " + user.userId);
                 Debug.Log("socketId " + user.socketId);
@@ -1119,11 +1123,13 @@ public class SocketManager : MonoBehaviour
     public class User
     {
         public string socketId;
+        public string username;
         public bool isCurrent;
 
-        public User(string socketId, bool isCurrent = false)
+        public User(string socketId,string username, bool isCurrent = false)
         {
             this.socketId = socketId;
+            this.username = username;
             this.isCurrent = isCurrent;
         }
 

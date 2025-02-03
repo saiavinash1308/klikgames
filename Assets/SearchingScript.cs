@@ -10,6 +10,10 @@ public class SearchingScript : MonoBehaviour
     public static SearchingScript Searching { get; private set; }
     private SocketManager socketManager;
     public GameObject Loading;
+    public GameObject PopUp;
+    public Button Quit;
+    public Button Cancle;
+
 
     void Awake()
     {
@@ -49,5 +53,21 @@ public class SearchingScript : MonoBehaviour
     {
         Debug.LogWarning("Searching Stopped...");
         isSearching = false;
+    }
+    public void EnablePopUp()
+    {
+        PopUp.SetActive(true);
+    }
+
+    public void QuitToHome()
+    {
+        SceneManager.LoadScene("Home"); // Change "HomeScene" to your actual scene name
+    }
+    public void ClosePopup()
+    {
+        if (PopUp != null)
+        {
+            PopUp.SetActive(false);
+        }
     }
 }

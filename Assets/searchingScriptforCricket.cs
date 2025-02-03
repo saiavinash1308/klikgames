@@ -13,6 +13,9 @@ public class searchingScriptforCricket : MonoBehaviour
     private SocketManager socketManager;
     public GameController gamecontroller;
     public GameObject Loading;
+    public GameObject PopUp;
+    public Button Quit;
+    public Button Cancle;
 
     void Awake()
     {
@@ -53,5 +56,22 @@ public class searchingScriptforCricket : MonoBehaviour
     {
         Debug.LogWarning("Searching Stopped...");
         isSearching = false;
+    }
+
+    public void EnablePopUp()
+    {
+        PopUp.SetActive(true);
+    }
+
+    public void QuitToHome()
+    {
+        SceneManager.LoadScene("Home"); // Change "HomeScene" to your actual scene name
+    }
+    public void ClosePopup()
+    {
+        if (PopUp != null)
+        {
+            PopUp.SetActive(false);
+        }
     }
 }

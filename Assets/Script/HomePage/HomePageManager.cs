@@ -188,6 +188,7 @@ public class HomePageManager : MonoBehaviour
     }
     private IEnumerator GetUserCount()
     {
+        Debug.Log("Getting user count");
         UnityWebRequest request = UnityWebRequest.Get(baseUrl);
 
         yield return request.SendWebRequest();
