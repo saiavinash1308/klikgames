@@ -318,6 +318,8 @@ public class SocketManager : MonoBehaviour
         socket.On("UPDATE_SCORE", OnUpdateScore);
         socket.On("SWITCH_CAMERA", OnSwitchCamera);
         socket.On("WINNER", OnCricWinner);
+        socket.On("CRICKET_IDLE", onCricketIdle);
+        socket.On("BALL_HIT_POSITION", onBallHit);
 
         //CLASSIC_LUDO...
 
@@ -337,40 +339,16 @@ public class SocketManager : MonoBehaviour
         stopSearch = false;
     }
 
-    public void GroundTargetMove(SocketIOResponse res)
+    public void OnWinner(SocketIOResponse res)
     {
-        try
+        string winnerId = res.GetValue<string>();
+        Debug.Log("This is winnerId: " + winnerId);
+        MainThreadDispatcher.Enqueue(() =>
         {
-            string positionString = res.GetValue<string>();
-            string[] positionParts = positionString.Split(',');
-
-            if (positionParts.Length != 3)
-            {
-                Debug.LogError("Invalid position data received.");
-                return;
-            }
-
-            // Parse the individual components back to float
-            if (float.TryParse(positionParts[0], out float x) &&
-                float.TryParse(positionParts[1], out float y) &&
-                float.TryParse(positionParts[2], out float z))
-            {
-                MainThreadDispatcher.Enqueue(() =>
-                {
-                    GroundTarget groundTarget = GameObject.FindObjectOfType<GroundTarget>();
-                    groundTarget.updatePosition(x, y, z);
-                });
-            }
-            else
-            {
-                Debug.LogError("Failed to parse position components.");
-            }
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"Exception in GroundTargetMove: {ex.Message}");
-        }
+            StartCoroutine(ShowPanel(2f));
+        });
     }
+
 
     public void GameStarted(SocketIOResponse res)
     {
@@ -674,24 +652,6 @@ public class SocketManager : MonoBehaviour
         }
     }
 
-    public void OnCricWinner(SocketIOResponse res)
-    {
-        string[] winnerData = res.GetValue<string[]>(); // Parse the response as an array
-        if (winnerData != null && winnerData.Length > 0)
-        {
-            string winnerId = winnerData[0]; // Get the winner's ID
-            Debug.Log("Winner data received: " + winnerId);
-            MainThreadDispatcher.Enqueue(() =>
-            {
-                GM.game.HandleGameWinner(winnerId); // Call the game winner handler with the ID
-            });
-
-        }
-        else
-        {
-            Debug.LogError("Invalid winner data received!");
-        }
-    }
 
 
     //private void UpdatePlayerPosition(string playerId, int diceValue)
@@ -786,21 +746,6 @@ public class SocketManager : MonoBehaviour
         // SceneManager.LoadScene("classicludo");
     }
 
-    //internal void OnPlayerTurn(SocketIOResponse res)
-    //{
-    //    //User currentUser = JsonConvert.DeserializeObject<User>(res.GetValue<string>());
-    //    //Debug.Log("Received Player Turn for: " + currentUser?.userId);
-    //    //GM.Instance.HandlePlayerTurn(currentUser);
-    //    string socketId = res.GetValue<string>();
-    //    Debug.Log("This is socketId" + socketId);
-    //    //if (socketId != "") {
-    //    //        Debug.Log("Instance for handle Player turn");
-    //    //}
-    //    Debug.Log("Received Player Turn for: " + socketId);
-    //     LudoGameManager.HandlePlayerTurn(socketId);
-    //    Debug.Log("Handle Player Turn for: " + socketId);
-    //    //StartCoroutine(EnsurePlayerTurn(socketId));
-    //}
     public void ClassicOnPlayerTurn(SocketIOResponse res)
     {
         // Extract the socketId of the player whose turn it is
@@ -826,55 +771,6 @@ public class SocketManager : MonoBehaviour
     }
 
 
-
-
-
-    //private IEnumerator EnsurePlayerTurn(string socketId)
-    //{
-    //    while (GM.game == null)
-    //    {
-    //        GM gm = GM.game ?? FindObjectOfType<GM>();
-    //        if (gm != null)
-    //        {
-    //            Debug.Log("GM successfully found");
-    //            break;
-    //        }
-    //        else
-    //        {
-    //            Debug.LogWarning("GM not found");
-    //        }
-    //        yield return new WaitForSeconds(0.1f);
-    //    }
-
-    //    // Make sure GM instance is found before calling methods
-    //    if (GM.game != null)
-    //    {
-    //        GM.game.HandlePlayerTurn(socketId);
-    //    }
-    //}
-
-    //public void OnUpdateMove(SocketIOResponse res)
-    //{
-    //    string moveData = res.GetValue<string>();
-    //    Debug.Log("Move updated: " + moveData);
-
-    //    MoveUpdate moveUpdate = JsonUtility.FromJson<MoveUpdate>(moveData);
-
-    //    // Now you can access the 'payload' data through moveUpdate.payload
-    //    if (moveUpdate != null && moveUpdate.payload != null)
-    //    {
-    //        Debug.Log($"Player {moveUpdate.payload.playerId} moved piece {moveUpdate.payload.pieceId} by {moveUpdate.payload.steps} steps.");
-
-    //        // Implement your logic to update the player's position or move the piece
-    //        GM.game.UpdatePlayerPosition(moveUpdate.payload);
-    //        //StartCoroutine(GM.game.BotRoutine(moveUpdate.payload.playerId, moveUpdate.payload.pieceId, moveUpdate.payload.steps));
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("Error parsing move data");
-    //    }
-
-    //}
 
     public void ClassicOnUpdateMove(SocketIOResponse res)
     {
@@ -904,34 +800,6 @@ public class SocketManager : MonoBehaviour
         }
     }
 
-
-    //internal string getMySocketId()
-    //{
-    //    return this.socket.Id;
-    //}
-
-    //public void OnUpdateMove(SocketIOResponse res)
-    //{
-    //    string moveData = res.GetValue<string>();
-    //    Debug.Log("Move updated: " + moveData);
-
-    //    MoveUpdate moveUpdate = JsonUtility.FromJson<MoveUpdate>(moveData);
-
-    //    // Now you can access the 'payload' data through moveUpdate.payload
-    //    if (moveUpdate != null && moveUpdate.payload != null)
-    //    {
-    //        Debug.Log($"Player {moveUpdate.payload.playerId} moved piece {moveUpdate.payload.pieceId} by {moveUpdate.payload.steps} steps.");
-
-    //        // Implement your logic to update the player's position or move the piece
-    //        GM.game.UpdatePlayerPosition(moveUpdate.payload);
-    //        //StartCoroutine(GM.game.BotRoutine(moveUpdate.payload.playerId, moveUpdate.payload.pieceId, moveUpdate.payload.steps));
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("Error parsing move data");
-    //    }
-
-    //}
 
 
     private ClassicLudoPP ClassicGetPlayerPieceFromMoveData(string moveData)
@@ -1079,18 +947,6 @@ public class SocketManager : MonoBehaviour
         return this.users;
     }
 
-    //public class DiceRollData
-    //{
-    //    public Payload payload;
-
-    //    [Serializable]
-    //    public class Payload
-    //    {
-    //        public string roomId;
-    //        public string playerId;
-    //        public int steps;
-    //    }
-    //}
 
     public class DiceRollData
     {
@@ -1134,14 +990,7 @@ public class SocketManager : MonoBehaviour
 
     }
 
-    //[System.Serializable]
-    //public class MoveData
-    //{
-    //    public string playerId;
-    //    public int pieceId;
-    //    //public int steps;
-    //    public int piecePosition;
-    //}
+
 
     [System.Serializable]
     public class MoveUpdate
@@ -1200,8 +1049,11 @@ public class SocketManager : MonoBehaviour
         }
     }
 
-    
 
+
+
+
+    /* CRICKET SOCKETMANAGER */
     private bool isPlayer1;
     private bool isPlayer2;
 
@@ -1234,8 +1086,6 @@ public class SocketManager : MonoBehaviour
         Debug.Log("Game Started Response Data: " + responseData);
         Debug.Log("My Socket Id " + socket.Id);
         CricGameStartData gameStartData;
-
-
 
         try
         {
@@ -1291,6 +1141,41 @@ public class SocketManager : MonoBehaviour
         }
     }
 
+    public void GroundTargetMove(SocketIOResponse res)
+    {
+        try
+        {
+            string positionString = res.GetValue<string>();
+            string[] positionParts = positionString.Split(',');
+
+            if (positionParts.Length != 3)
+            {
+                Debug.LogError("Invalid position data received.");
+                return;
+            }
+
+            // Parse the individual components back to float
+            if (float.TryParse(positionParts[0], out float x) &&
+                float.TryParse(positionParts[1], out float y) &&
+                float.TryParse(positionParts[2], out float z))
+            {
+                MainThreadDispatcher.Enqueue(() =>
+                {
+                    GroundTarget groundTarget = GameObject.FindObjectOfType<GroundTarget>();
+                    groundTarget.updatePosition(x, y, z);
+                });
+            }
+            else
+            {
+                Debug.LogError("Failed to parse position components.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Exception in GroundTargetMove: {ex.Message}");
+        }
+    }
+
     public void ServerPlayerRole(string Id)
     {
         var data = new
@@ -1308,8 +1193,7 @@ public class SocketManager : MonoBehaviour
         Debug.Log("This is debug for run");
         string speed = res.GetValue<string>();
         float runSpeed = float.Parse(speed);
-        MainThreadDispatcher.Enqueue(() =>
-        {
+        MainThreadDispatcher.Enqueue(() => {
 
             bowlplayer = GameObject.FindObjectOfType<BowlPlayer>();
             bowlplayer.StartRunFromSocket(runSpeed);
@@ -1317,30 +1201,47 @@ public class SocketManager : MonoBehaviour
         });
     }
 
-    //var data = new
-    //{
-    //    adjustedValue = adjustedValue,
-    //    predictedX = predictedX
-
-    //};
-
     private void OnBatsManMoved(SocketIOResponse res)
     {
-        string batsManData = res.GetValue<string>();
-        float adjustedValue = float.Parse(batsManData);
+        string data = res.GetValue<string>();
+        float predictedX = float.Parse(data);
+
         MainThreadDispatcher.Enqueue(() =>
         {
             batsmanplayer = GameObject.FindObjectOfType<BatsmanPlayer>();
-            //batsmanplayer.MoveBatsManFromSocket(adjustedValue);
-        });
+            batsmanplayer.MoveBatsman2(predictedX);
 
+            if (predictedX < batsmanplayer.transform.position.x)
+            {
+                batsmanplayer.anim.Play("Right");
+            }
+            else if (predictedX > batsmanplayer.transform.position.x)
+            {
+                batsmanplayer.anim.Play("Left");
+            }
+            else
+            {
+                batsmanplayer.anim.Play("Idle");
+            }
+        });
     }
+
+    public void onCricketIdle(SocketIOResponse res)
+    {
+        MainThreadDispatcher.Enqueue(() =>
+        {
+            batsmanplayer = GameObject.FindObjectOfType<BatsmanPlayer>();
+            batsmanplayer.isIdle = true;
+            batsmanplayer.anim.Play("Idle");
+        });
+    }
+
 
     public void OnBatsManHit(SocketIOResponse res)
     {
+        Debug.LogError("BATSMAN_HIT event received");
         MainThreadDispatcher.Enqueue(() =>
         {
-            batsmanplayer = GameObject.FindObjectOfType<BatsmanPlayer>();
             batsmanplayer.HittingBatFromSocket();
         });
 
@@ -1348,8 +1249,7 @@ public class SocketManager : MonoBehaviour
 
     public void OnResetBowler(SocketIOResponse res)
     {
-        MainThreadDispatcher.Enqueue(() =>
-        {
+        MainThreadDispatcher.Enqueue(() => {
 
             bowlplayer = GameObject.FindObjectOfType<BowlPlayer>();
             bowlplayer.RestartFromSocket();
@@ -1363,8 +1263,39 @@ public class SocketManager : MonoBehaviour
         Debug.Log("Calling batsman Reset");
         MainThreadDispatcher.Enqueue(() =>
         {
-            batsmanplayer = GameObject.FindObjectOfType<BatsmanPlayer>();
             batsmanplayer.ResetBatsmanFromSocket();
+        });
+    }
+
+    public void OnCricWinner(SocketIOResponse res)
+    {
+        string[] winnerData = res.GetValue<string[]>(); // Parse the response as an array
+        if (winnerData != null && winnerData.Length > 0)
+        {
+            string winnerId = winnerData[0]; // Get the winner's ID
+            Debug.Log("Winner data received: " + winnerId);
+            MainThreadDispatcher.Enqueue(() =>
+            {
+                StartCoroutine(ShowPanel(2f));
+                GM.game.HandleGameWinner(winnerId); // Call the game winner handler with the ID
+            });
+
+        }
+        else
+        {
+            Debug.LogError("Invalid winner data received!");
+        }
+    }
+
+    public void onBallHit(SocketIOResponse res)
+    {
+        string data = res.GetValue<string>();
+        float random = float.Parse(data);
+
+        MainThreadDispatcher.Enqueue(() =>
+        {
+            Bat bat = GameObject.FindObjectOfType<Bat>();
+            bat.ShootBall(random);  // BALL HIT
         });
     }
 
@@ -1406,16 +1337,6 @@ public class SocketManager : MonoBehaviour
     }
 
 
-    public void OnWinner(SocketIOResponse res)
-    {
-        string winnerId = res.GetValue<string>();
-        Debug.Log("This is winnerId: " + winnerId);
-        MainThreadDispatcher.Enqueue(() =>
-        {
-            StartCoroutine(ShowPanel(2f));
-        });
-    }
-
     private IEnumerator ShowPanel(float waitsecs)
     {
         yield return new WaitForSeconds(waitsecs);
@@ -1447,10 +1368,7 @@ public class SocketManager : MonoBehaviour
         {
             DrawPanel.SetActive(true);
         }
-
-
-        
-
     }
+
 
 }

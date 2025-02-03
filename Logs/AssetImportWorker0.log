@@ -696,3 +696,357 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 151.762693 seconds.
+  path: Assets/Prefabbackend/2 players.prefab
+  artifactKey: Guid(7d32bc4f5ce834c599060cc4c69d5df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabbackend/2 players.prefab using Guid(7d32bc4f5ce834c599060cc4c69d5df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6078aad3f85a327078c2df4452a53310') in 0.120273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 131
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Drop Shadow.mat
+  artifactKey: Guid(749b9069dc4742c5bfa5c74644049926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Drop Shadow.mat using Guid(749b9069dc4742c5bfa5c74644049926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ecbcdd09949be48f77bffc622999a95') in 0.189939 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.726370 seconds.
+  path: Assets/Cricket/Cricket Scenes/BowlerPlayer.prefab
+  artifactKey: Guid(8b228917cee814131a4ff42b8cc63653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Cricket Scenes/BowlerPlayer.prefab using Guid(8b228917cee814131a4ff42b8cc63653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4bf6c931f0b43fabc9e6c948be1a4a5') in 0.306255 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 288
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_Displacement.jpg
+  artifactKey: Guid(9571417d194d14b47a9fb9c2150b5bd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_Displacement.jpg using Guid(9571417d194d14b47a9fb9c2150b5bd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac5d3a581008ecdd6df653b8593608b2') in 0.019229 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Game ui/FinalUI/Ludo splash screen 1.png
+  artifactKey: Guid(a998d71ea1015bd41b8830c578fa8d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game ui/FinalUI/Ludo splash screen 1.png using Guid(a998d71ea1015bd41b8830c578fa8d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb3ab2e250a9241f70a9d002eb94219c') in 0.032888 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Cricket/Stadium/Stadium Textures/Cocrete wall_Displacement.jpg
+  artifactKey: Guid(11e86a11dfdf9426d9a0639d252b7823) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Stadium/Stadium Textures/Cocrete wall_Displacement.jpg using Guid(11e86a11dfdf9426d9a0639d252b7823) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d3ede0cc283dea47c3f7a1babcf8af8') in 0.006419 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Classic Ludo/ASSETS/Player Blue.png
+  artifactKey: Guid(8cad72cb9c97f264cabeb6e54f909c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Classic Ludo/ASSETS/Player Blue.png using Guid(8cad72cb9c97f264cabeb6e54f909c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f2a517e0fa5999e094e834d5a34bcce') in 0.007891 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 27.200658 seconds.
+  path: Assets/GlowingMaterial.mat
+  artifactKey: Guid(e78babdc5acd06d49b4e9995f7b210bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GlowingMaterial.mat using Guid(e78babdc5acd06d49b4e9995f7b210bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d1dd62c995beacb42136d4d33c572e') in 0.256009 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Menu.prefab
+  artifactKey: Guid(dfe34865e40f1a24e9d02e9603d3a203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Menu.prefab using Guid(dfe34865e40f1a24e9d02e9603d3a203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d4b18f9761ef77eb3227ea863c6b1b') in 0.027054 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 98
+========================================================================
+Received Import Request.
+  Time since last request: 13.371990 seconds.
+  path: Assets/Cricket/CricketTextures/grass.png
+  artifactKey: Guid(4bc7ec48345b94af2b1fd4f2b37fd3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/grass.png using Guid(4bc7ec48345b94af2b1fd4f2b37fd3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29928d2ebca7ed954782264144bc1c12') in 0.012134 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Cricket/CricketTextures/seats (1) 4.png
+  artifactKey: Guid(81906c86e5bc047ad8280901d43b366d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/seats (1) 4.png using Guid(81906c86e5bc047ad8280901d43b366d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2def0ac91da916ebbd96715cf1236e43') in 0.004198 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Cricket/CricketTextures/Seat 2.mat
+  artifactKey: Guid(a72293de885d645e88c2777898d00bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/Seat 2.mat using Guid(a72293de885d645e88c2777898d00bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c91799a4a97e1b01db80f99b2ce6ad') in 0.009479 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Cricket/CricketTextures/Seat 4.mat
+  artifactKey: Guid(6335b76d0748b4e50a5a57395a47eb0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/Seat 4.mat using Guid(6335b76d0748b4e50a5a57395a47eb0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6df1bb05608031dd005932cbab80233') in 0.004832 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Cricket/CricketTextures/Seat 1.mat
+  artifactKey: Guid(6c85e23732e25407a984c0a3314ddb02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/Seat 1.mat using Guid(6c85e23732e25407a984c0a3314ddb02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92161d5780323ccd269bb91c0c553f5b') in 0.004009 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Cricket/CricketTextures/Rectangle 1069.png
+  artifactKey: Guid(1081995ed898f4267bc2f569e43040cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/Rectangle 1069.png using Guid(1081995ed898f4267bc2f569e43040cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf8f01ae3a00ad436fe433bfcb99ee5') in 0.004167 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Cricket/CricketTextures/seats (1) 3.png
+  artifactKey: Guid(4d36ba8d99e9d49fbac874ccaf196700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/seats (1) 3.png using Guid(4d36ba8d99e9d49fbac874ccaf196700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7cee5d59abd307f1767160891c7716') in 0.003690 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Cricket/CricketTextures/seats (1) 2.png
+  artifactKey: Guid(77e496b585f314ffd8253dec3edc5f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/seats (1) 2.png using Guid(77e496b585f314ffd8253dec3edc5f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d67da07eb615bd355c7364b9a5a62b') in 0.004700 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 22.686071 seconds.
+  path: Assets/RedToken.png
+  artifactKey: Guid(2bd8c7a901e6345dba8f1650a96194a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RedToken.png using Guid(2bd8c7a901e6345dba8f1650a96194a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efcf10a6e1a825400cfe3df115d9cfa8') in 0.013307 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 11.311694 seconds.
+  path: Assets/New Universal Render Pipeline Asset.asset
+  artifactKey: Guid(97f8d2eab08da4bd1884ecea9adc0c48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Universal Render Pipeline Asset.asset using Guid(97f8d2eab08da4bd1884ecea9adc0c48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd51ed9ff1512b18b568090e64ab2c827') in 0.020349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 50
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.18 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 54 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7 unused Assets / (408.6 KB). Loaded Objects now: 6409.
+Memory consumption went from 121.2 MB to 120.8 MB.
+Total: 8.193375 ms (FindLiveObjects: 0.361083 ms CreateObjectMapping: 0.097292 ms MarkObjects: 7.593000 ms  DeleteObjects: 0.141250 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 8.417834 seconds.
+  path: Assets/Gregor Quendel - Crowd Cheering Sounds - 09 - Ambience and cheering.mp3
+  artifactKey: Guid(a72a80ff5a42dc9478db8f1a3daf2a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gregor Quendel - Crowd Cheering Sounds - 09 - Ambience and cheering.mp3 using Guid(a72a80ff5a42dc9478db8f1a3daf2a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad83b810166c23d9ee2c3a2cc9b467a') in 0.094894 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/RedToken.png
+  artifactKey: Guid(2bd8c7a901e6345dba8f1650a96194a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RedToken.png using Guid(2bd8c7a901e6345dba8f1650a96194a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '060a5fb721004803baf88f516b0814bd') in 0.009858 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/New Material.mat
+  artifactKey: Guid(8396bce8b60ed7d41bf844e9d2b78421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material.mat using Guid(8396bce8b60ed7d41bf844e9d2b78421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c3362f8cd67a8d9f966c00cc304630f') in 0.531757 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 12.583849 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
+  artifactKey: Guid(8a89fa14b10d46a99122fd4f73fca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset using Guid(8a89fa14b10d46a99122fd4f73fca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f6373d03a4ea8fb5e4f53741f86de3') in 0.061110 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Outline.mat
+  artifactKey: Guid(f629c6e43dba4bf38cb74d8860150664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Outline.mat using Guid(f629c6e43dba4bf38cb74d8860150664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02fcc11fad4f78189420cb0bb0bf9c2a') in 0.067561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Model/Fielder.fbx
+  artifactKey: Guid(23c560d602a83a64c994428a5f45af50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Model/Fielder.fbx using Guid(23c560d602a83a64c994428a5f45af50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51124400f08dabecf5eeccc9d27c02d3') in 0.387326 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 290
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Model/Rallying.fbx
+  artifactKey: Guid(b74bf01c0611cdc48bec5bd0d4e7f1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Model/Rallying.fbx using Guid(b74bf01c0611cdc48bec5bd0d4e7f1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e6cc05754536467a47130960bb20fc1') in 0.045862 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 148
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Drop Shadow.mat
+  artifactKey: Guid(f2dcf029949142e28b974630369c8b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Drop Shadow.mat using Guid(f2dcf029949142e28b974630369c8b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b6d98ba956f9820523140e656cbd36d') in 0.009495 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Fonts/Bangers.ttf
+  artifactKey: Guid(5dd49b3eacc540408c98eee0de38e0f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Fonts/Bangers.ttf using Guid(5dd49b3eacc540408c98eee0de38e0f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b252506a17efa17724924ee26cd6fc20') in 0.019682 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat
+  artifactKey: Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat using Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a1a51c2e5d28ce9e49234ed4c5e4f9') in 0.009110 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Cricket/HamzaKhan/BowlerModel/CricketBowlerModel.fbx
+  artifactKey: Guid(27705449dec3d4aed814dd730ca71e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/HamzaKhan/BowlerModel/CricketBowlerModel.fbx using Guid(27705449dec3d4aed814dd730ca71e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f6b717299cac4daf8c8d2501d7f016') in 0.636374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 259
+========================================================================
+Received Import Request.
+  Time since last request: 1.286396 seconds.
+  path: Assets/SocketManager.cs
+  artifactKey: Guid(3d3f722069639cf40a8149de606513b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SocketManager.cs using Guid(3d3f722069639cf40a8149de606513b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c29d45f0f75895935ab693d9baf5519') in 0.000830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 238.640671 seconds.
+  path: Assets/SocketManager.cs
+  artifactKey: Guid(3d3f722069639cf40a8149de606513b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SocketManager.cs using Guid(3d3f722069639cf40a8149de606513b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb1d4c116af575a8cb01baaa035bc56') in 0.006942 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.799 seconds
+Refreshing native plugins compatible for Editor in 1.92 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.344 seconds
+Domain Reload Profiling: 3144ms
+	BeginReloadAssembly (326ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (43ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (118ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (380ms)
+		LoadAssemblies (431ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (62ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2345ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1393ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (55ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (1074ms)
+			ProcessInitializeOnLoadMethodAttributes (159ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 1.79 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5603 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (428.8 KB). Loaded Objects now: 6469.
+Memory consumption went from 210.3 MB to 209.9 MB.
+Total: 3.022291 ms (FindLiveObjects: 0.340541 ms CreateObjectMapping: 0.093000 ms MarkObjects: 2.226459 ms  DeleteObjects: 0.361625 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 898.804669 seconds.
+  path: Assets/SocketManager.cs
+  artifactKey: Guid(3d3f722069639cf40a8149de606513b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SocketManager.cs using Guid(3d3f722069639cf40a8149de606513b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82bba8b3d054e5584f083e5e51fc2bdf') in 0.002152 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
