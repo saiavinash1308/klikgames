@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{294AAB73-4ECA-7398-DB39-65C0877F9F63}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Classic Ludo/Scripts/YellowPP.cs">
+    <Files>
+      <File FileName="Assets/SocketManager.cs" Line="244" Column="20" />
+      <File FileName="Assets/Script/ManagerandController/GameManager.cs" />
+      <File FileName="Assets/GamemanagerfortwoPlayer.cs" />
+      <File FileName="Assets/2 Players/GameManagerFor2Player.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPPt.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/PPt.cs" />
+      <File FileName="Assets/SearchingScriptfor2Players.cs" />
+      <File FileName="Assets/Script/HomePage/HomePageManager.cs" />
+      <File FileName="Assets/Script/Sign Up/SignUpController.cs" />
+      <File FileName="Assets/Cricket/Cricket Scripts/Cards.cs" />
+      <File FileName="Assets/Cricket/Cricket Scripts/GroundTarget.cs" Line="1" Column="1" />
+      <File FileName="Assets/Classic Ludo/Scripts/GM.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/YellowPP.cs" Line="1" Column="1" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoYellowPP.cs" Line="1" Column="1" />
+      <File FileName="Assets/PayemtScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cricket/Cricket Scripts/BatsmanPlayer.cs" Line="327" Column="23" />
+      <File FileName="Assets/Classic Ludo/Scripts/Yellow.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KlikMerged" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Classic Ludo" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="YellowPP.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="51670d9e-4d67-4fd0-9c8f-c1a5f7069381" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
