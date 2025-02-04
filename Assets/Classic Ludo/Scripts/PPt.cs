@@ -279,8 +279,8 @@ public class PPt : MonoBehaviour
         if (pieceCount == 0) return;
 
         int gridSize = Mathf.CeilToInt(Mathf.Sqrt(pieceCount));
-        float spacing = 0.16f;
-        float yOffset = 0.15f; // Adjust this value to move the grid up or down
+        float spacing = 0.10f;
+        float yOffset = 0.19f; // Adjust this value to move the grid up or down
 
         Vector3 startPosition = transform.position - new Vector3(spacing * (gridSize - 1) / 2, spacing * (gridSize - 1) / 2 - yOffset, 0);
 

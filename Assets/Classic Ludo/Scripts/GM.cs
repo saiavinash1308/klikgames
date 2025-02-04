@@ -330,6 +330,13 @@ public class GM : MonoBehaviour
                         dice[diceIndex].transform.position = diceTargetPositions.position;
                         dice[diceIndex].transform.rotation = diceTargetPositions.rotation;
                         Debug.Log($"Initialized dice for player {i} (2-player mode) at target position.");
+                        BoxCollider2D diceCollider = dice[diceIndex].GetComponent<BoxCollider2D>();
+                        if (diceCollider != null)
+                        {
+                            diceCollider.enabled = true;
+                            Debug.Log($"Enabled collider for dice {diceIndex} for player {i}.");
+                        }
+
                     }
                     else
                     {
@@ -350,6 +357,7 @@ public class GM : MonoBehaviour
                         dice[i].transform.position = diceTargetPositions.position;
                         dice[i].transform.rotation = diceTargetPositions.rotation;
                         Debug.Log($"Initialized dice for player {i} (4-player mode) at target position.");
+
                     }
                     else
                     {
@@ -1089,7 +1097,7 @@ public class GM : MonoBehaviour
                 // Assign points to the correct player's text
                 string currentPlayerId = players[i].socketId;
                 string color = getColor(currentPlayerId);
-                string pointText = $"Points: {points[i]}";
+                string pointText = $" {points[i]}";
 
                 switch (color)
                 {

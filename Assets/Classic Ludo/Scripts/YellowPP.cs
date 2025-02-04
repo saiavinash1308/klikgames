@@ -96,12 +96,12 @@ public class YellowPP : PP
     public void MovePiece()
     {
         Debug.LogWarning("Yellow Piece Moving");
-        if (GM.game.rolingDice == GM.game.manageRolingDice[1])
+        if (GM.game.rolingDice == GM.game.manageRolingDice[3])
         {
             if (isready && GM.game.canPlayermove)
             {
                 GM.game.canPlayermove = false;
-                movestep(pathparent.RedPlayerPathPoint);
+                movestep(pathparent.YellowPlayerPathPoint);
 
                 
 
@@ -112,7 +112,7 @@ public class YellowPP : PP
             else if (!isready && GM.game.rolingDice == yellowHomeRollingDice)
             {
                 GM.game.redOutPlayers = 4;
-                makeplayerreadytomove(pathparent.RedPlayerPathPoint);
+                makeplayerreadytomove(pathparent.YellowPlayerPathPoint);
                 GM.game.numberofstepstoMove = 0;
 
                 // Allow the player to roll again if they rolled a six and moved out of the home

@@ -1,39 +1,39 @@
 ﻿<Properties StartupConfiguration="{9E53B07A-52CB-0315-1CA6-29DAEBB99317}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cricket Scripts/Cards.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Home/GreenHome.cs">
     <Files>
-      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPPt.cs" Line="1" Column="1" />
-      <File FileName="Assets/SearchingScript.cs" Line="15" Column="26" />
-      <File FileName="Assets/SearchingScriptfor2Players.cs" Line="70" Column="6" />
-      <File FileName="Assets/ClassicSearchingScriptfor2Player.cs" Line="16" Column="26" />
-      <File FileName="Assets/ClassicSearchingScript.cs" Line="76" Column="6" />
-      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPP.cs" Line="1" Column="1" />
-      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoRD.cs" Line="1" Column="1" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPPt.cs" Line="292" Column="31" />
+      <File FileName="Assets/SearchingScript.cs" />
+      <File FileName="Assets/SearchingScriptfor2Players.cs" />
+      <File FileName="Assets/ClassicSearchingScriptfor2Player.cs" />
+      <File FileName="Assets/ClassicSearchingScript.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoRD.cs" />
       <File FileName="Assets/Classic Ludo/Scripts/PP.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/GM.cs" Line="394" Column="58" />
-      <File FileName="Assets/Classic Ludo/Scripts/RD.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/PPt.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/GM.cs" Line="1021" Column="51" />
+      <File FileName="Assets/Classic Ludo/Scripts/RD.cs" Line="12" Column="36" />
+      <File FileName="Assets/Classic Ludo/Scripts/PPt.cs" Line="283" Column="31" />
       <File FileName="Assets/Script/PlayerScript/PlayerPieces.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoBluePP.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoYellowPP.cs" Line="1" Column="1" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoBluePP.cs" Line="1" Column="1" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoYellowPP.cs" Line="47" Column="57" />
       <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoGreenPP.cs" Line="1" Column="1" />
-      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPOP.cs" Line="1" Column="1" />
-      <File FileName="Assets/SocketManager.cs" Line="244" Column="20" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoPOP.cs" />
+      <File FileName="Assets/SocketManager.cs" Line="553" Column="34" />
       <File FileName="Assets/Script/CountdownTimer.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/GreenPP.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/RedPP.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/YellowPP.cs" Line="1" Column="1" />
-      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoRedPP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/GreenPP.cs" Line="1" Column="1" />
+      <File FileName="Assets/Classic Ludo/Scripts/RedPP.cs" Line="1" Column="1" />
+      <File FileName="Assets/Classic Ludo/Scripts/YellowPP.cs" Line="115" Column="71" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoRedPP.cs" Line="1" Column="1" />
       <File FileName="Assets/2 Players/PathPointFor2Player.cs" />
       <File FileName="Assets/2 Players/PathObjectParentFor2Player.cs" />
       <File FileName="Assets/2 Players/LudoHomeFor2Player.cs" />
       <File FileName="Assets/2 Players/GameManagerFor2Player.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/BluePP.cs" />
+      <File FileName="Assets/Classic Ludo/Scripts/BluePP.cs" Line="1" Column="1" />
       <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoRed.cs" />
-      <File FileName="Assets/Script/HomePage/HomePageManager.cs" Line="189" Column="25" />
+      <File FileName="Assets/Script/HomePage/HomePageManager.cs" />
       <File FileName="Assets/PayemtScript.cs" Line="119" Column="34" />
-      <File FileName="Assets/Cricket Scripts/BowlController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cricket Scripts/BowlController.cs" />
       <File FileName="Assets/GameFetcherScript.cs" />
-      <File FileName="Assets/searchingScriptforCricket.cs" Line="68" Column="37" />
+      <File FileName="Assets/searchingScriptforCricket.cs" />
       <File FileName="Assets/Script/ManagerandController/GameManager.cs" />
       <File FileName="Assets/GamemanagerfortwoPlayer.cs" />
       <File FileName="Assets/Script/Sign In/LoginManager.cs" />
@@ -44,11 +44,14 @@
       <File FileName="Assets/EditProfile.cs" />
       <File FileName="Assets/SettingsManager.cs" />
       <File FileName="Assets/RazorpayPayment.cs" />
-      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoGM.cs" Line="394" Column="58" />
+      <File FileName="Assets/Classic Ludo/Scripts/ClassicLudoGM.cs" Line="1074" Column="64" />
       <File FileName="Assets/LeaderBoardScript.cs" />
-      <File FileName="Assets/UniWebView/Script/UniWebView.cs" Line="1586" Column="17" />
-      <File FileName="Assets/UniWebView/Script/UniWebViewMessage.cs" Line="10" Column="31" />
+      <File FileName="Assets/UniWebView/Script/UniWebView.cs" />
+      <File FileName="Assets/UniWebView/Script/UniWebViewMessage.cs" />
       <File FileName="Assets/Cricket Scripts/Cards.cs" Line="53" Column="1" />
+      <File FileName="Assets/Classic Ludo/Scripts/Blue.cs" Line="1" Column="1" />
+      <File FileName="../../../Documents/2PlayersMerged/Assets/SocketManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Home/GreenHome.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -58,10 +61,11 @@
               <Node name="Classic Ludo" expanded="True">
                 <Node name="Scripts" expanded="True" />
               </Node>
-              <Node name="Cricket Scripts" expanded="True">
-                <Node name="Cards.cs" selected="True" />
-              </Node>
+              <Node name="Cricket Scripts" expanded="True" />
               <Node name="Script" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="GreenHome.cs" selected="True" />
+                </Node>
                 <Node name="HomePage" expanded="True" />
                 <Node name="OTP" expanded="True" />
               </Node>
@@ -76,7 +80,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5f882200-0861-43a1-ad3f-9fd372274371" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2aff5d01-0bb5-4e72-b4f4-0f7900274fe5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

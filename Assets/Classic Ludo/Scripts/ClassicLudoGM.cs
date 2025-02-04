@@ -330,6 +330,12 @@ public class ClassicLudoGM : MonoBehaviour
                         dice[diceIndex].transform.position = diceTargetPositions.position;
                         dice[diceIndex].transform.rotation = diceTargetPositions.rotation;
                         Debug.Log($"Initialized dice for player {i} (2-player mode) at target position.");
+                        BoxCollider2D diceCollider = dice[diceIndex].GetComponent<BoxCollider2D>();
+                        if (diceCollider != null)
+                        {
+                            diceCollider.enabled = true;
+                            Debug.Log($"Enabled collider for dice {diceIndex} for player {i}.");
+                        }
                     }
                     else
                     {

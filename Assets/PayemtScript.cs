@@ -117,6 +117,9 @@ public class PaymentScript : MonoBehaviour
         webView.Show();
         //CurrentPanel.SetActive(false);
         EnablePanel(WalletPanel);
+        Loading.SetActive(false);
+        ShowStatusMessage(" ");
+
     }
 
 
