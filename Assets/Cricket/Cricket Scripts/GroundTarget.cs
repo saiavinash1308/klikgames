@@ -52,9 +52,9 @@ public class GroundTarget : MonoBehaviour
             Vector3 targetPosition = clickedtargetPos + new Vector3(diff.x*movespeed.x, 0, diff.y*movespeed.y);
             targetPosition.x = Mathf.Clamp(targetPosition.x, xval.x, xval.y);
             targetPosition.z = Mathf.Clamp(targetPosition.z, zval.x, zval.y);
-            transform.position = targetPosition;
+         //   transform.position = targetPosition;
             
-            string positionString = $"{transform.position.x},{transform.position.y},{transform.position.z}";
+            string positionString = $"{targetPosition.x},{targetPosition.y},{targetPosition.z}";
             socketmanager.EmitEvent("GROUND_TARGET_MOVE", positionString);
             
         }

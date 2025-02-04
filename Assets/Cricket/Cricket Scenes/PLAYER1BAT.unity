@@ -10758,10 +10758,10 @@ MonoBehaviour:
   batradius: 1
   ballmask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   minMaxhitVel: {x: 10, y: 15}
   hitduration: 0.1
-  movespeed: 7
+  movespeed: 10
   swipeDistance: 1
   swipeDirection: {x: 0, y: 0}
   playermoveslider: {fileID: 622868447}

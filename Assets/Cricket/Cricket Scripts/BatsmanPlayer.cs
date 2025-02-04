@@ -260,12 +260,12 @@ public class BatsmanPlayer : MonoBehaviour
         if (moveLeft)
         {
             adjustedValue = 1; // Moving left
-            animationState = "Right"; 
+            animationState = "Left"; 
         }
         else if (moveRight)
         {
             adjustedValue = -1; // Moving right
-            animationState = "Left"; 
+            animationState = "Right"; 
         }
 
         if (adjustedValue != 0)
@@ -325,12 +325,12 @@ public class BatsmanPlayer : MonoBehaviour
         moveLeft = false;
         moveRight = false;
         isIdle = true;
-        socketmanager.EmitEvent("MOVE_BATSMAN", transform.position.x.ToString()); // Emit current position (no movement)
+      //  socketmanager.EmitEvent("MOVE_BATSMAN", transform.position.x.ToString()); // Emit current position (no movement)
 
         // Play idle animation immediately
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-            anim.Play("Idle");
+        //    anim.Play("Idle");
         }
     }
 
