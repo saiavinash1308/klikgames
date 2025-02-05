@@ -15,6 +15,7 @@ public class SelectPanel : MonoBehaviour
     public GameObject FourWinnersMark;
     public GameObject OthersMark;
     public GameObject Wallet;
+    public GameObject CurrentPanel;
 
     public Text NameText;
 
@@ -28,6 +29,11 @@ public class SelectPanel : MonoBehaviour
         //string userName = PlayerPrefs.GetString("userName","Guest");
         string userName = PlayerPrefs.GetString("userName", "Guest");
         NameText.text = userName;
+    }
+    public void EnablePanel(GameObject panel)
+    {
+        panel.SetActive(true);
+        CurrentPanel.SetActive(false);
     }
 
     private void SetAllPanelsInactive()

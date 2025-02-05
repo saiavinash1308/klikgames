@@ -287,21 +287,30 @@ public class ClassicLudoPPt : MonoBehaviour
         int pieceCount = PlayerPiecesList.Count;
         if (pieceCount == 0) return;
 
-        int gridSize = Mathf.CeilToInt(Mathf.Sqrt(pieceCount));
-        float spacing = 0.10f;
-        float yOffset = 0.19f; // Adjust this value to move the grid up or down
+        int gridSize = Mathf.CeilToInt(Mathf.Sqrt(pieceCount)); // Determine grid dimensions
+        float spacing = 0.10f;  // Adjust spacing between pieces
+        float yOffset = 0.10f;  // Move grid up/down
 
-        Vector3 startPosition = transform.position - new Vector3(spacing * (gridSize - 1) / 2, spacing * (gridSize - 1) / 2 - yOffset, 0);
+        // Calculate total width and height of the grid
+        float totalWidth = (gridSize - 1) * spacing;
+        float totalHeight = (gridSize - 1) * spacing;
+
+        // Calculate start position to center the grid
+        Vector3 startPosition = transform.position - new Vector3(totalWidth / 2, totalHeight / 2 - yOffset, 0);
 
         for (int i = 0; i < pieceCount; i++)
         {
             int row = i / gridSize;
             int col = i % gridSize;
 
+            // Compute new position
             Vector3 newPosition = startPosition + new Vector3(col * spacing, -row * spacing, 0);
+
+            // Apply position to piece
             PlayerPiecesList[i].transform.position = newPosition;
         }
     }
+
 
 
 

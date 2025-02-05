@@ -53262,7 +53262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: 231}
+  m_AnchoredPosition: {x: -539.9998, y: 231}
   m_SizeDelta: {x: 1080, y: 460}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1300563555
@@ -76443,7 +76443,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 825946241}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9998761
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -90892,6 +90892,7 @@ MonoBehaviour:
   FourWinnersMark: {fileID: 1213657853}
   OthersMark: {fileID: 1915998813}
   Wallet: {fileID: 1697671494}
+  CurrentPanel: {fileID: 589507857774165810}
   NameText: {fileID: 5679655204521771057}
 --- !u!114 &2761576904225114845
 MonoBehaviour:
@@ -95905,8 +95906,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 747111468}
-        m_TargetAssemblyTypeName: BackButtonSettingsPage, Assembly-CSharp
+      - m_Target: {fileID: 2761576904225114844}
+        m_TargetAssemblyTypeName: SelectPanel, Assembly-CSharp
         m_MethodName: ActivatePanel
         m_Mode: 2
         m_Arguments:

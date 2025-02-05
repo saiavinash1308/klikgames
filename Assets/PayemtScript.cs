@@ -116,9 +116,9 @@ public class PaymentScript : MonoBehaviour
         webView.Load(razorpayUrl);
         webView.Show();
         //CurrentPanel.SetActive(false);
-        EnablePanel(WalletPanel);
         Loading.SetActive(false);
         ShowStatusMessage(" ");
+        EnablePanel(WalletPanel);
 
     }
 

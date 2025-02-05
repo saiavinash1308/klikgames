@@ -66,6 +66,8 @@ public class ClassicLudoGM : MonoBehaviour
     public Text greenPlayerIdText;
     public Text yellowPlayerIdText;
 
+    public Text prizePool;
+
     User currentUser;
     public User[] players;
 
@@ -384,16 +386,19 @@ public class ClassicLudoGM : MonoBehaviour
         redPlayerIdText.text = "";
         greenPlayerIdText.text = "";
         yellowPlayerIdText.text = "";
+        prizePool.text = "";
 
         if (players.Length == 2)
         {
             // Assign first player to Red and second player to Yellow
+            prizePool.text = socketManager.getPrizePool().ToString();
             redPlayerIdText.text = players[0].username;
             yellowPlayerIdText.text = players[1].username;
         }
         else if (players.Length == 4)
         {
             // Assign players to their respective colors for 4 players
+            prizePool.text = socketManager.getPrizePool().ToString();
             bluePlayerIdText.text = players[0].username;
             redPlayerIdText.text = players[1].username;
             greenPlayerIdText.text = players[2].username;
@@ -1030,15 +1035,15 @@ public class ClassicLudoGM : MonoBehaviour
                 // If the piece is in a safe zone, make it smaller
                 if (isInSafeZone)
                 {
-                    scale = 0.9f;   // Smaller scale when in the safe zone
-                    height = 0.9f;
+                    scale = 0.5f;   // Smaller scale when in the safe zone
+                    height = 0.5f;
                     depth = 0.5f;
                 }
                 else
                 {
                     // If the piece is not in the safe zone, use the standard scaling
-                    scale = color == activeColor ? 0.5f : 0.5f;
-                    height = color == activeColor ? 0.5f : 0.5f;
+                    scale = color == activeColor ? 0.6f : 0.6f;
+                    height = color == activeColor ? 0.6f : 0.6f;
                     depth = color == activeColor ? 0.5f : 0.5f;
                 }
 

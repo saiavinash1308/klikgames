@@ -203,6 +203,8 @@ public class SocketManager : MonoBehaviour
     //internal bool stopSearch = true;
     public ScoreManager scoremanager;
 
+    private float prizePool;
+
     private void Awake()
     {
         if (Instance == null)
@@ -400,6 +402,7 @@ public class SocketManager : MonoBehaviour
                 return;
             }
             roomId = gameStartData.roomId;
+            prizePool = gameStartData.prizePool;
             Debug.Log($"Number of users: {gameStartData.users.Length}");
             users = new User[gameStartData.users.Length];
             for (int i = 0; i < gameStartData.users.Length; i++)
@@ -1083,6 +1086,11 @@ public class SocketManager : MonoBehaviour
         return this.users;
     }
 
+    public float getPrizePool()
+    {
+        return this.prizePool;
+    }
+
     //public class DiceRollData
     //{
     //    public Payload payload;
@@ -1117,6 +1125,7 @@ public class SocketManager : MonoBehaviour
     {
         public string roomId;
         public User[] users;
+        public float prizePool;
     }
 
     [Serializable]

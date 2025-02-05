@@ -1,4 +1,5 @@
 
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,16 +44,26 @@ public class ClassicLudoGreenPP : ClassicLudoPP
                 ClassicLudoGM.game.canDiceRoll = true;
             }
         }
+
         if (socketManager != null && socketManager.isConnected)
         {
             string name = this.name;  // Get the name of the GameObject
             string numberPart = new string(name.Where(char.IsDigit).ToArray());
+
+            // Ensure that numberPart is not empty
+            if (string.IsNullOrEmpty(numberPart))
+            {
+                Debug.LogError("Failed to extract digits from name: " + name);
+                return; // Exit early if no digits are found
+            }
+
             string roomId = socketManager.GetRoomId();
             ClassicLudoMovePiecePayload payload = new ClassicLudoMovePiecePayload
             {
                 piece = numberPart,
                 roomId = roomId
             };
+
             string jsonPayload = JsonUtility.ToJson(payload);
             socketManager.socket.Emit("MOVE_PIECE", jsonPayload);
             Debug.Log("MovePiece:" + jsonPayload);
@@ -61,9 +72,10 @@ public class ClassicLudoGreenPP : ClassicLudoPP
         }
         else
         {
-            Debug.LogWarning("SocketManager is not connected. Cannot emit ROLL_DICE.");
+            Debug.LogWarning("SocketManager is not connected. Cannot emit MOVE_PIECE.");
         }
     }
+
     public void MovePiece()
     {
         if (ClassicLudoGM.game.rolingDice == ClassicLudoGM.game.manageRolingDice[2])
@@ -72,9 +84,9 @@ public class ClassicLudoGreenPP : ClassicLudoPP
             {
                 ClassicLudoGM.game.canPlayermove = false;
                 movestep(pathparent.GreenPlayerPathPoint);
-                //GM.game.transferDice = false;
+                //ClassicLudoGM.game.transferDice = false;
                 //GM.game.RolingDiceManager(); // After moving, transfer the dice
-                //GM.game.transferDice = true;
+                //ClassicLudoGM.game.transferDice = true;
             }
             else if (!isready && ClassicLudoGM.game.rolingDice == greenHomeRollingDice)
             {
@@ -87,7 +99,7 @@ public class ClassicLudoGreenPP : ClassicLudoPP
                 ClassicLudoGM.game.canDiceRoll = true;
             }
         }
-    }
 
+    }
 
 }

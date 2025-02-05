@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 using System;
 
@@ -12,7 +13,7 @@ public class Wallet : MonoBehaviour
     public GameObject CurrentPanel;
 
     public GameObject transactionDataPrefab;  
-    public Transform contentPanel1;  
+    public Transform contentPanel1;
 
     private const string baseUrl = "https://backend-zh32.onrender.com/api/transactions/fetchTransactions";
 
@@ -20,6 +21,7 @@ public class Wallet : MonoBehaviour
     {
         CurrentPanel.SetActive(true);
         StartCoroutine(GetTransactionData());
+        
     }
 
     public void EnablePanel(GameObject panel)
