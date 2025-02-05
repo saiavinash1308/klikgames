@@ -14,7 +14,7 @@ public class OTPManager : MonoBehaviour
     public Button resendOTPButton; // New button for resending OTP
     public TextMeshProUGUI statusText;
     public GameObject Loading;
-    //public GameObject SuccessPanel;
+    public GameObject CurrentPanel;
 
     public string verifyOtpApiUrl = "https://backend-zh32.onrender.com/api/user/verifyotp"; // OTP verification endpoint
     public string resendOtpApiUrl = "https://backend-zh32.onrender.com/api/user/resendotp"; // Resend OTP endpoint
@@ -24,6 +24,12 @@ public class OTPManager : MonoBehaviour
         submitOTPButton.onClick.AddListener(OnSubmitOTPClicked);
        // SuccessButton.onClick.AddListener(OnSuccessButtonClick);
         resendOTPButton.onClick.AddListener(OnResendOTPClicked); // Add listener for the resend OTP button
+    }
+
+    public void EnablePanel(GameObject panel)
+    {
+        panel.SetActive(true);
+        CurrentPanel.SetActive(false);
     }
 
     // OTP submission function

@@ -57,12 +57,12 @@ EditorBuildSettings:
     path: Assets/Classic Ludo/Scenes/ClassicLudoMultiplayer.unity
     guid: f630bc1fe4c0b45b299312f5fba87457
   - enabled: 1
-    path: Assets/Cricket Scenes/CricketLoadingScene.unity
+    path: Assets/Cricket/Cricket Scenes/CricketLoadingScene.unity
     guid: 9b0859699b002492694150d460d030e8
   - enabled: 1
-    path: Assets/Cricket Scenes/PLAYER1BAT.unity
+    path: Assets/Cricket/Cricket Scenes/PLAYER1BAT.unity
     guid: 8547dfc87aec2403eb5f84eff2f87e80
   - enabled: 1
-    path: Assets/Cricket Scenes/PLAYER2BAT.unity
+    path: Assets/Cricket/Cricket Scenes/PLAYER2BAT.unity
     guid: 42ce9b905311b4b1cb4ade3b5dd87d1e
   m_configObjects: {}
