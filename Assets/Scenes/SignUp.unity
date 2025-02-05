@@ -709,6 +709,7 @@ MonoBehaviour:
   resendOTPButton: {fileID: 19146264}
   statusText: {fileID: 1220175329}
   Loading: {fileID: 1158511597}
+  CurrentPanel: {fileID: 1508630341}
   verifyOtpApiUrl: https://backend-zh32.onrender.com/api/user/verifyotp
   resendOtpApiUrl: https://backend-zh32.onrender.com/api/user/resendotp
 --- !u!4 &47929449
@@ -5765,7 +5766,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1255209961}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 47929448}
+        m_TargetAssemblyTypeName: OTPManager, Assembly-CSharp
+        m_MethodName: EnablePanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 216850692}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1255209961
 MonoBehaviour:
   m_ObjectHideFlags: 0

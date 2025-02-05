@@ -178,7 +178,6 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
 
 public class SocketManager : MonoBehaviour
 {
@@ -203,7 +202,8 @@ public class SocketManager : MonoBehaviour
     public BatController batcontroller;
     //internal bool stopSearch = true;
     public ScoreManager scoremanager;
-    private GameObject returnpanel;
+
+    private float prizePool;
 
     private void Awake()
     {
@@ -299,8 +299,6 @@ public class SocketManager : MonoBehaviour
 
     internal void AddListeners()
     {
-        socket.On("MATCH_MAKING_FAILED", onMatchMakingFailed);
-
         socket.On("STOP_SEARCH", OnStopSearch);
         socket.On("START_GAME", GameStarted);
         socket.On("CURRENT_TURN", OnPlayerTurn);
@@ -322,8 +320,6 @@ public class SocketManager : MonoBehaviour
         socket.On("UPDATE_SCORE", OnUpdateScore);
         socket.On("SWITCH_CAMERA", OnSwitchCamera);
         socket.On("WINNER", OnCricWinner);
-        socket.On("CRICKET_IDLE", onCricketIdle);
-        socket.On("BALL_HIT_POSITION", onBallHit);
 
         //CLASSIC_LUDO...
 
@@ -334,26 +330,6 @@ public class SocketManager : MonoBehaviour
         socket.On("CLASSIC_LUDO_KILL_PIECE", ClassicOnKillPiece);
         socket.On("CLASSIC_LUDO_DICE_ROLLED", ClassicOnDiceRolled);
         socket.On("CLASSIC_LUDO_WINNERS", ClassicOnWinner);
-    }
-
-
-    public void onMatchMakingFailed(SocketIOResponse res)
-    {
-        string message = res.GetValue<string>();
-        Debug.LogWarning("Quit Room");
-        MainThreadDispatcher.Enqueue(() =>
-        {
-            returnpanel = GameObject.FindGameObjectWithTag("ReturnPanel");
-            if (returnpanel == null)
-            {
-                returnpanel = GameObject.FindGameObjectWithTag("ReturnPanel"); // if you need to handle search differently
-                                                                               // or use
-                returnpanel = GameObject.FindObjectsOfType<GameObject>(true)
-                                          .FirstOrDefault(obj => obj.CompareTag("ReturnPanel"));
-            }
-            returnpanel.SetActive(true);
-            Invoke("ReturnHome", 2f);
-        });
     }
 
     public void OnStopSearch(SocketIOResponse res)
@@ -426,6 +402,7 @@ public class SocketManager : MonoBehaviour
                 return;
             }
             roomId = gameStartData.roomId;
+            prizePool = gameStartData.prizePool;
             Debug.Log($"Number of users: {gameStartData.users.Length}");
             users = new User[gameStartData.users.Length];
             for (int i = 0; i < gameStartData.users.Length; i++)
@@ -1109,6 +1086,11 @@ public class SocketManager : MonoBehaviour
         return this.users;
     }
 
+    public float getPrizePool()
+    {
+        return this.prizePool;
+    }
+
     //public class DiceRollData
     //{
     //    public Payload payload;
@@ -1143,6 +1125,7 @@ public class SocketManager : MonoBehaviour
     {
         public string roomId;
         public User[] users;
+        public float prizePool;
     }
 
     [Serializable]
@@ -1391,16 +1374,6 @@ public class SocketManager : MonoBehaviour
 
     }
 
-    public void onCricketIdle(SocketIOResponse res)
-    {
-        MainThreadDispatcher.Enqueue(() =>
-        {
-            batsmanplayer = GameObject.FindObjectOfType<BatsmanPlayer>();
-            batsmanplayer.isIdle = true;
-            batsmanplayer.anim.Play("Idle");
-        });
-    }
-
     public void OnResetBowler(SocketIOResponse res)
     {
         MainThreadDispatcher.Enqueue(() =>
@@ -1453,18 +1426,6 @@ public class SocketManager : MonoBehaviour
             {
                 scoremanager.updateScoreFromSocket(score);
             }
-        });
-    }
-
-    public void onBallHit(SocketIOResponse res)
-    {
-        string data = res.GetValue<string>();
-        float random = float.Parse(data);
-
-        MainThreadDispatcher.Enqueue(() =>
-        {
-            Bat bat = GameObject.FindObjectOfType<Bat>();
-            bat.ShootBall(random);  // BALL HIT
         });
     }
 

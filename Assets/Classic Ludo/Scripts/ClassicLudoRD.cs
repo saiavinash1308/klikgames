@@ -134,8 +134,8 @@ public class ClassicLudoRD : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             bool isPlayerOut = ClassicLudoGM.game.IsPlayerOut(ClassicLudoGM.game.rolingDice);
-            GM.game.canPlayermove = (isPlayerOut || numberGot == 6);
-            GM.game.canPlayermove = true;
+            ClassicLudoGM.game.canPlayermove = (isPlayerOut || numberGot == 6);
+            ClassicLudoGM.game.canPlayermove = true;
             if (generateRandomNumberonDice != null)
             {
                 StopCoroutine(generateRandomNumberonDice);
