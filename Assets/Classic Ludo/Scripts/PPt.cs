@@ -65,7 +65,7 @@ public class PPt : MonoBehaviour
 
                     // Mark that the player gets an additional roll for killing another player
                     //GM.game.shouldRollAgain = true;
-                    Handheld.Vibrate();
+                    //Handheld.Vibrate();
 
                     return false;
                 }

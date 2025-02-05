@@ -66,7 +66,7 @@ public class InitGame : MonoBehaviour
 
     public void QuitRoom()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Home");
     }
 
     // Update is called once per frame

@@ -299,6 +299,7 @@ public class BatsmanPlayer : MonoBehaviour
 
     public void OnMoveLeftPressed()
     {
+        Debug.LogError("LEFT");
         ismove = true;
         batstate = BatState.moving;
         moveLeft = true;
@@ -309,6 +310,7 @@ public class BatsmanPlayer : MonoBehaviour
 
     public void OnMoveRightPressed()
     {
+        Debug.LogError("RIGHT");
         ismove = true;
         batstate = BatState.moving;
         moveRight = true;

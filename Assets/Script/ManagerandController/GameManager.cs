@@ -1564,7 +1564,7 @@ public class GameManager : MonoBehaviour
 
             if (isVibrationEnabled)
             {
-                Handheld.Vibrate();  // Only vibrate if the toggle is on
+                //Handheld.Vibrate();  // Only vibrate if the toggle is on
             }
 
             UpdateDiceOpacity();
@@ -1914,7 +1914,7 @@ public class GameManager : MonoBehaviour
         {
             if (rolingDice == manageRolingDice[3] && canDiceRoll)
             {
-                Handheld.Vibrate();
+                //Handheld.Vibrate();
                 manageRolingDice[3].RollDiceForBot();
                 yield return new WaitForSeconds(1f);
 
@@ -1933,7 +1933,7 @@ public class GameManager : MonoBehaviour
 
             if (rolingDice == manageRolingDice[0] && canDiceRoll)
             {
-                Handheld.Vibrate();
+                //Handheld.Vibrate();
                 manageRolingDice[0].RollDiceForBot();
                 yield return new WaitForSeconds(1f);
 
@@ -1952,7 +1952,7 @@ public class GameManager : MonoBehaviour
 
             if (rolingDice == manageRolingDice[2] && canDiceRoll)
             {
-                Handheld.Vibrate();
+                //Handheld.Vibrate();
                 manageRolingDice[2].RollDiceForBot();
                 yield return new WaitForSeconds(1f);
 

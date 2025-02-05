@@ -702,7 +702,7 @@ public class SocketManager : MonoBehaviour
         }
     }
 
-    public void OnCricWinner(SocketIOResponse res)
+    public void OnWinner(SocketIOResponse res)
     {
         string[] winnerData = res.GetValue<string[]>(); // Parse the response as an array
         if (winnerData != null && winnerData.Length > 0)
@@ -1358,14 +1358,27 @@ public class SocketManager : MonoBehaviour
 
     private void OnBatsManMoved(SocketIOResponse res)
     {
-        string batsManData = res.GetValue<string>();
-        float adjustedValue = float.Parse(batsManData);
+        string data = res.GetValue<string>();
+        float predictedX = float.Parse(data);
+
         MainThreadDispatcher.Enqueue(() =>
         {
             batsmanplayer = GameObject.FindObjectOfType<BatsmanPlayer>();
-            //batsmanplayer.MoveBatsManFromSocket(adjustedValue);
-        });
+            batsmanplayer.MoveBatsman2(predictedX);
 
+            if (predictedX < batsmanplayer.transform.position.x)
+            {
+                batsmanplayer.anim.Play("Right");
+            }
+            else if (predictedX > batsmanplayer.transform.position.x)
+            {
+                batsmanplayer.anim.Play("Left");
+            }
+            else
+            {
+                batsmanplayer.anim.Play("Idle");
+            }
+        });
     }
 
     public void OnBatsManHit(SocketIOResponse res)
@@ -1436,7 +1449,10 @@ public class SocketManager : MonoBehaviour
                 scoremanager.BallMissedFromSocket();
                 return;
             }
-            scoremanager.updateScoreFromSocket(score);
+            else
+            {
+                scoremanager.updateScoreFromSocket(score);
+            }
         });
     }
 
@@ -1460,7 +1476,7 @@ public class SocketManager : MonoBehaviour
     }
 
 
-    public void OnWinner(SocketIOResponse res)
+    public void OnCricWinner(SocketIOResponse res)
     {
         string winnerId = res.GetValue<string>();
         Debug.Log("This is winnerId: " + winnerId);

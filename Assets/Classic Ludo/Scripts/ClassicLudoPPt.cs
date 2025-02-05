@@ -83,7 +83,7 @@ public class ClassicLudoPPt : MonoBehaviour
 
                     // Mark that the player gets an additional roll for killing another player
                     //ClassicLudoGM.game.shouldRollAgain = true;
-                    Handheld.Vibrate();
+                    //Handheld.Vibrate();
 
                     return false;
                 }

@@ -211,7 +211,7 @@ public class GameManagerFortwoPlayers : MonoBehaviour
             rolingDice = manageRolingDice[nextIndex];
             Debug.Log("Current Dice Index: " + currentIndex + " | Next Dice Index: " + nextIndex);
 
-            Handheld.Vibrate();
+            //Handheld.Vibrate();
             UpdateDiceOpacity();
             UpdateArrowVisibility();
             ResizePlayerPieces(); // Call to resize pieces
@@ -407,7 +407,7 @@ public class GameManagerFortwoPlayers : MonoBehaviour
         {
             if (rolingDice == manageRolingDice[1] && canDiceRoll)
             {
-                Handheld.Vibrate();
+                //Handheld.Vibrate();
                 manageRolingDice[1].RollDiceForBot();
                 yield return new WaitForSeconds(1f);
 

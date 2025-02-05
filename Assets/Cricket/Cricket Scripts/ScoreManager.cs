@@ -27,6 +27,8 @@ public class ScoreManager : MonoBehaviour
     [Header("Events")]
     public static Action<int> onScoreCalculated;
     public GameObject batsman;
+    public bool isScoreUpdate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +54,9 @@ public class ScoreManager : MonoBehaviour
 
     private void BallTouchedGround(Vector3 ballpos)
     {
-       
+        if (isScoreUpdate)
+            return;
+
         playerScore = 2;
 
         Vector3 batsmanPos = batsman.transform.position; // or wherever the reference point is
@@ -73,7 +77,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         socketmanager.EmitEvent("UPDATE_SCORE", playerScore.ToString());
-
+        isScoreUpdate = true;
         
 
         
@@ -82,6 +86,9 @@ public class ScoreManager : MonoBehaviour
 
     public void updateScoreFromSocket(int playerScore)
     {
+        if (isScoreUpdate)
+            return;
+        Debug.LogError("UPDATE_SCORE");
         onScoreCalculated?.Invoke(playerScore);
         scoretexts[currentball].text = playerScore.ToString();
         currentball++;
@@ -95,6 +102,7 @@ public class ScoreManager : MonoBehaviour
     private IEnumerator ResetDistance(float waitsecs)
     {
         yield return new WaitForSeconds(waitsecs);
+        isScoreUpdate = false;
         testdistance = 0f;          //reset distance after some time
     }
 
@@ -106,9 +114,14 @@ public class ScoreManager : MonoBehaviour
 
     public void BallMissedFromSocket()
     {
+        if (isScoreUpdate)
+            return;
+        Debug.LogError("UPDATE_SCORE BALL MISSED");
         scoretexts[currentball].text = "0";     // dot ball 
         currentball++;
         onScoreCalculated?.Invoke(0);
+        isScoreUpdate = true;
+        StartCoroutine(ResetDistance(waitTime));
     }
 
     public void StumpsHitted()

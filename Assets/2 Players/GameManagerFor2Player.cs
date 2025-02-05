@@ -250,7 +250,7 @@ public class GameManagerFor2Player : MonoBehaviour
 
             if (isVibrationEnabled)
             {
-                Handheld.Vibrate();  // Only vibrate if the toggle is on
+                //Handheld.Vibrate();  // Only vibrate if the toggle is on
             }
 
             UpdateDiceOpacity();
@@ -507,7 +507,7 @@ public class GameManagerFor2Player : MonoBehaviour
             
             if (rolingDice == manageRolingDice[1] && canDiceRoll)
             {
-                Handheld.Vibrate();
+                //Handheld.Vibrate();
                 manageRolingDice[1].RollDiceForBot();
                 yield return new WaitForSeconds(1f);
 
