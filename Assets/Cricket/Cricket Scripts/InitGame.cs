@@ -16,12 +16,29 @@ public class InitGame : MonoBehaviour
     public BatController batcontroller;
     public BowlController bowlcontroller;
     public CricNetManager cricnetmanager;
+    public GameObject PopUp;
     // Start is called before the first frame update
     void Start()
     {
         cricnetmanager = GameObject.FindObjectOfType<CricNetManager>();
         StartCoroutine(ShowText());
 
+    }
+    public void EnablePopUp()
+    {
+        PopUp.SetActive(true);
+    }
+
+    public void QuitToHome()
+    {
+        SceneManager.LoadScene("Home"); // Change "HomeScene" to your actual scene name
+    }
+    public void ClosePopup()
+    {
+        if (PopUp != null)
+        {
+            PopUp.SetActive(false);
+        }
     }
 
     public void ActivateScripts()

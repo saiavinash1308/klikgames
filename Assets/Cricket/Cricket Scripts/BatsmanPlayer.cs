@@ -117,7 +117,7 @@ public class BatsmanPlayer : MonoBehaviour
 
     public void SwipeBat()
     {
-   
+
         if (batcontroller.enabled)
         {
             // Check for swipe gesture
@@ -260,17 +260,17 @@ public class BatsmanPlayer : MonoBehaviour
         if (moveLeft)
         {
             adjustedValue = 1; // Moving left
-            animationState = "Left"; 
+            animationState = "Left";
         }
         else if (moveRight)
         {
             adjustedValue = -1; // Moving right
-            animationState = "Right"; 
+            animationState = "Right";
         }
 
         if (adjustedValue != 0)
         {
-          predictedX = transform.position.x + (adjustedValue * movespeed * Time.deltaTime);
+            predictedX = transform.position.x + (adjustedValue * movespeed * Time.deltaTime);
             if (!isIdle)
             {
                 socketmanager.EmitEvent("MOVE_BATSMAN", predictedX.ToString()); // Only send predictedX
@@ -284,7 +284,7 @@ public class BatsmanPlayer : MonoBehaviour
                 anim.Play(animationState); // Only change animation if needed
             }
         }
-        else if(adjustedValue==0)
+        else if (adjustedValue == 0)
         {
             // When no movement, ensure Idle is played immediately
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
@@ -327,12 +327,12 @@ public class BatsmanPlayer : MonoBehaviour
         moveLeft = false;
         moveRight = false;
         isIdle = true;
-      //  socketmanager.EmitEvent("MOVE_BATSMAN", transform.position.x.ToString()); // Emit current position (no movement)
+        //  socketmanager.EmitEvent("MOVE_BATSMAN", transform.position.x.ToString()); // Emit current position (no movement)
 
         // Play idle animation immediately
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-        //    anim.Play("Idle");
+            //    anim.Play("Idle");
         }
     }
 
@@ -345,13 +345,13 @@ public class BatsmanPlayer : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * movespeed);
     }
 
-    private void  SwitchState()
+    private void SwitchState()
     {
         switch (batstate)
         {
             case BatState.moving:
                 ControlMovement();
-         
+
                 break;
             case BatState.hitting:
                 if (canDetectHit)
@@ -360,7 +360,7 @@ public class BatsmanPlayer : MonoBehaviour
         }
     }
 
-   
+
 
 
     public void StartDetectingHits()
@@ -378,26 +378,26 @@ public class BatsmanPlayer : MonoBehaviour
     public void CheckForHits()
     {
         // Set the center of the sphere
-    /*    Vector3 center = batcol.transform.TransformPoint(batcol.center);
-        // Detect balls within the sphere
-        detectballs = Physics.OverlapSphere(center, batradius, ballmask);
+        /*    Vector3 center = batcol.transform.TransformPoint(batcol.center);
+            // Detect balls within the sphere
+            detectballs = Physics.OverlapSphere(center, batradius, ballmask);
 
-        if (detectballs.Length > 0)
-        {
-            foreach (var ball in detectballs)
+            if (detectballs.Length > 0)
             {
-                Debug.Log("Ball detected: " + ball.gameObject.name);
-                BallDetectedCallback(ball);
+                foreach (var ball in detectballs)
+                {
+                    Debug.Log("Ball detected: " + ball.gameObject.name);
+                    BallDetectedCallback(ball);
+                }
+
             }
- 
-        }
-        else
-        {
-                Debug.Log("ball not detected");
-                Restart();           
-                        
-        }
-        hitTimer += Time.deltaTime;  */
+            else
+            {
+                    Debug.Log("ball not detected");
+                    Restart();           
+
+            }
+            hitTimer += Time.deltaTime;  */
     }
 
 
@@ -429,7 +429,7 @@ public class BatsmanPlayer : MonoBehaviour
     public void HittingBat()
     {
         //Hit event batsman
-       
+
         socketmanager.EmitEvent("BATSMAN_HIT", "");
 
     }
@@ -450,11 +450,11 @@ public class BatsmanPlayer : MonoBehaviour
 
     private void ShootBall(Transform ball)  // push ball after touching bat
     {
-         float lerp = Mathf.Clamp01(hitTimer / hitduration);
-         float hitvel = Mathf.Lerp(minMaxhitVel.y, minMaxhitVel.x, lerp);
-         Vector3 hitVelVector = (Vector3.back + Vector3.up + Vector3.right * Random.Range(-1f, 1f)) * hitvel;
-         ball.GetComponent<Ball>().TouchedBat(hitVelVector);
-         onBallHit?.Invoke(ball);    // switch to ball cam*/
+        float lerp = Mathf.Clamp01(hitTimer / hitduration);
+        float hitvel = Mathf.Lerp(minMaxhitVel.y, minMaxhitVel.x, lerp);
+        Vector3 hitVelVector = (Vector3.back + Vector3.up + Vector3.right * Random.Range(-1f, 1f)) * hitvel;
+        ball.GetComponent<Ball>().TouchedBat(hitVelVector);
+        onBallHit?.Invoke(ball);    // switch to ball cam*/
     }
 
 
@@ -478,7 +478,7 @@ public class BatsmanPlayer : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if(batcol!=null)
+        if (batcol != null)
         {
             Vector3 center = batcol.transform.TransformPoint(batcol.center);
             Gizmos.color = Color.red;

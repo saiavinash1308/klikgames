@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4439372, g: 0.49315345, b: 0.5721989, a: 1}
+  m_IndirectSpecularColor: {r: 0.44407046, g: 0.49331492, b: 0.57239574, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1584,7 +1584,6 @@ GameObject:
   - component: {fileID: 6570460117405832576}
   - component: {fileID: 30850341341945690}
   - component: {fileID: 6570460117405832577}
-  - component: {fileID: 6570460117405832578}
   m_Layer: 5
   m_Name: 2 players
   m_TagString: Untagged
@@ -3127,36 +3126,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523664909583169854}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8eb1ea066dbe64320be293b118132b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isSearching: 0
   loadingImage: {fileID: 1177884601406791426}
-  Loading: {fileID: 0}
-  PopUp: {fileID: 0}
-  Quit: {fileID: 0}
-  Cancle: {fileID: 0}
---- !u!114 &6570460117405832578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523664909583169854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4e0c059cb7db42228dd9c585a9ad396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isSearching: 0
-  loadingImage: {fileID: 0}
-  gamecontroller: {fileID: 0}
-  Loading: {fileID: 0}
-  PopUp: {fileID: 0}
-  Quit: {fileID: 0}
-  Cancle: {fileID: 0}
+  gamecontroller: {fileID: 328195269}
 --- !u!224 &6583604170102208287
 RectTransform:
   m_ObjectHideFlags: 0
