@@ -323,9 +323,6 @@ public class BatsmanPlayer : MonoBehaviour
         ismove = false;
         moveLeft = false;
         moveRight = false;
-        ismove = false;
-        moveLeft = false;
-        moveRight = false;
         isIdle = true;
         //  socketmanager.EmitEvent("MOVE_BATSMAN", transform.position.x.ToString()); // Emit current position (no movement)
 

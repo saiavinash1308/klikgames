@@ -4,6 +4,7 @@ using UnityEngine.Networking; // For API requests
 using UnityEngine.SceneManagement; // For scene navigation
 using System.Text;
 using System.Collections; // For encoding the JSON data
+using UnityEngine.UI;
 
 public class SignUpManager : MonoBehaviour
 {
@@ -20,10 +21,53 @@ public class SignUpManager : MonoBehaviour
     public GameObject SignUpPanel;
     public GameObject OTPPanel;
     public GameObject SignInPopUp;
+    public Toggle TermsToggle;
+    public Toggle StateToggle;
+    public GameObject termschckmark, statechckmark;
+    [SerializeField]
+    private bool isterms, isstate;
 
     // URL for the backend API
     public string apiUrl = "https://backend-zh32.onrender.com/api/user/create"; // Replace with your actual API URL
 
+
+    public void Start()
+    {
+        TermsToggle.onValueChanged.AddListener(OnTermsChanged);
+        StateToggle.onValueChanged.AddListener(OnStateChanged);
+        termschckmark.SetActive(false);
+        statechckmark.SetActive(false);
+    }
+
+    public void OnTermsChanged(bool isOn)
+    {
+        isterms = isOn;  // Directly use the value from the toggle
+
+        // Show or hide the checkmark based on toggle state
+        if (isterms)
+        {
+            termschckmark.SetActive(true);
+        }
+        else
+        {
+            termschckmark.SetActive(false);
+        }
+    }
+
+    public void OnStateChanged(bool isOn)
+    {
+        isstate = isOn;  // Directly use the value from the toggle
+
+        // Show or hide the checkmark based on toggle state
+        if (isstate)
+        {
+            statechckmark.SetActive(true);
+        }
+        else
+        {
+            statechckmark.SetActive(false);
+        }
+    }
     // Called when the Sign Up button is clicked
     public void OnSignUpButtonClicked()
     {
@@ -142,12 +186,15 @@ public class SignUpManager : MonoBehaviour
 
     public void OnSignUpClicked()
     {
-        //SceneManager.LoadScene("Sign In");
-        SignInPanel.SetActive(true);
-        SignUpPanel.SetActive(false);
-        OTPPanel.SetActive(false);
-        Loading.SetActive(false);
-        SignInPopUp.SetActive(false);
+        if (isterms && isstate)
+        {
+            //SceneManager.LoadScene("Sign In");
+            SignInPanel.SetActive(true);
+            SignUpPanel.SetActive(false);
+            OTPPanel.SetActive(false);
+            Loading.SetActive(false);
+            SignInPopUp.SetActive(false);
+        }
 
     }
 
