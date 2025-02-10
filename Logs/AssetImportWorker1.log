@@ -1,0 +1,595 @@
+Unity Editor version:    2022.3.9f1 (ea401c316338)
+Branch:                  2022.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 15.1 (Build 24B2083)
+Darwin version:          24.1.0
+Architecture:            x86_64
+Running under Rosetta:   YES
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+/Users/sonu/Desktop/KlikMerged
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+49306
+Successfully changed project path to: /Users/sonu/Desktop/KlikMerged
+/Users/sonu/Desktop/KlikMerged
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8739639808] Host "[IP] 192.168.29.113 [Port] 0 [Flags] 2 [Guid] 1590907076 [EditorId] 1590907076 [Version] 1048832 [Id] OSXEditor(0,sorabhs-Mac-mini.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [8739639808] Host "[IP] 192.168.29.113 [Port] 0 [Flags] 2 [Guid] 1590907076 [EditorId] 1590907076 [Version] 1048832 [Id] OSXEditor(0,sorabhs-Mac-mini.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 9 workers.
+Refreshing native plugins compatible for Editor in 23.50 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.9f1 (ea401c316338)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/sonu/Desktop/KlikMerged/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M4 (high power)
+Metal devices available: 1
+0: Apple M4 (high power)
+Using device Apple M4 (high power)
+Initializing Metal device caps: Apple M4
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56380
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.003236 seconds.
+- Loaded All Assemblies, in  0.423 seconds
+Native extension for Android target not found
+InvalidOperationException: Cannot process request because the process (1283) has exited.
+  at System.Diagnostics.Process.GetProcessHandle (System.Int32 access, System.Boolean throwIfExited) [0x0004e] in <7b6d8d819f484934aae999cadeaf7aa9>:0 
+  at System.Diagnostics.Process.GetProcessHandle (System.Int32 access) [0x00000] in <7b6d8d819f484934aae999cadeaf7aa9>:0 
+  at System.Diagnostics.Process.Kill () [0x00002] in <7b6d8d819f484934aae999cadeaf7aa9>:0 
+  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process.Kill()
+  at UnityEditor.Android.AndroidDeploymentTargetsExtension.GetKnownTargets (UnityEditor.DeploymentTargets.IDeploymentTargetsMainThreadContext context, UnityEditor.ProgressHandler progressHandler) [0x0014a] in <950249aad035483681d10b4c9c3c20d4>:0 
+  at UnityEditor.Android.TargetScanWorker.ScanSync () [0x00039] in <950249aad035483681d10b4c9c3c20d4>:0 
+  at UnityEditor.Android.TargetExtension.OnUsbDevicesChanged (UnityEditor.Hardware.UsbDevice[] usbDevices) [0x00081] in <950249aad035483681d10b4c9c3c20d4>:0 
+  at UnityEditor.Android.TargetExtension.OnLoad () [0x000ad] in <950249aad035483681d10b4c9c3c20d4>:0 
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in /Users/bokken/build/output/unity/unity/Editor/Mono/Modules/ModuleManager.cs:147 
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Modules/ModuleManager.cs Line: 147)
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.925 seconds
+Domain Reload Profiling: 1349ms
+	BeginReloadAssembly (178ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (95ms)
+	LoadAllAssembliesAndSetupDomain (116ms)
+		LoadAssemblies (176ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (112ms)
+			TypeCache.Refresh (110ms)
+				TypeCache.ScanAssembly (99ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (926ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (835ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (454ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (233ms)
+			ProcessInitializeOnLoadMethodAttributes (133ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.929 seconds
+Refreshing native plugins compatible for Editor in 1.91 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.577 seconds
+Domain Reload Profiling: 2502ms
+	BeginReloadAssembly (229ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (31ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (80ms)
+	LoadAllAssembliesAndSetupDomain (582ms)
+		LoadAssemblies (430ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (257ms)
+			TypeCache.Refresh (194ms)
+				TypeCache.ScanAssembly (174ms)
+			ScanForSourceGeneratedMonoScriptInfo (37ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (1579ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1253ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (68ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (95ms)
+			ProcessInitializeOnLoadAttributes (927ms)
+			ProcessInitializeOnLoadMethodAttributes (156ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.07 seconds
+Refreshing native plugins compatible for Editor in 2.26 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5769 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (499.8 KB). Loaded Objects now: 6208.
+Memory consumption went from 231.2 MB to 230.7 MB.
+Total: 3.276625 ms (FindLiveObjects: 0.259167 ms CreateObjectMapping: 0.099375 ms MarkObjects: 2.656916 ms  DeleteObjects: 0.260167 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3539.898045 seconds.
+  path: Assets/Cricket/Prefabs/Ground.png
+  artifactKey: Guid(cee38b7de3c3543d8aae5645a6456f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Prefabs/Ground.png using Guid(cee38b7de3c3543d8aae5645a6456f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03eb50c0cc7928eb20292e5311eda44a') in 0.184541 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Cricket/Prefabs/Pitch.png
+  artifactKey: Guid(7024830a9d2f04e61ab0f52a2b2ea0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Prefabs/Pitch.png using Guid(7024830a9d2f04e61ab0f52a2b2ea0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65881939a773c07291780056260d25e0') in 0.012193 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Cricket/Prefabs/batsmen 6.fbx
+  artifactKey: Guid(3379b048c90e14e258b0ce6883d67f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Prefabs/batsmen 6.fbx using Guid(3379b048c90e14e258b0ce6883d67f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98408fce46c079efcb7325b7c42ab558') in 1.342449 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 750
+========================================================================
+Received Import Request.
+  Time since last request: 237.011160 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/4K-brick_wall_1-displacement.jpg
+  artifactKey: Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/4K-brick_wall_1-displacement.jpg using Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dccba949ede9d83edde4c4b1ecec5b2') in 0.069315 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Roughness.jpg
+  artifactKey: Guid(9dd303e4398d4405fa86758982c5578a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Roughness.jpg using Guid(9dd303e4398d4405fa86758982c5578a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46bc14335f3fb4f3c60d140efc380a5') in 0.007071 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_color.jpg
+  artifactKey: Guid(ac937e0b2e3464487951db927f22ae49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_color.jpg using Guid(ac937e0b2e3464487951db927f22ae49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '950abc18c1c0609cf24b2628dbcc178f') in 0.008416 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000693 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal.jpg
+  artifactKey: Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal.jpg using Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd7b02f12e00397d764b99db6062cdf') in 0.007593 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/VideoCapture_20240102-222518.jpg
+  artifactKey: Guid(5d15e862c43c64afaa49167d498ac545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/VideoCapture_20240102-222518.jpg using Guid(5d15e862c43c64afaa49167d498ac545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18bba1a84d7c0339609f2173dcafba2a') in 0.005295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_normal.jpg
+  artifactKey: Guid(2c179b470079a449b818aac090966caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_normal.jpg using Guid(2c179b470079a449b818aac090966caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72518edd176a9e540f1928a40a1cb5af') in 0.006554 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Displacement.jpg
+  artifactKey: Guid(707e4385d07f74666938dbd2b9d4f3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Displacement.jpg using Guid(707e4385d07f74666938dbd2b9d4f3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b0a4dc79b09a15e722f888cf75b8a5') in 0.005556 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_diff_4k.jpg
+  artifactKey: Guid(8515436ff75bd4f95873f1097b9b0585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_diff_4k.jpg using Guid(8515436ff75bd4f95873f1097b9b0585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24c0d5605eacb98491408222c8d3ba44') in 0.006743 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Normal.jpg
+  artifactKey: Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Normal.jpg using Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c788f0926ed683620c95b99e6dc49b') in 0.006714 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_metallic.jpg
+  artifactKey: Guid(0ed197a4db0e64939807370941ab6dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_metallic.jpg using Guid(0ed197a4db0e64939807370941ab6dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf8ee0801fa8db221a969ee39bdb77f1') in 0.005097 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_roughness.jpg
+  artifactKey: Guid(969aaa626fd054a92b26141b68459a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_roughness.jpg using Guid(969aaa626fd054a92b26141b68459a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845c7f69ca0272da83e82942ca486391') in 0.007616 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_disp_4k.jpg
+  artifactKey: Guid(fabd04ee05ccd4cfda1ab66d3dc46659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_disp_4k.jpg using Guid(fabd04ee05ccd4cfda1ab66d3dc46659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed499d69bb9eece1054440568cfdc749') in 0.007300 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_rough_4k.jpg
+  artifactKey: Guid(b38efc813ce8d4a73a3f25976c3f6d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_rough_4k.jpg using Guid(b38efc813ce8d4a73a3f25976c3f6d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2642ae497c53e56e420d95b6ccaa8f49') in 0.006806 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 45.207096 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Fat Grass.mat
+  artifactKey: Guid(576a04eb5f1b447a9aaf1941ec96e08a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Fat Grass.mat using Guid(576a04eb5f1b447a9aaf1941ec96e08a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c577f017151ddf423e8bbf09e13c1a46') in 0.019813 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Printed plastic.mat
+  artifactKey: Guid(95fd462293d7142088513e2d76d3746d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Printed plastic.mat using Guid(95fd462293d7142088513e2d76d3746d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43bfc505a95fdd3e1b8a77b1f7ff7a37') in 0.006083 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Material.001.mat
+  artifactKey: Guid(1f3e41cf5584144b084aab889ee1b5cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Material.001.mat using Guid(1f3e41cf5584144b084aab889ee1b5cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd497607737ef00893f2332b727cd1a') in 0.006137 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Yellow Dossier Plastic Surface.mat
+  artifactKey: Guid(e184ad08cc9dd4f3c829909590bc7066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Yellow Dossier Plastic Surface.mat using Guid(e184ad08cc9dd4f3c829909590bc7066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '033d46bc6ebda96e9cc97b853b3dff75') in 0.006332 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Glass.mat
+  artifactKey: Guid(9d94358ac9ff64d7cbd3d5ad34af4750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Glass.mat using Guid(9d94358ac9ff64d7cbd3d5ad34af4750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9385c71860897442e257926464bb29d3') in 0.005576 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 60.320016 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Normal 1.jpg
+  artifactKey: Guid(5130fb6eed4fb433cabb5bd8ebb6844e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Normal 1.jpg using Guid(5130fb6eed4fb433cabb5bd8ebb6844e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ff20fcb0788213d79f8b135c62067e7') in 0.016211 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Pared_Verde_Esmeralda_roughness.jpg
+  artifactKey: Guid(e28d8cbf750fc413c90c22c5392a5915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Pared_Verde_Esmeralda_roughness.jpg using Guid(e28d8cbf750fc413c90c22c5392a5915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d4788dc111653e0461f780c9a544d83') in 0.007082 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_metallic 1.jpg
+  artifactKey: Guid(185ce9c877e5f42469f1c757925feac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_metallic 1.jpg using Guid(185ce9c877e5f42469f1c757925feac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11aba7d9eee3b75978368d32c9cf852') in 0.004831 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/plastic-smudge-smoothness copy.jpg
+  artifactKey: Guid(84e9769350b894c25826089eac4bbc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/plastic-smudge-smoothness copy.jpg using Guid(84e9769350b894c25826089eac4bbc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd751b6a7fe7ef161607f7cfb75a6063c') in 0.005461 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Roughness 1.jpg
+  artifactKey: Guid(c6ecdc1849fa54f5ba72ce43abea3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Roughness 1.jpg using Guid(c6ecdc1849fa54f5ba72ce43abea3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22cbac4462e5ae6deeafe118f351054e') in 0.004915 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_roughness 1.jpg
+  artifactKey: Guid(d59267f76287c4340aea693960cb585e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_roughness 1.jpg using Guid(d59267f76287c4340aea693960cb585e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4218b87e0dbf5cf3456df5829274f9f') in 0.005222 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/yellow_dossier_plastic_surface_roughness.jpg
+  artifactKey: Guid(34701a0b35fb240e98d340986df361d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/yellow_dossier_plastic_surface_roughness.jpg using Guid(34701a0b35fb240e98d340986df361d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e37db024ba7aeca8c0fa74f0c91e9293') in 0.006412 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal 1.jpg
+  artifactKey: Guid(1a9e3b47996924eca8f25c1e9f37db1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal 1.jpg using Guid(1a9e3b47996924eca8f25c1e9f37db1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064b3072109b568d8eeb074cefbf7f90') in 0.005245 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 119.594153 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Normal.jpg
+  artifactKey: Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Normal.jpg using Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b899f91bb2f280348d0c15dddcc54e91') in 0.048049 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal.jpg
+  artifactKey: Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal.jpg using Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '406033180135def69eb3d767fcbd8f69') in 0.008346 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 69.414183 seconds.
+  path: Assets/Cricket/STADIUM NEW/Fat Grass.mat
+  artifactKey: Guid(e3b62a02e88f84d96b3bdc081cb1cd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Fat Grass.mat using Guid(e3b62a02e88f84d96b3bdc081cb1cd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b861f45de8acc8b93763e519944600b') in 0.319856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Cricket/STADIUM NEW/Yellow Dossier Plastic Surface.mat
+  artifactKey: Guid(76e0cb75603694581b31cf9626a1f684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Yellow Dossier Plastic Surface.mat using Guid(76e0cb75603694581b31cf9626a1f684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beab4c22018748a0c3ec91308a307df7') in 0.009374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Cricket/STADIUM NEW/Material.001.mat
+  artifactKey: Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Material.001.mat using Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90f40dfef9aca424c1d291ff5c06fc84') in 0.005815 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Cricket/STADIUM NEW/Printed plastic.mat
+  artifactKey: Guid(b82a08149e17645139d14d04ece14503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Printed plastic.mat using Guid(b82a08149e17645139d14d04ece14503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33e21b18981aa59a88f5e5335f2edda8') in 0.005695 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Cricket/STADIUM NEW/Piano Finish.mat
+  artifactKey: Guid(9a312e4f80a704cab91695f16429200d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Piano Finish.mat using Guid(9a312e4f80a704cab91695f16429200d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38a1c1ee91072de1e4396d5f55194d0') in 0.005379 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Cricket/STADIUM NEW/Glass.mat
+  artifactKey: Guid(91c51243bc99d469ea0706a786690763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Glass.mat using Guid(91c51243bc99d469ea0706a786690763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666747d4c996b5f49dae3e6d07666bad') in 0.006400 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Cricket/STADIUM NEW/Steel round brushed.mat
+  artifactKey: Guid(d8b4d14ce7cc848a79a441cb0bbd32d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Steel round brushed.mat using Guid(d8b4d14ce7cc848a79a441cb0bbd32d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a60549b35dafa2df5cf696b4ff964a6') in 0.006786 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Cricket/STADIUM NEW/White Wall Paint.mat
+  artifactKey: Guid(0611a5501cbf54ea8aa89e84c40c807c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/White Wall Paint.mat using Guid(0611a5501cbf54ea8aa89e84c40c807c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b10242824708bf5a95fa757770454f') in 0.006637 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Cricket/STADIUM NEW/Plastic Blue 16.mat
+  artifactKey: Guid(a8e05ef7b31b24ba0a4f19fc50ba64d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Plastic Blue 16.mat using Guid(a8e05ef7b31b24ba0a4f19fc50ba64d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ed5ae620cae4b767c259db57062d12') in 0.007473 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Cricket/STADIUM NEW/Stone Wall.mat
+  artifactKey: Guid(71c524266d05e4b039d4ad0557c23e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Stone Wall.mat using Guid(71c524266d05e4b039d4ad0557c23e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ff4cfe4be201948a878818230d54f7') in 0.005024 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 149.218224 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Fonts/Anton.ttf
+  artifactKey: Guid(997a43b767814dd0a7642ec9b78cba41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Fonts/Anton.ttf using Guid(997a43b767814dd0a7642ec9b78cba41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6269e025ffa866bb4a712a6e3aa85eca') in 0.056324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.955128 seconds.
+  path: Assets/Cricket/CricketTextures/NewPitch.mat
+  artifactKey: Guid(ad46e2ae9a53348a8b39e1337b12892d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/CricketTextures/NewPitch.mat using Guid(ad46e2ae9a53348a8b39e1337b12892d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86852bb8f7011c95d10a5a7079d9d535') in 0.006546 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Cricket/Prefabs/Textures/newsky.mat
+  artifactKey: Guid(a647e0da0212b4626ad318d8b7fcfd1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Prefabs/Textures/newsky.mat using Guid(a647e0da0212b4626ad318d8b7fcfd1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a78d8851cb68b9699009be1c6dfddd6a') in 0.035736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 608.296387 seconds.
+  path: Assets/Cricket/STADIUM NEW/Material.001.mat
+  artifactKey: Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Material.001.mat using Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92b2e6124f374fa3dc5a0c4bbe59dbd') in 0.026679 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
+  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd51a538c5d5d906887f5e9b1d2663d') in 0.982644 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1439
+========================================================================
+Received Import Request.
+  Time since last request: 171.927484 seconds.
+  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
+  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baccbaa9b5234edb3158ae8fdcd85190') in 0.490054 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1439
+========================================================================
+Received Import Request.
+  Time since last request: 384.801892 seconds.
+  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg
+  artifactKey: Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg using Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b668c652c0b6ed4a0bec66b892f425aa') in 0.045050 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
+  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b979efcad85e4d1de5056efd03b5e76f') in 0.639313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1439

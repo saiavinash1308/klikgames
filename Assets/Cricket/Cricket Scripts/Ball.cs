@@ -15,6 +15,8 @@ public class Ball : MonoBehaviour
     public static Action onBallMissed;
     public static Action onStumpsHit;
     public static Action onBallCaught;
+    private bool isFade;
+    private float trailduration=0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,15 +75,33 @@ public class Ball : MonoBehaviour
         if(other.gameObject.tag=="Missed")
         {
             Destroy(this.gameObject, 1f);
+            StartCoroutine(FadeBall());
             DetectBallMiss();
         }
+
+    }
+
+    private IEnumerator FadeBall()
+    {
+        isFade = true;
+        float startTime = Time.time;
+        float initialTime = this.transform.GetChild(0).GetComponent<TrailRenderer>().time;
+        while(Time.time-startTime<trailduration)
+        {
+          this.transform.GetChild(0).GetComponent<TrailRenderer>().time = Mathf.Lerp(initialTime, 0f, (Time.time - startTime) / trailduration);
+            yield return null; 
+        }
+
+        // Ensure that the trail time is set to 0 when fade-out completes
+       this.transform.GetChild(0).GetComponent<TrailRenderer>().time = 0f;
+        isFade = false;
 
     }
 
 
     private void DetectFieldGround()
     {
-        float bounceForce = Random.Range(0, 2f);
+        float bounceForce = Random.Range(1f, 3f);
         rb.AddForce(Vector3.up * bounceForce, ForceMode.Impulse);       // bounce for pitch
         if (!istouchbat)         // Ball is touching field
         {

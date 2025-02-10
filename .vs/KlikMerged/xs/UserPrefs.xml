@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{294AAB73-4ECA-7398-DB39-65C0877F9F63}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Sign Up/SignUpController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cricket/Cricket Scripts/Network/CricNetManager.cs">
     <Files>
       <File FileName="Assets/Cricket/Cricket Scripts/BatsmanPlayer.cs" Line="325" Column="27" />
       <File FileName="Assets/Classic Ludo/Scripts/Yellow.cs" />
@@ -17,14 +17,23 @@
       <File FileName="Assets/Script/OTP/OTPManager.cs" />
       <File FileName="Assets/WithdrawPayment.cs" />
       <File FileName="Assets/FooterScript.cs" />
-      <File FileName="Assets/SocketManager.cs" Line="1383" Column="49" />
-      <File FileName="Assets/Script/Sign Up/SignUpController.cs" Line="69" Column="10" />
+      <File FileName="Assets/SocketManager.cs" />
+      <File FileName="Assets/Script/Sign Up/SignUpController.cs" Line="75" Column="43" />
+      <File FileName="Assets/Cricket/Cricket Scripts/Ball.cs" Line="19" Column="37" />
+      <File FileName="Assets/Cricket/Cricket Scripts/Network/CricNetManager.cs" Line="26" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="KlikMerged" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Cricket" expanded="True">
+                <Node name="Cricket Scripts" expanded="True">
+                  <Node name="Network" expanded="True">
+                    <Node name="CricNetManager.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
               <Node name="Script" expanded="True">
                 <Node name="Sign Up" expanded="True" />
               </Node>
@@ -36,7 +45,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fedf9941-a2da-4090-94ba-96bb00de15d0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fb112380-6b45-44cd-82a0-ab24b863555a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
