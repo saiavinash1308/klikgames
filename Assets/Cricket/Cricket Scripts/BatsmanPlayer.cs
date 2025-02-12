@@ -84,6 +84,7 @@ public class BatsmanPlayer : MonoBehaviour
         batstate = BatState.moving;
         BowlPlayer.OnThrownBall += ThrownBallCallback;
         BowlController.OnStartNextBall += Restart;
+        AIBowl.OnThrownBall += ThrownBallCallback;
         initialCamPosition = batcam.transform.position;
         Canvas canvas = swiperect.GetComponentInParent<Canvas>();
         canvas.worldCamera = Camera.main;
@@ -98,6 +99,7 @@ public class BatsmanPlayer : MonoBehaviour
     {
         BowlPlayer.OnThrownBall -= ThrownBallCallback;
         BowlController.OnStartNextBall -= Restart;
+        AIBowl.OnThrownBall -= ThrownBallCallback;
     }
 
     // Update is called once per frame
@@ -273,7 +275,14 @@ public class BatsmanPlayer : MonoBehaviour
             predictedX = transform.position.x + (adjustedValue * movespeed * Time.deltaTime);
             if (!isIdle)
             {
-                socketmanager.EmitEvent("MOVE_BATSMAN", predictedX.ToString()); // Only send predictedX
+                if (socketmanager.isUsebots)
+                {
+                 MoveBatsman2(predictedX);
+                }
+                else if (!socketmanager.isUsebots)
+                {
+                    socketmanager.EmitEvent("MOVE_BATSMAN", predictedX.ToString()); // Only send predictedX
+                }
             }
         }
 
@@ -289,9 +298,15 @@ public class BatsmanPlayer : MonoBehaviour
             // When no movement, ensure Idle is played immediately
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
             {
-                isIdle = true;
-                socketmanager.EmitEvent("CRICKET_IDLE", "");
-                anim.Play("Idle");
+                if (socketmanager.isUsebots)
+                {
+                    isIdle = true;
+                    anim.Play("Idle");
+                }
+                else if(!socketmanager.isUsebots)
+                {
+                    socketmanager.EmitEvent("CRICKET_IDLE", "");
+                }
             }
         }
     }
@@ -426,9 +441,18 @@ public class BatsmanPlayer : MonoBehaviour
     public void HittingBat()
     {
         //Hit event batsman
+        if (!socketmanager.isUsebots)
+        {
+            socketmanager.EmitEvent("BATSMAN_HIT", "");
+        }
 
-        socketmanager.EmitEvent("BATSMAN_HIT", "");
-
+        else if(socketmanager.isUsebots)
+        {
+            Debug.LogError("HittingBat method triggered");
+            batstate = BatState.hitting;
+            anim.Play("Hit");
+            StartCoroutine(ResetBatting());
+        }
     }
 
     public void HittingBatFromSocket()
@@ -462,7 +486,16 @@ public class BatsmanPlayer : MonoBehaviour
     }
     private void Restart()
     {
-        socketmanager.EmitEvent("RESET_BATSMAN", "");
+        if (!socketmanager.isUsebots)
+        {
+            socketmanager.EmitEvent("RESET_BATSMAN", "");
+        }
+        else if(socketmanager.isUsebots)
+        {
+            Debug.Log("Setting batsman to idle");
+            batstate = BatState.moving;
+            anim.Play("Idle");
+        }
     }
 
     public void ResetBatsmanFromSocket()

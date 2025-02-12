@@ -16,13 +16,16 @@ public class InitGame : MonoBehaviour
     public BatController batcontroller;
     public BowlController bowlcontroller;
     public CricNetManager cricnetmanager;
+    public SocketManager socketmanager;
     public GameObject PopUp;
+
+
     // Start is called before the first frame update
     void Start()
     {
         cricnetmanager = GameObject.FindObjectOfType<CricNetManager>();
+        socketmanager = GameObject.FindObjectOfType<SocketManager>();
         StartCoroutine(ShowText());
-
     }
     public void EnablePopUp()
     {
@@ -61,14 +64,24 @@ public class InitGame : MonoBehaviour
         Debug.LogError("CricNetManager.Instance is null!");
         yield break;
     }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         MainThreadDispatcher.Enqueue(() =>
         {
             Debug.Log("Handling player turn for socketId on the main thread.");
             cricnetmanager.Player1Text = DispPlayer1Text;
-            cricnetmanager.Player2Text = DispPlayer2Text;
             cricnetmanager.DisplayPlayer1Text();
-            cricnetmanager.DisplayPlayer2Text();
+
+            if (!socketmanager.isUsebots)
+            {
+                cricnetmanager.Player2Text = DispPlayer2Text;
+                cricnetmanager.DisplayPlayer2Text();
+            }
+            else if(socketmanager.isUsebots)        // Using bots
+            {
+                cricnetmanager.Player2Text.text = "Alan";
+                cricnetmanager.Player2Text = DispPlayer2Text;
+
+            }
             cricnetmanager.FindObjects();
             ActivatePanels();
             ActivateScripts();
@@ -83,6 +96,7 @@ public class InitGame : MonoBehaviour
 
     public void QuitRoom()
     {
+        socketmanager.isUsebots = false;
         SceneManager.LoadScene("Home");
     }
 

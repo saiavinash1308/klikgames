@@ -1,174 +1,3 @@
-//using System;
-//using UnityEngine;
-//using UnityEngine.UI;
-//using SocketIOClient;
-//using SocketIOClient.Newtonsoft.Json;
-//using System.Collections;
-//using UnityEngine.SceneManagement;
-
-//public class SocketManager : MonoBehaviour
-//{
-//    public static SocketManager Instance { get; private set; }
-//    public SocketIOUnity socket;
-//    public Text statusText;
-//    internal bool isConnected = false;
-//    private bool hasEmittedAddUser = false;
-
-//    public GM gm;
-//    public GM gm;
-
-//    private void Awake()
-//    {
-//        if (Instance == null)
-//        {
-//            Instance = this;
-//            DontDestroyOnLoad(gameObject);
-//            InitializeSocket();
-
-
-//        }
-//        else
-//        {
-//            Destroy(gameObject);
-//        }
-//    }
-//    private void Update()
-//    {
-//        gm = FindObjectOfType<GM>();
-//        if (gm != null)
-//        {
-//            Debug.Log("GM found: " + gm.name);
-//        }
-//        else
-//        {
-//            Debug.LogWarning("GM instance not found. Ensure there's a GM object in the scene.");
-//        }
-//    }
-//    private IEnumerator EmitAddUserEventWhenConnected()
-//    {
-//        while (!isConnected)
-//        {
-//            yield return null; // Wait until connected
-//        }
-
-//        string authToken = PlayerPrefs.GetString("AuthToken", null);
-//        if (!string.IsNullOrEmpty(authToken) && !hasEmittedAddUser)
-//        {
-//            Debug.Log("AuthToken: " + authToken);
-//            EmitEvent("ADD_USER", authToken);
-//            hasEmittedAddUser = true; // Emit only once
-//        }
-//    }
-
-//    private void Start()
-//    {
-//        StartCoroutine(EmitAddUserEventWhenConnected());
-//    }
-
-//    internal void InitializeSocket()
-//    {
-//        var url = "http://localhost:3000/";
-//        var uri = new Uri(url);
-//        socket = new SocketIOUnity(uri, new SocketIOOptions
-//        {
-//            EIO = 4,
-//            Transport = SocketIOClient.Transport.TransportProtocol.WebSocket
-//        });
-//        socket.JsonSerializer = new NewtonsoftJsonSerializer();
-
-//        socket.OnConnected += OnConnected;
-//        //socket.OnDisconnected += OnDisconnected; // Register for disconnection
-
-//        Debug.Log("Connecting to server...");
-//        socket.Connect();
-//    }
-
-//    internal void OnConnected(object sender, EventArgs e)
-//    {
-//        isConnected = true;
-//        Debug.Log("Connected to server.");
-//        AddListeners();
-
-//        // Emit ADD_USER event here if needed
-//        EmitAddUserIfNecessary();
-//    }
-
-//    private void EmitAddUserIfNecessary()
-//    {
-//        string authToken = PlayerPrefs.GetString("AuthToken", null);
-//        if (!string.IsNullOrEmpty(authToken) && !hasEmittedAddUser)
-//        {
-//            Debug.Log("AuthToken: " + authToken);
-//            EmitEvent("ADD_USER", authToken);
-//            hasEmittedAddUser = true; // Ensure it only emits once
-//        }
-//    }
-
-//    private void OnDisconnected(object sender, EventArgs e)
-//    {
-//        isConnected = false;
-//        Debug.Log("Disconnected from server.");
-//        hasEmittedAddUser = false; // Reset flag on disconnection
-//    }
-
-//    internal void EmitEvent(string eventName, string data)
-//    {
-//        if (isConnected)
-//        {
-//            socket.Emit(eventName, data);
-//        }
-//        else
-//        {
-//            Debug.LogWarning("Attempted to emit event while disconnected.");
-//        }
-//    }
-
-//    internal void AddListeners()
-//    {
-//        socket.On("START_GAME", GameStarted);
-//        socket.On("CURRENT_TURN", OnPlayerTurn);
-//    }
-
-//    public void GameStarted(SocketIOResponse res)
-//    {
-//        Debug.Log("Game Started");
-//        string responseData = res.GetValue<string>();
-//        Debug.Log("Game Started: " + responseData);
-
-//        // Save the response data in PlayerPrefs
-//        PlayerPrefs.SetString("GameStartResponse", responseData);
-//        PlayerPrefs.Save(); // Ensure to save the PlayerPrefs
-
-//        // Load the desired scene
-//        SceneManager.LoadScene("classicludo");
-//    }
-
-//    public void OnPlayerTurn(SocketIOResponse res)
-//    {
-
-//            string currentUser = res.GetValue<string>();
-//            Debug.Log("Received Player Turn for: " + currentUser);
-
-//            if (gm == null)
-//            {
-//                  gm = GM.Instance;
-//            }
-
-//            // Use gm reference
-//            gm.HandlePlayerTurn(currentUser);
-//    }
-
-
-
-//    private void OnDestroy()
-//    {
-//        if (socket != null)
-//        {
-//            socket.Disconnect();
-//            socket.Dispose();
-//        }
-//    }
-//}
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -206,7 +35,7 @@ public class SocketManager : MonoBehaviour
     private GameObject returnpanel;
 
     private float prizePool;
-
+    public bool isUsebots;
     private void Awake()
     {
         if (Instance == null)
@@ -340,21 +169,27 @@ public class SocketManager : MonoBehaviour
 
     public void onMatchMakingFailed(SocketIOResponse res)
     {
-        string message = res.GetValue<string>();
-        Debug.LogWarning("Quit Room");
+        isUsebots = true;
         MainThreadDispatcher.Enqueue(() =>
         {
-            returnpanel = GameObject.FindGameObjectWithTag("ReturnPanel");
-            if (returnpanel == null)
-            {
-                returnpanel = GameObject.FindGameObjectWithTag("ReturnPanel"); // if you need to handle search differently
-                                                                               // or use
-                returnpanel = GameObject.FindObjectsOfType<GameObject>(true)
-                                          .FirstOrDefault(obj => obj.CompareTag("ReturnPanel"));
-            }
-            returnpanel.SetActive(true);
-            Invoke("ReturnHome", 2f);
+            gamecontroller.PlayButton();
         });
+        //string message = res.GetValue<string>();
+        //Debug.LogWarning("Quit Room");
+        //MainThreadDispatcher.Enqueue(() =>
+        //{
+        //    returnpanel = GameObject.FindGameObjectWithTag("ReturnPanel");
+        //    if (returnpanel == null)
+        //    {
+        //        returnpanel = GameObject.FindGameObjectWithTag("ReturnPanel"); // if you need to handle search differently
+        //                                                                       // or use
+        //        returnpanel = GameObject.FindObjectsOfType<GameObject>(true)
+        //                                  .FirstOrDefault(obj => obj.CompareTag("ReturnPanel"));
+        //    }
+        //    returnpanel.SetActive(true);
+        //    Invoke("ReturnHome", 2f);
+        //});
+
     }
 
     public void OnStopSearch(SocketIOResponse res)

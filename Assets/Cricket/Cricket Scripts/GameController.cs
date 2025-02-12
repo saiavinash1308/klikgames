@@ -76,9 +76,20 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
-        if (firststate == GameMode.Batsman)
+        if (!socketmanager.isUsebots)
         {
-            SceneManager.LoadScene("PLAYER1BAT");  //PLAYER1BAT
+            if (firststate == GameMode.Batsman)
+            {
+                SceneManager.LoadScene("PLAYER1BAT");  //PLAYER1BAT
+            }
+        }
+
+        else if(socketmanager.isUsebots)
+        {
+            if(firststate==GameMode.Batsman)
+            {
+                SceneManager.LoadScene("BAT_AI");
+            }
         }
     }
 
@@ -100,16 +111,33 @@ public class GameController : MonoBehaviour
 
     public void StartNextMode()
     {
-        if (firststate == GameMode.Bowler)
+        if (!socketmanager.isUsebots)
         {
-            gamemode = GameMode.Batsman;
-            SceneManager.LoadScene("PLAYER1BAT");  //PLAYER1BAT
-        }
+            if (firststate == GameMode.Bowler)
+            {
+                gamemode = GameMode.Batsman;
+                SceneManager.LoadScene("PLAYER1BAT");  //PLAYER1BAT
+            }
 
-        else
+            else
+            {
+                gamemode = GameMode.Bowler;
+                SceneManager.LoadScene("PLAYER2BAT");   //PLAYER2BAT
+            }
+        }
+        else if(socketmanager.isUsebots)
         {
-            gamemode = GameMode.Bowler;
-            SceneManager.LoadScene("PLAYER2BAT");   //PLAYER2BAT
+            if (firststate == GameMode.Bowler)
+            {
+                gamemode = GameMode.Batsman;
+                SceneManager.LoadScene("BAT_AI");  //PLAYER1BAT
+            }
+
+            else
+            {
+                gamemode = GameMode.Bowler;
+                SceneManager.LoadScene("BOWL_AI");   //PLAYER2BAT
+            }
         }
     }
 
@@ -143,7 +171,7 @@ public class GameController : MonoBehaviour
     public void NextButton()
     {
         SetGameMode(GameMode.Menu);
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Home");
     }
 
     public int GetPlayer1Score()

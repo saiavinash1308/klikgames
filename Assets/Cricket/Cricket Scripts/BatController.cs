@@ -128,12 +128,12 @@ public class BatController : MonoBehaviour
 
     public void BallMissed()
     {
-        PlayBall(Vector3.zero);
+        PlayBall(Vector3.zero);     // ball missed bat
     }
 
     public void BallCaught()
     {
-        Debug.Log("Wicket");
+        Debug.Log("ball caught");    // catch
         currentBall = 2;
         PlayBall(Vector3.zero);
         StartCoroutine(OpenWicketPanel());

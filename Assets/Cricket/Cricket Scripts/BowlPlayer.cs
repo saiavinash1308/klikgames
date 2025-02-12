@@ -48,7 +48,18 @@ public class BowlPlayer : MonoBehaviour
 
     private void Restart()
     {
-        socketmanager.EmitEvent("RESET_BOWLER", "");   
+        if (socketmanager.isUsebots)
+        {
+            bowlmode = BowlMode.Idle;
+            transform.position = initialpos;
+            cricball.SetActive(true);
+            anim.SetInteger("BowlState", 0);
+            anim.Play("Idle");
+        }
+        else
+        {
+            socketmanager.EmitEvent("RESET_BOWLER", "");
+        }
     }
 
     public void RestartFromSocket()
@@ -91,7 +102,17 @@ public class BowlPlayer : MonoBehaviour
 
     public void StartRun(float bowlspeed)
     {
-        socketmanager.EmitEvent("BOWLER_RUN", bowlspeed.ToString());
+        if (!socketmanager.isUsebots)
+        {
+            socketmanager.EmitEvent("BOWLER_RUN", bowlspeed.ToString());
+        }
+        else if(socketmanager.isUsebots)
+        {
+            runtime = 0;
+            this.bowlingspeed = bowlspeed;
+            bowlmode = BowlMode.Running;
+            anim.SetInteger("BowlState", 1);
+        }
     }
 
     public void StartRunFromSocket(float bowlspeed)

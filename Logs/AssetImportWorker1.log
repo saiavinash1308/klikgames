@@ -22,7 +22,7 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-49306
+49330
 Successfully changed project path to: /Users/sonu/Desktop/KlikMerged
 /Users/sonu/Desktop/KlikMerged
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -56,12 +56,12 @@ Successfully changed project path to: /Users/sonu/Desktop/KlikMerged
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8739639808] Host "[IP] 192.168.29.113 [Port] 0 [Flags] 2 [Guid] 1590907076 [EditorId] 1590907076 [Version] 1048832 [Id] OSXEditor(0,sorabhs-Mac-mini.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [8770060800] Host "[IP] 192.168.29.113 [Port] 0 [Flags] 2 [Guid] 3278489817 [EditorId] 3278489817 [Version] 1048832 [Id] OSXEditor(0,sorabhs-Mac-mini.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [8739639808] Host "[IP] 192.168.29.113 [Port] 0 [Flags] 2 [Guid] 1590907076 [EditorId] 1590907076 [Version] 1048832 [Id] OSXEditor(0,sorabhs-Mac-mini.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8770060800] Host "[IP] 192.168.29.113 [Port] 0 [Flags] 2 [Guid] 3278489817 [EditorId] 3278489817 [Version] 1048832 [Id] OSXEditor(0,sorabhs-Mac-mini.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 9 workers.
-Refreshing native plugins compatible for Editor in 23.50 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 22.75 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.9f1 (ea401c316338)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -76,31 +76,20 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56380
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56757
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.003236 seconds.
+Registered in 0.002620 seconds.
 - Loaded All Assemblies, in  0.423 seconds
 Native extension for Android target not found
-InvalidOperationException: Cannot process request because the process (1283) has exited.
-  at System.Diagnostics.Process.GetProcessHandle (System.Int32 access, System.Boolean throwIfExited) [0x0004e] in <7b6d8d819f484934aae999cadeaf7aa9>:0 
-  at System.Diagnostics.Process.GetProcessHandle (System.Int32 access) [0x00000] in <7b6d8d819f484934aae999cadeaf7aa9>:0 
-  at System.Diagnostics.Process.Kill () [0x00002] in <7b6d8d819f484934aae999cadeaf7aa9>:0 
-  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process.Kill()
-  at UnityEditor.Android.AndroidDeploymentTargetsExtension.GetKnownTargets (UnityEditor.DeploymentTargets.IDeploymentTargetsMainThreadContext context, UnityEditor.ProgressHandler progressHandler) [0x0014a] in <950249aad035483681d10b4c9c3c20d4>:0 
-  at UnityEditor.Android.TargetScanWorker.ScanSync () [0x00039] in <950249aad035483681d10b4c9c3c20d4>:0 
-  at UnityEditor.Android.TargetExtension.OnUsbDevicesChanged (UnityEditor.Hardware.UsbDevice[] usbDevices) [0x00081] in <950249aad035483681d10b4c9c3c20d4>:0 
-  at UnityEditor.Android.TargetExtension.OnLoad () [0x000ad] in <950249aad035483681d10b4c9c3c20d4>:0 
-  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in /Users/bokken/build/output/unity/unity/Editor/Mono/Modules/ModuleManager.cs:147 
-
-(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/Modules/ModuleManager.cs Line: 147)
-
+Android Extension - Scanning For ADB Devices 185 ms
+Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.925 seconds
-Domain Reload Profiling: 1349ms
-	BeginReloadAssembly (178ms)
+- Finished resetting the current domain, in  0.994 seconds
+Domain Reload Profiling: 1418ms
+	BeginReloadAssembly (161ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
@@ -108,26 +97,26 @@ Domain Reload Profiling: 1349ms
 		CreateAndSetChildDomain (2ms)
 	RebuildCommonClasses (26ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (95ms)
-	LoadAllAssembliesAndSetupDomain (116ms)
-		LoadAssemblies (176ms)
+	initialDomainReloadingComplete (107ms)
+	LoadAllAssembliesAndSetupDomain (120ms)
+		LoadAssemblies (160ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (112ms)
-			TypeCache.Refresh (110ms)
-				TypeCache.ScanAssembly (99ms)
+		AnalyzeDomain (117ms)
+			TypeCache.Refresh (115ms)
+				TypeCache.ScanAssembly (105ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (926ms)
+	FinalizeReload (995ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (835ms)
+		SetupLoadedEditorAssemblies (903ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (454ms)
-			SetLoadedEditorAssemblies (9ms)
+			InitializePlatformSupportModulesInManaged (495ms)
+			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (7ms)
-			ProcessInitializeOnLoadAttributes (233ms)
-			ProcessInitializeOnLoadMethodAttributes (133ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (252ms)
+			ProcessInitializeOnLoadMethodAttributes (142ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -136,8 +125,8 @@ Domain Reload Profiling: 1349ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.929 seconds
-Refreshing native plugins compatible for Editor in 1.91 ms, found 5 plugins.
+- Loaded All Assemblies, in  0.906 seconds
+Refreshing native plugins compatible for Editor in 1.88 ms, found 5 plugins.
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Package Manager log level set to [2]
@@ -145,48 +134,48 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.577 seconds
-Domain Reload Profiling: 2502ms
-	BeginReloadAssembly (229ms)
+- Finished resetting the current domain, in  1.640 seconds
+Domain Reload Profiling: 2548ms
+	BeginReloadAssembly (224ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (31ms)
+		DisableScriptedObjects (29ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (24ms)
+		CreateAndSetChildDomain (23ms)
 	RebuildCommonClasses (24ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (80ms)
-	LoadAllAssembliesAndSetupDomain (582ms)
-		LoadAssemblies (430ms)
+	initialDomainReloadingComplete (88ms)
+	LoadAllAssembliesAndSetupDomain (563ms)
+		LoadAssemblies (422ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (257ms)
-			TypeCache.Refresh (194ms)
-				TypeCache.ScanAssembly (174ms)
-			ScanForSourceGeneratedMonoScriptInfo (37ms)
+		AnalyzeDomain (247ms)
+			TypeCache.Refresh (185ms)
+				TypeCache.ScanAssembly (167ms)
+			ScanForSourceGeneratedMonoScriptInfo (36ms)
 			ResolveRequiredComponents (26ms)
-	FinalizeReload (1579ms)
+	FinalizeReload (1641ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1253ms)
+		SetupLoadedEditorAssemblies (1316ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (68ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (59ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (95ms)
-			ProcessInitializeOnLoadAttributes (927ms)
-			ProcessInitializeOnLoadMethodAttributes (156ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (968ms)
+			ProcessInitializeOnLoadMethodAttributes (184ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
 Launching external process: /Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.07 seconds
-Refreshing native plugins compatible for Editor in 2.26 ms, found 5 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.86 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5769 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 104 unused Assets / (499.8 KB). Loaded Objects now: 6208.
-Memory consumption went from 231.2 MB to 230.7 MB.
-Total: 3.276625 ms (FindLiveObjects: 0.259167 ms CreateObjectMapping: 0.099375 ms MarkObjects: 2.656916 ms  DeleteObjects: 0.260167 ms)
+Memory consumption went from 231.5 MB to 231.0 MB.
+Total: 2.948500 ms (FindLiveObjects: 0.249500 ms CreateObjectMapping: 0.094625 ms MarkObjects: 2.356708 ms  DeleteObjects: 0.246792 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -203,393 +192,1729 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 3539.898045 seconds.
-  path: Assets/Cricket/Prefabs/Ground.png
-  artifactKey: Guid(cee38b7de3c3543d8aae5645a6456f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/Prefabs/Ground.png using Guid(cee38b7de3c3543d8aae5645a6456f92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03eb50c0cc7928eb20292e5311eda44a') in 0.184541 seconds
+  Time since last request: 1240.512126 seconds.
+  path: Assets/Cricket/Cricket Scenes/Batsman.unity
+  artifactKey: Guid(013b8cfad87c404448338c5541e20b7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Cricket Scenes/Batsman.unity using Guid(013b8cfad87c404448338c5541e20b7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ac67587f3f89904fc7a64f10a7ad8c') in 0.004638 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Cricket/Prefabs/Pitch.png
-  artifactKey: Guid(7024830a9d2f04e61ab0f52a2b2ea0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/Prefabs/Pitch.png using Guid(7024830a9d2f04e61ab0f52a2b2ea0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65881939a773c07291780056260d25e0') in 0.012193 seconds
+  Time since last request: 67.026304 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - Drop Shadow.mat
+  artifactKey: Guid(b246c4190f4e46ec9352fe15a7b09ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - Drop Shadow.mat using Guid(b246c4190f4e46ec9352fe15a7b09ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c3fe9c31274afe994bd691e6b4eca7') in 0.689224 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000075 seconds.
-  path: Assets/Cricket/Prefabs/batsmen 6.fbx
-  artifactKey: Guid(3379b048c90e14e258b0ce6883d67f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/Prefabs/batsmen 6.fbx using Guid(3379b048c90e14e258b0ce6883d67f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98408fce46c079efcb7325b7c42ab558') in 1.342449 seconds
+  Time since last request: 142.112160 seconds.
+  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
+  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89d93651ead52400680c051806a3038a') in 0.749351 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 750
+Number of asset objects unloaded after import = 1439
 ========================================================================
 Received Import Request.
-  Time since last request: 237.011160 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/4K-brick_wall_1-displacement.jpg
+  Time since last request: 2.805924 seconds.
+  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
+  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f8358939b3c6c02d4d189ea5831c4ce') in 0.407433 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1439
+========================================================================
+Received Import Request.
+  Time since last request: 916.979005 seconds.
+  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
+  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '155e38c0354eb7f364e7b4c6c5536786') in 0.443600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1439
+========================================================================
+Received Import Request.
+  Time since last request: 9.107788 seconds.
+  path: Assets/Cricket/STADIUM NEW/Plastic Blue 16.mat
+  artifactKey: Guid(a8e05ef7b31b24ba0a4f19fc50ba64d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Plastic Blue 16.mat using Guid(a8e05ef7b31b24ba0a4f19fc50ba64d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '999607cf68a144e836fcc0915297828c') in 0.023141 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 53.179361 seconds.
+  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
+  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c3f886310754849ebfe767b70302e0') in 0.445960 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1439
+========================================================================
+Received Import Request.
+  Time since last request: 68.766604 seconds.
+  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg
   artifactKey: Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/4K-brick_wall_1-displacement.jpg using Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dccba949ede9d83edde4c4b1ecec5b2') in 0.069315 seconds
+Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg using Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64ca952fd42248b895e29ec5fc7558d6') in 0.033594 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Roughness.jpg
+  Time since last request: 0.000034 seconds.
+  path: Assets/Cricket/STADIUM NEW/DefaultMaterial_Roughness.jpg
   artifactKey: Guid(9dd303e4398d4405fa86758982c5578a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Roughness.jpg using Guid(9dd303e4398d4405fa86758982c5578a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46bc14335f3fb4f3c60d140efc380a5') in 0.007071 seconds
+Start importing Assets/Cricket/STADIUM NEW/DefaultMaterial_Roughness.jpg using Guid(9dd303e4398d4405fa86758982c5578a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d79147c645e677f62a04020a235f0a') in 0.005643 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_color.jpg
+  Time since last request: 0.000070 seconds.
+  path: Assets/Cricket/STADIUM NEW/painted_plaster_wall_17_color.jpg
   artifactKey: Guid(ac937e0b2e3464487951db927f22ae49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_color.jpg using Guid(ac937e0b2e3464487951db927f22ae49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '950abc18c1c0609cf24b2628dbcc178f') in 0.008416 seconds
+Start importing Assets/Cricket/STADIUM NEW/painted_plaster_wall_17_color.jpg using Guid(ac937e0b2e3464487951db927f22ae49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca49021c5d7db058f87266a77eb2e63d') in 0.004919 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000693 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal.jpg
-  artifactKey: Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal.jpg using Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd7b02f12e00397d764b99db6062cdf') in 0.007593 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/VideoCapture_20240102-222518.jpg
-  artifactKey: Guid(5d15e862c43c64afaa49167d498ac545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/VideoCapture_20240102-222518.jpg using Guid(5d15e862c43c64afaa49167d498ac545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18bba1a84d7c0339609f2173dcafba2a') in 0.005295 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000129 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_normal.jpg
-  artifactKey: Guid(2c179b470079a449b818aac090966caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_normal.jpg using Guid(2c179b470079a449b818aac090966caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72518edd176a9e540f1928a40a1cb5af') in 0.006554 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000067 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Displacement.jpg
-  artifactKey: Guid(707e4385d07f74666938dbd2b9d4f3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Displacement.jpg using Guid(707e4385d07f74666938dbd2b9d4f3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b0a4dc79b09a15e722f888cf75b8a5') in 0.005556 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_diff_4k.jpg
-  artifactKey: Guid(8515436ff75bd4f95873f1097b9b0585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_diff_4k.jpg using Guid(8515436ff75bd4f95873f1097b9b0585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24c0d5605eacb98491408222c8d3ba44') in 0.006743 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000080 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Normal.jpg
-  artifactKey: Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Normal.jpg using Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c788f0926ed683620c95b99e6dc49b') in 0.006714 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_metallic.jpg
-  artifactKey: Guid(0ed197a4db0e64939807370941ab6dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_metallic.jpg using Guid(0ed197a4db0e64939807370941ab6dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf8ee0801fa8db221a969ee39bdb77f1') in 0.005097 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000106 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_roughness.jpg
-  artifactKey: Guid(969aaa626fd054a92b26141b68459a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/painted_plaster_wall_17_roughness.jpg using Guid(969aaa626fd054a92b26141b68459a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845c7f69ca0272da83e82942ca486391') in 0.007616 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000089 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_disp_4k.jpg
-  artifactKey: Guid(fabd04ee05ccd4cfda1ab66d3dc46659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_disp_4k.jpg using Guid(fabd04ee05ccd4cfda1ab66d3dc46659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed499d69bb9eece1054440568cfdc749') in 0.007300 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_rough_4k.jpg
-  artifactKey: Guid(b38efc813ce8d4a73a3f25976c3f6d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/large_floor_tiles_02_rough_4k.jpg using Guid(b38efc813ce8d4a73a3f25976c3f6d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2642ae497c53e56e420d95b6ccaa8f49') in 0.006806 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 45.207096 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Fat Grass.mat
-  artifactKey: Guid(576a04eb5f1b447a9aaf1941ec96e08a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Fat Grass.mat using Guid(576a04eb5f1b447a9aaf1941ec96e08a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c577f017151ddf423e8bbf09e13c1a46') in 0.019813 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Printed plastic.mat
-  artifactKey: Guid(95fd462293d7142088513e2d76d3746d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Printed plastic.mat using Guid(95fd462293d7142088513e2d76d3746d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43bfc505a95fdd3e1b8a77b1f7ff7a37') in 0.006083 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Material.001.mat
-  artifactKey: Guid(1f3e41cf5584144b084aab889ee1b5cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Material.001.mat using Guid(1f3e41cf5584144b084aab889ee1b5cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd497607737ef00893f2332b727cd1a') in 0.006137 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Yellow Dossier Plastic Surface.mat
-  artifactKey: Guid(e184ad08cc9dd4f3c829909590bc7066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Yellow Dossier Plastic Surface.mat using Guid(e184ad08cc9dd4f3c829909590bc7066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '033d46bc6ebda96e9cc97b853b3dff75') in 0.006332 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Glass.mat
-  artifactKey: Guid(9d94358ac9ff64d7cbd3d5ad34af4750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Glass.mat using Guid(9d94358ac9ff64d7cbd3d5ad34af4750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9385c71860897442e257926464bb29d3') in 0.005576 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 60.320016 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Normal 1.jpg
-  artifactKey: Guid(5130fb6eed4fb433cabb5bd8ebb6844e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Normal 1.jpg using Guid(5130fb6eed4fb433cabb5bd8ebb6844e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ff20fcb0788213d79f8b135c62067e7') in 0.016211 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000098 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Pared_Verde_Esmeralda_roughness.jpg
-  artifactKey: Guid(e28d8cbf750fc413c90c22c5392a5915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Pared_Verde_Esmeralda_roughness.jpg using Guid(e28d8cbf750fc413c90c22c5392a5915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d4788dc111653e0461f780c9a544d83') in 0.007082 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000121 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_metallic 1.jpg
-  artifactKey: Guid(185ce9c877e5f42469f1c757925feac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_metallic 1.jpg using Guid(185ce9c877e5f42469f1c757925feac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11aba7d9eee3b75978368d32c9cf852') in 0.004831 seconds
+  Time since last request: 0.000039 seconds.
+  path: Assets/Cricket/STADIUM NEW/yellow_dossier_plastic_surface_color.jpg
+  artifactKey: Guid(38b64d0785c2443f08919577a6dbf36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/yellow_dossier_plastic_surface_color.jpg using Guid(38b64d0785c2443f08919577a6dbf36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45d559496076891f3780c8378c84b5b9') in 0.005199 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000104 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/plastic-smudge-smoothness copy.jpg
-  artifactKey: Guid(84e9769350b894c25826089eac4bbc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/plastic-smudge-smoothness copy.jpg using Guid(84e9769350b894c25826089eac4bbc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd751b6a7fe7ef161607f7cfb75a6063c') in 0.005461 seconds
+  path: Assets/Cricket/STADIUM NEW/Material.001.mat
+  artifactKey: Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Material.001.mat using Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef35025a85074a2bf517fffcc7fb4309') in 0.008200 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Cricket/STADIUM NEW/Pared_Verde_Esmeralda_roughness.jpg
+  artifactKey: Guid(e28d8cbf750fc413c90c22c5392a5915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Pared_Verde_Esmeralda_roughness.jpg using Guid(e28d8cbf750fc413c90c22c5392a5915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f608c0bceea61d51ecf3d9a90ea1ddc2') in 0.005305 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Roughness 1.jpg
-  artifactKey: Guid(c6ecdc1849fa54f5ba72ce43abea3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/Concrete wall_Roughness 1.jpg using Guid(c6ecdc1849fa54f5ba72ce43abea3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22cbac4462e5ae6deeafe118f351054e') in 0.004915 seconds
+  Time since last request: 0.000084 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_roughness.jpg
+  artifactKey: Guid(7343221c341ea4f76a1aec5715deb076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_roughness.jpg using Guid(7343221c341ea4f76a1aec5715deb076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e30a860d5d1e0df0be2a72ea3c9944') in 0.005163 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_roughness 1.jpg
-  artifactKey: Guid(d59267f76287c4340aea693960cb585e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_roughness 1.jpg using Guid(d59267f76287c4340aea693960cb585e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4218b87e0dbf5cf3456df5829274f9f') in 0.005222 seconds
+  Time since last request: 0.000085 seconds.
+  path: Assets/Cricket/STADIUM NEW/painted_plaster_wall_17_normal.jpg
+  artifactKey: Guid(2c179b470079a449b818aac090966caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/painted_plaster_wall_17_normal.jpg using Guid(2c179b470079a449b818aac090966caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e12e5edbec72cfaaed172b9956782b6a') in 0.005046 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000079 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/yellow_dossier_plastic_surface_roughness.jpg
-  artifactKey: Guid(34701a0b35fb240e98d340986df361d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/yellow_dossier_plastic_surface_roughness.jpg using Guid(34701a0b35fb240e98d340986df361d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e37db024ba7aeca8c0fa74f0c91e9293') in 0.006412 seconds
+  Time since last request: 0.000063 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_diffuseOriginal.png
+  artifactKey: Guid(741310fbeda5c4c428318d05ccf61ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_diffuseOriginal.png using Guid(741310fbeda5c4c428318d05ccf61ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea62e5d0f0e08425447059d9493b6678') in 0.005672 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_Displacement.jpg
+  artifactKey: Guid(707e4385d07f74666938dbd2b9d4f3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_Displacement.jpg using Guid(707e4385d07f74666938dbd2b9d4f3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97124014851045a4dff3e822c1b050ab') in 0.005036 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_specular 1.jpg
+  artifactKey: Guid(392e76cee98a94728bab05062d1c96ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_specular 1.jpg using Guid(392e76cee98a94728bab05062d1c96ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01a51229b65b446b4c477c5d68fa41dc') in 0.004965 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000048 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal 1.jpg
-  artifactKey: Guid(1a9e3b47996924eca8f25c1e9f37db1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal 1.jpg using Guid(1a9e3b47996924eca8f25c1e9f37db1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064b3072109b568d8eeb074cefbf7f90') in 0.005245 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 119.594153 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Normal.jpg
-  artifactKey: Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/DefaultMaterial_Normal.jpg using Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b899f91bb2f280348d0c15dddcc54e91') in 0.048049 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal.jpg
-  artifactKey: Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stadium new textures/pasto01_normal.jpg using Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '406033180135def69eb3d767fcbd8f69') in 0.008346 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 69.414183 seconds.
-  path: Assets/Cricket/STADIUM NEW/Fat Grass.mat
-  artifactKey: Guid(e3b62a02e88f84d96b3bdc081cb1cd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Fat Grass.mat using Guid(e3b62a02e88f84d96b3bdc081cb1cd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b861f45de8acc8b93763e519944600b') in 0.319856 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000117 seconds.
-  path: Assets/Cricket/STADIUM NEW/Yellow Dossier Plastic Surface.mat
-  artifactKey: Guid(76e0cb75603694581b31cf9626a1f684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Yellow Dossier Plastic Surface.mat using Guid(76e0cb75603694581b31cf9626a1f684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beab4c22018748a0c3ec91308a307df7') in 0.009374 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/Cricket/STADIUM NEW/Material.001.mat
-  artifactKey: Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Material.001.mat using Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90f40dfef9aca424c1d291ff5c06fc84') in 0.005815 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000088 seconds.
-  path: Assets/Cricket/STADIUM NEW/Printed plastic.mat
-  artifactKey: Guid(b82a08149e17645139d14d04ece14503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Printed plastic.mat using Guid(b82a08149e17645139d14d04ece14503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33e21b18981aa59a88f5e5335f2edda8') in 0.005695 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000113 seconds.
-  path: Assets/Cricket/STADIUM NEW/Piano Finish.mat
-  artifactKey: Guid(9a312e4f80a704cab91695f16429200d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Piano Finish.mat using Guid(9a312e4f80a704cab91695f16429200d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38a1c1ee91072de1e4396d5f55194d0') in 0.005379 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
   path: Assets/Cricket/STADIUM NEW/Glass.mat
   artifactKey: Guid(91c51243bc99d469ea0706a786690763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Glass.mat using Guid(91c51243bc99d469ea0706a786690763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666747d4c996b5f49dae3e6d07666bad') in 0.006400 seconds
+Start importing Assets/Cricket/STADIUM NEW/Glass.mat using Guid(91c51243bc99d469ea0706a786690763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90b18b0bc2aeebf36fbe7d46c6fb641f') in 0.005514 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Cricket/STADIUM NEW/Steel round brushed.mat
-  artifactKey: Guid(d8b4d14ce7cc848a79a441cb0bbd32d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Steel round brushed.mat using Guid(d8b4d14ce7cc848a79a441cb0bbd32d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a60549b35dafa2df5cf696b4ff964a6') in 0.006786 seconds
+  Time since last request: 0.000048 seconds.
+  path: Assets/Cricket/STADIUM NEW/DefaultMaterial_Normal 1.jpg
+  artifactKey: Guid(d4235745567d24b6fa530c1b32d876e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/DefaultMaterial_Normal 1.jpg using Guid(d4235745567d24b6fa530c1b32d876e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f308e4258792b82249d56282fde23334') in 0.005268 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000125 seconds.
+  Time since last request: 0.000057 seconds.
   path: Assets/Cricket/STADIUM NEW/White Wall Paint.mat
   artifactKey: Guid(0611a5501cbf54ea8aa89e84c40c807c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/White Wall Paint.mat using Guid(0611a5501cbf54ea8aa89e84c40c807c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b10242824708bf5a95fa757770454f') in 0.006637 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Cricket/STADIUM NEW/Plastic Blue 16.mat
-  artifactKey: Guid(a8e05ef7b31b24ba0a4f19fc50ba64d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Plastic Blue 16.mat using Guid(a8e05ef7b31b24ba0a4f19fc50ba64d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ed5ae620cae4b767c259db57062d12') in 0.007473 seconds
+Start importing Assets/Cricket/STADIUM NEW/White Wall Paint.mat using Guid(0611a5501cbf54ea8aa89e84c40c807c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87f62a8ba0b9c9c66107667baeafe908') in 0.006651 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000043 seconds.
-  path: Assets/Cricket/STADIUM NEW/Stone Wall.mat
-  artifactKey: Guid(71c524266d05e4b039d4ad0557c23e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Stone Wall.mat using Guid(71c524266d05e4b039d4ad0557c23e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ff4cfe4be201948a878818230d54f7') in 0.005024 seconds
+  path: Assets/Cricket/STADIUM NEW/pasto01_roughness 1.jpg
+  artifactKey: Guid(d59267f76287c4340aea693960cb585e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_roughness 1.jpg using Guid(d59267f76287c4340aea693960cb585e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c40a1e98cac6884441705a61e40c6d8') in 0.004767 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 149.218224 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Fonts/Anton.ttf
-  artifactKey: Guid(997a43b767814dd0a7642ec9b78cba41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Fonts/Anton.ttf using Guid(997a43b767814dd0a7642ec9b78cba41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6269e025ffa866bb4a712a6e3aa85eca') in 0.056324 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.955128 seconds.
-  path: Assets/Cricket/CricketTextures/NewPitch.mat
-  artifactKey: Guid(ad46e2ae9a53348a8b39e1337b12892d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/CricketTextures/NewPitch.mat using Guid(ad46e2ae9a53348a8b39e1337b12892d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86852bb8f7011c95d10a5a7079d9d535') in 0.006546 seconds
+  Time since last request: 0.000064 seconds.
+  path: Assets/Cricket/STADIUM NEW/large_floor_tiles_02_nor_4k.jpg
+  artifactKey: Guid(9c713ca3b846c4b8cb270cf40c920881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/large_floor_tiles_02_nor_4k.jpg using Guid(9c713ca3b846c4b8cb270cf40c920881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac7496231d072b4d996bc2b4d8b3b2e0') in 0.004259 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000066 seconds.
-  path: Assets/Cricket/Prefabs/Textures/newsky.mat
-  artifactKey: Guid(a647e0da0212b4626ad318d8b7fcfd1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/Prefabs/Textures/newsky.mat using Guid(a647e0da0212b4626ad318d8b7fcfd1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a78d8851cb68b9699009be1c6dfddd6a') in 0.035736 seconds
+  Time since last request: 0.000100 seconds.
+  path: Assets/Cricket/STADIUM NEW/yellow_dossier_plastic_surface_roughness.jpg
+  artifactKey: Guid(34701a0b35fb240e98d340986df361d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/yellow_dossier_plastic_surface_roughness.jpg using Guid(34701a0b35fb240e98d340986df361d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aeab22fa70ee9807862448db4c13102') in 0.004418 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 608.296387 seconds.
-  path: Assets/Cricket/STADIUM NEW/Material.001.mat
-  artifactKey: Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/Material.001.mat using Guid(b7b1b855196e145e8b4e5b72e346057b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92b2e6124f374fa3dc5a0c4bbe59dbd') in 0.026679 seconds
+  Time since last request: 0.000085 seconds.
+  path: Assets/Cricket/STADIUM NEW/large_floor_tiles_02_disp_4k.jpg
+  artifactKey: Guid(fabd04ee05ccd4cfda1ab66d3dc46659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/large_floor_tiles_02_disp_4k.jpg using Guid(fabd04ee05ccd4cfda1ab66d3dc46659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b23278213f178566d2ae585e2468622') in 0.004529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-specular.jpg
+  artifactKey: Guid(bab5544da225546d9b88d265f2ec200f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-specular.jpg using Guid(bab5544da225546d9b88d265f2ec200f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bde371337c07e750a574bca4b4f66252') in 0.004303 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Cricket/STADIUM NEW/Plastic Blue 16.mat
+  artifactKey: Guid(a8e05ef7b31b24ba0a4f19fc50ba64d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Plastic Blue 16.mat using Guid(a8e05ef7b31b24ba0a4f19fc50ba64d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0e5bd10df0619c5c703dea69d18b29b') in 0.006473 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
-  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd51a538c5d5d906887f5e9b1d2663d') in 0.982644 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1439
-========================================================================
-Received Import Request.
-  Time since last request: 171.927484 seconds.
-  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
-  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baccbaa9b5234edb3158ae8fdcd85190') in 0.490054 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1439
-========================================================================
-Received Import Request.
-  Time since last request: 384.801892 seconds.
-  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg
-  artifactKey: Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg using Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b668c652c0b6ed4a0bec66b892f425aa') in 0.045050 seconds
+  Time since last request: 0.000038 seconds.
+  path: Assets/Cricket/STADIUM NEW/painted_plaster_wall_17_height.jpg
+  artifactKey: Guid(f4ba32fcd2a914f548665f951d3bf40f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/painted_plaster_wall_17_height.jpg using Guid(f4ba32fcd2a914f548665f951d3bf40f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74fc06502ee3961fe66342e9decba590') in 0.004250 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000082 seconds.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-normal.jpg
+  artifactKey: Guid(d025a58a380a540de9e78c3849bca009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-normal.jpg using Guid(d025a58a380a540de9e78c3849bca009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca8b464fa375d68d93e0a94515ca88d3') in 0.005539 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_Normal 1.jpg
+  artifactKey: Guid(5130fb6eed4fb433cabb5bd8ebb6844e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_Normal 1.jpg using Guid(5130fb6eed4fb433cabb5bd8ebb6844e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a3bb03121b3a63a94f4fed3c921da25') in 0.004926 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Cricket/STADIUM NEW/Yellow Dossier Plastic Surface.mat
+  artifactKey: Guid(76e0cb75603694581b31cf9626a1f684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Yellow Dossier Plastic Surface.mat using Guid(76e0cb75603694581b31cf9626a1f684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '589abb31cb9c709c705903337f9fc687') in 0.006545 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_normal.jpg
+  artifactKey: Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_normal.jpg using Guid(11e86e576d8084748b943caa7ab399d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02227224a9445b247fdcc7029cfb8b36') in 0.048789 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Cricket/STADIUM NEW/Fat Grass.mat
+  artifactKey: Guid(e3b62a02e88f84d96b3bdc081cb1cd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Fat Grass.mat using Guid(e3b62a02e88f84d96b3bdc081cb1cd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2b554011cf82ee4acf1851305524f57') in 0.006974 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Cricket/STADIUM NEW/plastic-texture-normal-1.jpg
+  artifactKey: Guid(910accefcb8db47f082b4622faa1dc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/plastic-texture-normal-1.jpg using Guid(910accefcb8db47f082b4622faa1dc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fcd3280da1fe63ba226b6ad78a9cc71') in 0.004856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Cricket/STADIUM NEW/plastic-smudge-smoothness copy.jpg
+  artifactKey: Guid(84e9769350b894c25826089eac4bbc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/plastic-smudge-smoothness copy.jpg using Guid(84e9769350b894c25826089eac4bbc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46be1f04933fbab963decd42a72bbbaa') in 0.004109 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_specular.jpg
+  artifactKey: Guid(84e7a9e1a95f3437aaf0d32ef06afd2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_specular.jpg using Guid(84e7a9e1a95f3437aaf0d32ef06afd2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b36bd8c9e07bc09d8896cb1bf885cbc9') in 0.004987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Cricket/STADIUM NEW/large_floor_tiles_02_diff_4k.jpg
+  artifactKey: Guid(8515436ff75bd4f95873f1097b9b0585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/large_floor_tiles_02_diff_4k.jpg using Guid(8515436ff75bd4f95873f1097b9b0585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2611c21087095a131957755b0f87b07b') in 0.004477 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_BaseColor 1.jpg
+  artifactKey: Guid(9ef2367a431cd45d391ba16bfde10e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_BaseColor 1.jpg using Guid(9ef2367a431cd45d391ba16bfde10e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d2b4b23530d7485c9d440f447308048') in 0.004642 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_Roughness 1.jpg
+  artifactKey: Guid(c6ecdc1849fa54f5ba72ce43abea3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_Roughness 1.jpg using Guid(c6ecdc1849fa54f5ba72ce43abea3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ef369d4a06eedacfe6b7524250cd97') in 0.004344 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_Roughness.jpg
+  artifactKey: Guid(ee74860c4dc8849f0806bab5ee52e238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_Roughness.jpg using Guid(ee74860c4dc8849f0806bab5ee52e238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfda95dbcab85a9cefc3909ed63b08e0') in 0.004886 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Cricket/STADIUM NEW/DefaultMaterial_Normal.jpg
+  artifactKey: Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/DefaultMaterial_Normal.jpg using Guid(e6658217d8d724465ac374fffa143ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '197fbe9574df65bdc2384b5f2f9a5a69') in 0.004569 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Cricket/STADIUM NEW/Steel round brushed.mat
+  artifactKey: Guid(d8b4d14ce7cc848a79a441cb0bbd32d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Steel round brushed.mat using Guid(d8b4d14ce7cc848a79a441cb0bbd32d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8985fe9b814c85d343dad6c5b5b058b9') in 0.006142 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Cricket/STADIUM NEW/Pared_Verde_Esmeralda_normal.jpg
+  artifactKey: Guid(69296c492e4624170a7f10019b398d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Pared_Verde_Esmeralda_normal.jpg using Guid(69296c492e4624170a7f10019b398d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9e1a983c19d47b9020cb32dd73b2311') in 0.004830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Cricket/STADIUM NEW/Metal01_roughness_xtm.jpg
+  artifactKey: Guid(5ed0df25b18ae4949a104f685a6ba3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Metal01_roughness_xtm.jpg using Guid(5ed0df25b18ae4949a104f685a6ba3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0196131070b7b73bd5b17344401884a0') in 0.004506 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_metallic.jpg
+  artifactKey: Guid(0ed197a4db0e64939807370941ab6dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_metallic.jpg using Guid(0ed197a4db0e64939807370941ab6dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '396bb3540479d5cf30d89d5dde8695ea') in 0.004585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Cricket/STADIUM NEW/Hi-Res Metal Radial-Brushed 2000.A2jpg.jpg
+  artifactKey: Guid(413dd0c9f14d745a88d751729dd93ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Hi-Res Metal Radial-Brushed 2000.A2jpg.jpg using Guid(413dd0c9f14d745a88d751729dd93ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67359263b449cd1eccfe98eb65029839') in 0.004631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Cricket/STADIUM NEW/painted_plaster_wall_17_roughness.jpg
+  artifactKey: Guid(969aaa626fd054a92b26141b68459a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/painted_plaster_wall_17_roughness.jpg using Guid(969aaa626fd054a92b26141b68459a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7612f116a7a08176785fc90f6a1e340a') in 0.004448 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_diffuseOriginal 1.png
+  artifactKey: Guid(2eeed3ea5305941358532b9cea68e830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_diffuseOriginal 1.png using Guid(2eeed3ea5305941358532b9cea68e830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d3d728fb587a67292b385189ce3162a') in 0.005158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_Normal.jpg
+  artifactKey: Guid(7cff7f90ff44045d59140e331f3636e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_Normal.jpg using Guid(7cff7f90ff44045d59140e331f3636e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb27a7c856c46c4b882809a010e8cdbc') in 0.004853 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 219.649736 seconds.
+  path: Assets/Cricket/STADIUM NEW/DefaultMaterial_Normal 1.jpg
+  artifactKey: Guid(d4235745567d24b6fa530c1b32d876e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/DefaultMaterial_Normal 1.jpg using Guid(d4235745567d24b6fa530c1b32d876e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c53a66b9075dbe20da46fa18353e9246') in 0.020645 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Cricket/STADIUM NEW/DefaultMaterial_Roughness.jpg
+  artifactKey: Guid(9dd303e4398d4405fa86758982c5578a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/DefaultMaterial_Roughness.jpg using Guid(9dd303e4398d4405fa86758982c5578a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6684fd83bc45efa7adfaf2fbd64b9ddc') in 0.019311 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
   path: Assets/Cricket/STADIUM NEW/stadium new.fbx
   artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b979efcad85e4d1de5056efd03b5e76f') in 0.639313 seconds
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cc9b223120103ff33f313a1d0b8463e') in 0.756535 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1439
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_height.jpg
+  artifactKey: Guid(b23e5a7fa0ade469ab90e21300ea5d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_height.jpg using Guid(b23e5a7fa0ade469ab90e21300ea5d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '562e1dacc4a57fb756cd34fba911d532') in 0.022094 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Cricket/STADIUM NEW/pasto01_diffuseOriginal 1.png
+  artifactKey: Guid(2eeed3ea5305941358532b9cea68e830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/pasto01_diffuseOriginal 1.png using Guid(2eeed3ea5305941358532b9cea68e830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2419607d786e58761b9f1db3730b67c0') in 0.017460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.948592 seconds.
+  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg
+  artifactKey: Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg using Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3d4872460939773bf660b7ddeedda2') in 0.022793 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall.mat
+  artifactKey: Guid(d636fd9c85119474b961e7680405cfb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall.mat using Guid(d636fd9c85119474b961e7680405cfb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d0cd87bdfcd5023cc930934ff41a70') in 0.046578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-normal.jpg
+  artifactKey: Guid(d025a58a380a540de9e78c3849bca009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-normal.jpg using Guid(d025a58a380a540de9e78c3849bca009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc567034d736209307ce684585dad8c1') in 0.016633 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_BaseColor 1.jpg
+  artifactKey: Guid(9ef2367a431cd45d391ba16bfde10e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_BaseColor 1.jpg using Guid(9ef2367a431cd45d391ba16bfde10e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8ebbb62afa24b8b8e1b0370e56a03c') in 0.017834 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_Roughness.jpg
+  artifactKey: Guid(ee74860c4dc8849f0806bab5ee52e238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_Roughness.jpg using Guid(ee74860c4dc8849f0806bab5ee52e238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4f6a1a3f1f955bb5a458d293f8278ab') in 0.017291 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 229.749677 seconds.
+  path: Assets/Cricket/STADIUM NEW/DefaultMaterial_Normal 1.jpg
+  artifactKey: Guid(d4235745567d24b6fa530c1b32d876e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/DefaultMaterial_Normal 1.jpg using Guid(d4235745567d24b6fa530c1b32d876e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6ae5c68ef634173b92fad97d7eb219') in 0.029419 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Cricket/STADIUM NEW/stadium new.fbx
+  artifactKey: Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/stadium new.fbx using Guid(03fd4622a7aee4eec8e3d9b4752302d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe356b935b325263d7785cbc4be45518') in 0.685519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1439
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Cricket/STADIUM NEW/large_floor_tiles_02_rough_4k.jpg
+  artifactKey: Guid(b38efc813ce8d4a73a3f25976c3f6d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/large_floor_tiles_02_rough_4k.jpg using Guid(b38efc813ce8d4a73a3f25976c3f6d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f1a1c8572af08c6175bc9bcc1db000') in 0.015869 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 434.780105 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_Normal.jpg
+  artifactKey: Guid(7cff7f90ff44045d59140e331f3636e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_Normal.jpg using Guid(7cff7f90ff44045d59140e331f3636e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8eae3c55c71872c8a4d81a6ca91bec9') in 0.022333 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_Roughness 1.jpg
+  artifactKey: Guid(c6ecdc1849fa54f5ba72ce43abea3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_Roughness 1.jpg using Guid(c6ecdc1849fa54f5ba72ce43abea3277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4a3ef559f7144a3539291c5cd4f1e2e') in 0.018795 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 775.378038 seconds.
+  path: Assets/Cricket/STADIUM NEW/Yellow Dossier Plastic Surface.mat
+  artifactKey: Guid(76e0cb75603694581b31cf9626a1f684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Yellow Dossier Plastic Surface.mat using Guid(76e0cb75603694581b31cf9626a1f684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4db35e871cf1d6fe41b0936a81d6568') in 0.453158 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 2.140692 seconds.
+  path: Assets/Cricket/STADIUM NEW/Printed plastic.mat
+  artifactKey: Guid(b82a08149e17645139d14d04ece14503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Printed plastic.mat using Guid(b82a08149e17645139d14d04ece14503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1385e085aba5bdee7dc8c5a9ba29f5') in 0.009946 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.354078 seconds.
+  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg
+  artifactKey: Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-displacement.jpg using Guid(f5808308af39e4fd6836d561b94ece6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df82d11322790e43457c2b64ae654466') in 0.028590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_BaseColor.jpg
+  artifactKey: Guid(a2b1a746152ab4d2d9c88f0c68d976c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_BaseColor.jpg using Guid(a2b1a746152ab4d2d9c88f0c68d976c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af0db44434c1a474acedc15f6b27696a') in 0.014415 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Cricket/STADIUM NEW/4K-brick_wall_1-specular.jpg
+  artifactKey: Guid(bab5544da225546d9b88d265f2ec200f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/4K-brick_wall_1-specular.jpg using Guid(bab5544da225546d9b88d265f2ec200f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71bf9c9286625bdd64efaa7d4113bfb7') in 0.016829 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Cricket/STADIUM NEW/Concrete wall_BaseColor 1.jpg
+  artifactKey: Guid(9ef2367a431cd45d391ba16bfde10e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/STADIUM NEW/Concrete wall_BaseColor 1.jpg using Guid(9ef2367a431cd45d391ba16bfde10e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cc80e2a6acf8d36a613405cd3b1f566') in 0.017291 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 75.478188 seconds.
+  path: Assets/Cricket/Textures/grass.png
+  artifactKey: Guid(0ab8e2068ce274130b6d70d92d258aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Textures/grass.png using Guid(0ab8e2068ce274130b6d70d92d258aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f8cec160928d86e40227909d2c695a') in 0.056902 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Cricket/Textures/hair2.jpg
+  artifactKey: Guid(bf5877e942ad945c29335f48fc2dba43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Textures/hair2.jpg using Guid(bf5877e942ad945c29335f48fc2dba43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c73af768f65f75ac8865d0570bb2bb5') in 0.006555 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.779 seconds
+Refreshing native plugins compatible for Editor in 2.17 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.227 seconds
+Domain Reload Profiling: 3008ms
+	BeginReloadAssembly (331ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (41ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (112ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (358ms)
+		LoadAssemblies (419ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (61ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (19ms)
+			ResolveRequiredComponents (29ms)
+	FinalizeReload (2228ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1322ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (999ms)
+			ProcessInitializeOnLoadMethodAttributes (157ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+Refreshing native plugins compatible for Editor in 6.43 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (476.8 KB). Loaded Objects now: 6311.
+Memory consumption went from 205.6 MB to 205.1 MB.
+Total: 2.943708 ms (FindLiveObjects: 0.485833 ms CreateObjectMapping: 0.084750 ms MarkObjects: 2.191708 ms  DeleteObjects: 0.181000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.755 seconds
+Refreshing native plugins compatible for Editor in 2.02 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.261 seconds
+Domain Reload Profiling: 3017ms
+	BeginReloadAssembly (310ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (22ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (98ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (355ms)
+		LoadAssemblies (437ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (58ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (18ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2262ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1304ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (59ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (972ms)
+			ProcessInitializeOnLoadMethodAttributes (160ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 2.43 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (476.9 KB). Loaded Objects now: 6327.
+Memory consumption went from 209.5 MB to 209.0 MB.
+Total: 2.579416 ms (FindLiveObjects: 0.315042 ms CreateObjectMapping: 0.128125 ms MarkObjects: 1.977584 ms  DeleteObjects: 0.158084 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 6672.288436 seconds.
+  path: Assets/NewUI/Rainbow_colors__stripes__lines__1080x2160_wallpaper-removebg-preview.png
+  artifactKey: Guid(72fce9241cdd8e148b5507a710da1bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NewUI/Rainbow_colors__stripes__lines__1080x2160_wallpaper-removebg-preview.png using Guid(72fce9241cdd8e148b5507a710da1bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969f7e7eeee6e79afc4a581bb0e68c49') in 0.175516 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1220.108773 seconds.
+  path: Assets/Cricket/HamzaKhan/Textures/CricketBowler/BodyNormal.png
+  artifactKey: Guid(41b49be0ebfc54cec83de8dd715fcb97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/HamzaKhan/Textures/CricketBowler/BodyNormal.png using Guid(41b49be0ebfc54cec83de8dd715fcb97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0491c636aef7951aa7eb871bb112884a') in 0.038805 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/Cricket/Sounds/Bounce.wav
+  artifactKey: Guid(206683667eeb843df8b78c5b394d67aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Sounds/Bounce.wav using Guid(206683667eeb843df8b78c5b394d67aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70a4dbcc6e2f23272c7d52086f2cd6d5') in 0.107349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1744.003738 seconds.
+  path: Assets/Game ui/FinalUI/fast Ludo logo.png
+  artifactKey: Guid(37f6ab1864d74e64f8b822e980101fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game ui/FinalUI/fast Ludo logo.png using Guid(37f6ab1864d74e64f8b822e980101fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddcec00f5271b7b67e8a42a2a3018278') in 0.026973 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_BaseColor.jpg
+  artifactKey: Guid(d9814255aa1fc401aadc27ae0b7532a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_BaseColor.jpg using Guid(d9814255aa1fc401aadc27ae0b7532a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef9f3e9198520590d9991a88bae8bbb0') in 0.011840 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_BaseColor 1.jpg
+  artifactKey: Guid(ddff2bfeed2f045d6ac4cd93b22d4d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_BaseColor 1.jpg using Guid(ddff2bfeed2f045d6ac4cd93b22d4d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '135a14690eb203947cfbe058b485a513') in 0.007647 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_BaseColor 2.jpg
+  artifactKey: Guid(0cbd210ae2f484d7086114d333b5f50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_BaseColor 2.jpg using Guid(0cbd210ae2f484d7086114d333b5f50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a707d6dd9b05692f2123b270d0e12213') in 0.011105 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_Roughness.jpg
+  artifactKey: Guid(a3e18f63b28894390b93d396b5a7d06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_Roughness.jpg using Guid(a3e18f63b28894390b93d396b5a7d06a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '044813565016a0bf3f72baac61526324') in 0.007557 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_Normal 2.jpg
+  artifactKey: Guid(277e216744e324403a708a11a451a130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Stadium/Stadium Textures/GWC_Masonry_Stone_04_Normal 2.jpg using Guid(277e216744e324403a708a11a451a130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7960f1f961180e2516e419ff66bda8d1') in 0.006582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.719 seconds
+Refreshing native plugins compatible for Editor in 2.00 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.236 seconds
+Domain Reload Profiling: 2957ms
+	BeginReloadAssembly (282ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (29ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (88ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (349ms)
+		LoadAssemblies (399ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (68ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (23ms)
+			ResolveRequiredComponents (33ms)
+	FinalizeReload (2238ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1340ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (55ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (1013ms)
+			ProcessInitializeOnLoadMethodAttributes (168ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Refreshing native plugins compatible for Editor in 2.02 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.0 KB). Loaded Objects now: 6349.
+Memory consumption went from 214.3 MB to 213.8 MB.
+Total: 2.541542 ms (FindLiveObjects: 0.318958 ms CreateObjectMapping: 0.087084 ms MarkObjects: 1.967791 ms  DeleteObjects: 0.167167 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.731 seconds
+Refreshing native plugins compatible for Editor in 2.02 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.238 seconds
+Domain Reload Profiling: 2971ms
+	BeginReloadAssembly (261ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (29ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (79ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (375ms)
+		LoadAssemblies (422ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (59ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (19ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2239ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1322ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (55ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (104ms)
+			ProcessInitializeOnLoadAttributes (994ms)
+			ProcessInitializeOnLoadMethodAttributes (163ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+Refreshing native plugins compatible for Editor in 1.95 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.1 KB). Loaded Objects now: 6365.
+Memory consumption went from 218.2 MB to 217.7 MB.
+Total: 2.607875 ms (FindLiveObjects: 0.354375 ms CreateObjectMapping: 0.157250 ms MarkObjects: 1.945083 ms  DeleteObjects: 0.150625 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.802 seconds
+Refreshing native plugins compatible for Editor in 1.84 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.343 seconds
+Domain Reload Profiling: 3146ms
+	BeginReloadAssembly (279ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (32ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (84ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (429ms)
+		LoadAssemblies (474ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (67ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (32ms)
+	FinalizeReload (2344ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1387ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (104ms)
+			ProcessInitializeOnLoadAttributes (1049ms)
+			ProcessInitializeOnLoadMethodAttributes (171ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 5.72 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.1 KB). Loaded Objects now: 6381.
+Memory consumption went from 222.2 MB to 221.7 MB.
+Total: 3.239792 ms (FindLiveObjects: 0.513375 ms CreateObjectMapping: 0.146250 ms MarkObjects: 2.234250 ms  DeleteObjects: 0.345291 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4236.203291 seconds.
+  path: Assets/Cricket/Cricket Scripts/InitGame.cs
+  artifactKey: Guid(99c7e5b345d364e96a7729de146de3c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cricket/Cricket Scripts/InitGame.cs using Guid(99c7e5b345d364e96a7729de146de3c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f7543c544b8dd3fb3a0f62175ed4b6b') in 0.002536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.697 seconds
+Refreshing native plugins compatible for Editor in 2.11 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.174 seconds
+Domain Reload Profiling: 2872ms
+	BeginReloadAssembly (257ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (27ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (71ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (344ms)
+		LoadAssemblies (394ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (62ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (29ms)
+	FinalizeReload (2175ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1302ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (55ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (979ms)
+			ProcessInitializeOnLoadMethodAttributes (160ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Refreshing native plugins compatible for Editor in 2.09 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.0 KB). Loaded Objects now: 6397.
+Memory consumption went from 226.4 MB to 225.9 MB.
+Total: 2.528042 ms (FindLiveObjects: 0.354334 ms CreateObjectMapping: 0.080500 ms MarkObjects: 1.919500 ms  DeleteObjects: 0.173250 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.698 seconds
+Refreshing native plugins compatible for Editor in 1.78 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.251 seconds
+Domain Reload Profiling: 2950ms
+	BeginReloadAssembly (251ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (23ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (75ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (362ms)
+		LoadAssemblies (407ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (60ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (27ms)
+	FinalizeReload (2252ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1295ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (60ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (112ms)
+			ProcessInitializeOnLoadAttributes (962ms)
+			ProcessInitializeOnLoadMethodAttributes (155ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+Refreshing native plugins compatible for Editor in 2.70 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.1 KB). Loaded Objects now: 6413.
+Memory consumption went from 230.4 MB to 229.9 MB.
+Total: 2.623250 ms (FindLiveObjects: 0.326666 ms CreateObjectMapping: 0.130334 ms MarkObjects: 2.000417 ms  DeleteObjects: 0.165416 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.694 seconds
+Refreshing native plugins compatible for Editor in 3.59 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.194 seconds
+Domain Reload Profiling: 2889ms
+	BeginReloadAssembly (256ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (25ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (76ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (346ms)
+		LoadAssemblies (390ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (62ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (29ms)
+	FinalizeReload (2195ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1317ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (55ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (972ms)
+			ProcessInitializeOnLoadMethodAttributes (180ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 3.01 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (476.9 KB). Loaded Objects now: 6429.
+Memory consumption went from 234.4 MB to 233.9 MB.
+Total: 2.813125 ms (FindLiveObjects: 0.451333 ms CreateObjectMapping: 0.095541 ms MarkObjects: 2.097208 ms  DeleteObjects: 0.168250 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.764 seconds
+Refreshing native plugins compatible for Editor in 2.01 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.262 seconds
+Domain Reload Profiling: 3028ms
+	BeginReloadAssembly (284ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (23ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (85ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (391ms)
+		LoadAssemblies (455ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (62ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2263ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1346ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (58ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (104ms)
+			ProcessInitializeOnLoadAttributes (1014ms)
+			ProcessInitializeOnLoadMethodAttributes (164ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Refreshing native plugins compatible for Editor in 1.86 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.0 KB). Loaded Objects now: 6445.
+Memory consumption went from 238.4 MB to 238.0 MB.
+Total: 2.590458 ms (FindLiveObjects: 0.404791 ms CreateObjectMapping: 0.130042 ms MarkObjects: 1.899709 ms  DeleteObjects: 0.155416 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.648 seconds
+Refreshing native plugins compatible for Editor in 2.00 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.177 seconds
+Domain Reload Profiling: 2826ms
+	BeginReloadAssembly (249ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (28ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (67ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (317ms)
+		LoadAssemblies (364ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (56ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2178ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1308ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (100ms)
+			ProcessInitializeOnLoadAttributes (985ms)
+			ProcessInitializeOnLoadMethodAttributes (160ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 2.17 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.2 KB). Loaded Objects now: 6461.
+Memory consumption went from 242.5 MB to 242.0 MB.
+Total: 2.549083 ms (FindLiveObjects: 0.325000 ms CreateObjectMapping: 0.149250 ms MarkObjects: 1.915250 ms  DeleteObjects: 0.159042 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.648 seconds
+Refreshing native plugins compatible for Editor in 1.98 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.206 seconds
+Domain Reload Profiling: 2855ms
+	BeginReloadAssembly (259ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (27ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (76ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (303ms)
+		LoadAssemblies (345ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (62ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (19ms)
+			ResolveRequiredComponents (30ms)
+	FinalizeReload (2207ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1339ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (65ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (104ms)
+			ProcessInitializeOnLoadAttributes (998ms)
+			ProcessInitializeOnLoadMethodAttributes (166ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 2.08 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.1 KB). Loaded Objects now: 6477.
+Memory consumption went from 246.5 MB to 246.1 MB.
+Total: 2.535167 ms (FindLiveObjects: 0.315625 ms CreateObjectMapping: 0.091625 ms MarkObjects: 1.956125 ms  DeleteObjects: 0.171292 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.677 seconds
+Refreshing native plugins compatible for Editor in 2.03 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.231 seconds
+Domain Reload Profiling: 2910ms
+	BeginReloadAssembly (259ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (26ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (80ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (330ms)
+		LoadAssemblies (374ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (60ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (18ms)
+			ResolveRequiredComponents (30ms)
+	FinalizeReload (2232ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1340ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (70ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (102ms)
+			ProcessInitializeOnLoadAttributes (994ms)
+			ProcessInitializeOnLoadMethodAttributes (168ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 1.90 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.2 KB). Loaded Objects now: 6493.
+Memory consumption went from 250.6 MB to 250.1 MB.
+Total: 2.596416 ms (FindLiveObjects: 0.285834 ms CreateObjectMapping: 0.113000 ms MarkObjects: 2.040834 ms  DeleteObjects: 0.156125 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.677 seconds
+Refreshing native plugins compatible for Editor in 2.15 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.202 seconds
+Domain Reload Profiling: 2879ms
+	BeginReloadAssembly (255ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (23ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (75ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (335ms)
+		LoadAssemblies (381ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (62ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2203ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1308ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (67ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (962ms)
+			ProcessInitializeOnLoadMethodAttributes (166ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (42ms)
+Refreshing native plugins compatible for Editor in 1.90 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (476.9 KB). Loaded Objects now: 6509.
+Memory consumption went from 254.6 MB to 254.1 MB.
+Total: 2.609542 ms (FindLiveObjects: 0.310583 ms CreateObjectMapping: 0.098792 ms MarkObjects: 2.021458 ms  DeleteObjects: 0.178167 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.731 seconds
+Refreshing native plugins compatible for Editor in 2.21 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.242 seconds
+Domain Reload Profiling: 2974ms
+	BeginReloadAssembly (271ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (27ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (82ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (360ms)
+		LoadAssemblies (412ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (62ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (19ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2243ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1353ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (80ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (995ms)
+			ProcessInitializeOnLoadMethodAttributes (166ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+Refreshing native plugins compatible for Editor in 1.87 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.2 KB). Loaded Objects now: 6525.
+Memory consumption went from 258.6 MB to 258.2 MB.
+Total: 2.574292 ms (FindLiveObjects: 0.356500 ms CreateObjectMapping: 0.096791 ms MarkObjects: 1.942958 ms  DeleteObjects: 0.177459 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.684 seconds
+Refreshing native plugins compatible for Editor in 2.29 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.235 seconds
+Domain Reload Profiling: 2920ms
+	BeginReloadAssembly (260ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (26ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (82ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (340ms)
+		LoadAssemblies (385ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (59ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (18ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2236ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1311ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (64ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (972ms)
+			ProcessInitializeOnLoadMethodAttributes (165ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 1.77 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.2 KB). Loaded Objects now: 6541.
+Memory consumption went from 262.7 MB to 262.2 MB.
+Total: 2.594750 ms (FindLiveObjects: 0.404666 ms CreateObjectMapping: 0.132083 ms MarkObjects: 1.899750 ms  DeleteObjects: 0.157750 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.694 seconds
+Refreshing native plugins compatible for Editor in 2.05 ms, found 5 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.220 seconds
+Domain Reload Profiling: 2915ms
+	BeginReloadAssembly (256ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (25ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (77ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (351ms)
+		LoadAssemblies (398ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (61ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (20ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (2220ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1313ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (67ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (947ms)
+			ProcessInitializeOnLoadMethodAttributes (188ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 1.78 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5601 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (477.2 KB). Loaded Objects now: 6557.
+Memory consumption went from 266.7 MB to 266.2 MB.
+Total: 2.521666 ms (FindLiveObjects: 0.379791 ms CreateObjectMapping: 0.106667 ms MarkObjects: 1.875458 ms  DeleteObjects: 0.159291 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

@@ -18,7 +18,9 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         BowlPlayer.OnThrownBall += PlayBowlerSound;
+        AIBowl.OnThrownBall += PlayBowlerSound;
         BatsmanPlayer.onBallHit += PlayBatHitSound;
+        AIBat.onBallHit += PlayBatHitSound;
         Ball.onTouchGround += PlayBallHitGround;
         Ball.onStumpsHit += PlayStumpsHitSound;
     }
@@ -26,7 +28,9 @@ public class SoundManager : MonoBehaviour
     private void OnDestroy()
     {
         BowlPlayer.OnThrownBall -= PlayBowlerSound;
+        AIBowl.OnThrownBall -= PlayBowlerSound;
         BatsmanPlayer.onBallHit -= PlayBatHitSound;
+        AIBat.onBallHit -= PlayBatHitSound;
         Ball.onTouchGround -= PlayBallHitGround;
         Ball.onStumpsHit -= PlayStumpsHitSound;
     }

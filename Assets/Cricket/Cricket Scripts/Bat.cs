@@ -36,7 +36,7 @@ public class Bat : MonoBehaviour
 
         if (collision.gameObject.tag == "Ball")
         {
-            ball = collision.gameObject.GetComponent<Ball>();
+            ball = collision.gameObject.GetComponent<Ball>();   // on touching ball 
             if (ball != null)
             {
                 float random = Random.Range(-1f, 1f);
