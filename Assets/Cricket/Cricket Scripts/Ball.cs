@@ -55,6 +55,7 @@ public class Ball : MonoBehaviour
     {
         if(col.gameObject.tag=="SmallField")
         {
+            Debug.Log("ball in small field");
             StartCoroutine(DotBall());
         }
     }
@@ -101,7 +102,7 @@ public class Ball : MonoBehaviour
 
     private void DetectFieldGround()
     {
-        float bounceForce = Random.Range(1f, 3f);
+        float bounceForce = Random.Range(1f, 2.5f);
         rb.AddForce(Vector3.up * bounceForce, ForceMode.Impulse);       // bounce for pitch
         if (!istouchbat)         // Ball is touching field
         {

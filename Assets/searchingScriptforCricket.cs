@@ -16,6 +16,8 @@ public class searchingScriptforCricket : MonoBehaviour
     public GameObject PopUp;
     public Button Quit;
     public Button Cancle;
+    [SerializeField]
+    public float waitTimer;
 
     void Awake()
     {
@@ -35,11 +37,15 @@ public class searchingScriptforCricket : MonoBehaviour
         StartCoroutine(SearchAndLoadCoroutine());
     }
 
+    public void Update()
+    {
+        waitTimer -= Time.deltaTime;
+    }
+
     private IEnumerator SearchAndLoadCoroutine()
     {
         loadingImage.gameObject.SetActive(true); // Show loading image
         Loading.gameObject.SetActive(true);
-
         while (socketManager != null && socketManager.stopSearch)
         {
             loadingImage.fillAmount = Mathf.PingPong(Time.time, 1f); // Smooth fill between 0 and 1
@@ -50,7 +56,14 @@ public class searchingScriptforCricket : MonoBehaviour
         loadingImage.gameObject.SetActive(false);
         Loading.gameObject.SetActive(false);
         //  SceneManager.LoadScene("PLAYER1BAT");           // CRICKET TEST
-        gamecontroller.PlayButton();        // PLAYER1BAT OR PLAYER2BAT
+        if (waitTimer < 20)
+        {
+            gamecontroller.PlayButton();        // PLAYER1BAT OR PLAYER2BAT
+        }
+        else if(waitTimer>20)
+        {
+            socketManager.EmitEvent("MATCH_MAKING_FAILED", "");
+        }
     }
     public void StopSearching()
     {

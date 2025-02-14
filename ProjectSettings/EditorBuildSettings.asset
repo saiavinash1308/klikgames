@@ -20,33 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LudoLoadingScene.unity
     guid: c2f4274d4c37bc046879c21ac2aa96d9
-  - enabled: 0
-    path: Assets/Scenes/RightSpinBowler.unity
-    guid: c1b01b3b395c63a4fa7cb5c5c24917b4
-  - enabled: 0
-    path: Assets/Scenes/batsmanScene.unity
-    guid: 62a9f26eb9b3ab14a9365725a1f1b178
-  - enabled: 0
-    path: Assets/Scenes/CricketLoading.unity
-    guid: 144000301e64ec44c98ddd74a59d5b7e
-  - enabled: 0
-    path: Assets/Scenes/ChooseCric.unity
-    guid: e22b243c445825149b65fb56edf83f0b
   - enabled: 1
     path: Assets/Classic Ludo/Scenes/classicludo.unity
     guid: 60c02f8b4fe9abb4dbdffafb38743ec1
   - enabled: 1
     path: Assets/Scenes/LudoLoadingSceneFor2Player.unity
     guid: 0acb144f4d0b64f8d86ff83ce102a997
-  - enabled: 0
-    path: Assets/2 Players/fastludoFor2Player.unity
-    guid: c8f69a5e1e0864857b710d14071ab2bc
-  - enabled: 0
-    path: Assets/Scenes/SnakeAndLadderLoading.unity
-    guid: 55491a4f2bd3f4b8699091581603291d
-  - enabled: 0
-    path: Assets/Scenes/RummyLoading.unity
-    guid: 3792128c7dd674fffab255492aadb4d5
   - enabled: 1
     path: Assets/Scenes/ClassicLudoLoadingScene.unity
     guid: 1a11e5816a8c9403c9cc6a8430c37cb9
@@ -65,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cricket/Cricket Scenes/PLAYER2BAT.unity
     guid: 42ce9b905311b4b1cb4ade3b5dd87d1e
+  - enabled: 1
+    path: Assets/Cricket/Cricket Scenes/BAT_AI.unity
+    guid: ce6612258893d4ecf88dc292e3facfc5
+  - enabled: 1
+    path: Assets/Cricket/Cricket Scenes/BOWL_AI.unity
+    guid: 96a5ea41c94b64612bb088d44de7f653
   m_configObjects: {}

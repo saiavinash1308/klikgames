@@ -11,6 +11,9 @@ public class CricketSearchingFor2Players : MonoBehaviour
     private SocketManager socketManager;
     public GameController gamecontroller;
 
+    public float waitTimer;
+    public bool isSet = true;
+
     void Awake()
     {
         Searching = this;
@@ -29,21 +32,42 @@ public class CricketSearchingFor2Players : MonoBehaviour
         StartCoroutine(SearchAndLoadCoroutine());
     }
 
+    private void Update()
+    {
+        waitTimer += Time.deltaTime;
+        if (isSet)
+        {
+            if (waitTimer > 20f)
+            {
+                Debug.Log("Matchmaking failed. Emitting event...");
+                socketManager.EmitEvent("MATCH_MAKING_FAILED", ""); //BAT_AI OR BOWL_AI
+                isSet = false; // Stop the loop
+                isSearching = false; // Update searching state
+                socketManager.isUsebots = true;
+                gamecontroller.PlayButton();
+
+            }
+        }
+    }
+
     private IEnumerator SearchAndLoadCoroutine()
     {
         loadingImage.gameObject.SetActive(true); // Show loading image
-
         while (socketManager != null && socketManager.stopSearch)
         {
             loadingImage.fillAmount = Mathf.PingPong(Time.time, 1f); // Smooth fill between 0 and 1
-
             yield return new WaitForSeconds(2f);
         }
 
         loadingImage.gameObject.SetActive(false);
 
-        //  SceneManager.LoadScene("PLAYER1BAT");           // CRICKET TEST
-        gamecontroller.PlayButton();        // PLAYER1BAT OR PLAYER2BAT
+            if (waitTimer < 20)
+            {
+                gamecontroller.PlayButton(); // PLAYER1BAT OR PLAYER2BAT
+            }
+ 
+            yield return null; 
+        
     }
     public void StopSearching()
     {

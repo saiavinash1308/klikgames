@@ -169,6 +169,8 @@ public class SocketManager : MonoBehaviour
 
     public void onMatchMakingFailed(SocketIOResponse res)
     {
+        string message = res.GetValue<string>();
+        Debug.Log("Match Making Failed"+message);
         isUsebots = true;
         MainThreadDispatcher.Enqueue(() =>
         {

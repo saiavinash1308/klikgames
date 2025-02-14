@@ -75,9 +75,16 @@ public class ScoreManager : MonoBehaviour
         {
             playerScore += 2;       // ball is in more distance second radius
         }
+        if (!socketmanager.isUsebots)
+        {
+            socketmanager.EmitEvent("UPDATE_SCORE", playerScore.ToString());
+            isScoreUpdate = true;
+        }
 
-        socketmanager.EmitEvent("UPDATE_SCORE", playerScore.ToString());
-        isScoreUpdate = true;
+        else if(socketmanager.isUsebots)
+        {
+            UpdateScore();
+        }
         
 
         
@@ -98,6 +105,18 @@ public class ScoreManager : MonoBehaviour
         StartCoroutine(ResetDistance(waitTime));
     }
 
+    public void UpdateScore()
+    {
+        onScoreCalculated?.Invoke(playerScore);
+        scoretexts[currentball].text = playerScore.ToString();
+        currentball++;
+
+        finalScore = finalScore + playerScore;          // display final score 
+        finalscoretext.text = finalScore.ToString();
+        StartCoroutine(ResetDistance(waitTime));
+    }
+
+
 
     private IEnumerator ResetDistance(float waitsecs)
     {
@@ -109,7 +128,19 @@ public class ScoreManager : MonoBehaviour
 
     public void BallMissed()
     {
-        socketmanager.EmitEvent("UPDATE_SCORE", "0");
+        if (!socketmanager.isUsebots)
+        {
+            socketmanager.EmitEvent("UPDATE_SCORE", "0");
+        }
+        else if(socketmanager.isUsebots)
+        {
+            Debug.LogError("UPDATE_SCORE BALL MISSED");
+            scoretexts[currentball].text = "0";     // dot ball 
+            currentball++;
+            onScoreCalculated?.Invoke(0);
+            isScoreUpdate = true;
+            StartCoroutine(ResetDistance(waitTime));
+        }
     }
 
     public void BallMissedFromSocket()
@@ -124,11 +155,18 @@ public class ScoreManager : MonoBehaviour
         StartCoroutine(ResetDistance(waitTime));
     }
 
+    
+
     public void StumpsHitted()
     {
-        
-        socketmanager.EmitEvent("WICKET", "");
-
+        if (!socketmanager.isUsebots)
+        {
+            socketmanager.EmitEvent("WICKET", "");
+        }
+        else if(socketmanager.isUsebots)
+        {
+            scoretexts[currentball].text = "w";
+        }
     }
 
     public void HitStumpsFromSocket()

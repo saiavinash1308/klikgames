@@ -78,8 +78,8 @@ public class InitGame : MonoBehaviour
             }
             else if(socketmanager.isUsebots)        // Using bots
             {
-                cricnetmanager.Player2Text.text = "Alan";
-                cricnetmanager.Player2Text = DispPlayer2Text;
+           //     cricnetmanager.Player2Text.text = "Alan".ToString();
+          //      cricnetmanager.Player2Text = DispPlayer2Text;
 
             }
             cricnetmanager.FindObjects();
