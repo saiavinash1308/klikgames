@@ -18,6 +18,8 @@ public class SocketManager : MonoBehaviour
     private bool hasEmittedAddUser = false;
     [SerializeField]
     private GM LudoGameManager;
+    [SerializeField]
+    private MindMorgaGameController MindMorgaGameController;
     private RD RollingDice;
     private string roomId;
     private string socketId;
@@ -73,8 +75,8 @@ public class SocketManager : MonoBehaviour
 
     internal void InitializeSocket()
     {
-        //var url = "http://localhost:3000/";
-        var url = "https://backend-production-2509b.up.railway.app/";
+        var url = "http://localhost:3000/";
+        //var url = "https://backend-production-2509b.up.railway.app/";
         var uri = new Uri(url);
         socket = new SocketIOUnity(uri, new SocketIOOptions
         {
@@ -165,6 +167,15 @@ public class SocketManager : MonoBehaviour
         socket.On("CLASSIC_LUDO_KILL_PIECE", ClassicOnKillPiece);
         socket.On("CLASSIC_LUDO_DICE_ROLLED", ClassicOnDiceRolled);
         socket.On("CLASSIC_LUDO_WINNERS", ClassicOnWinner);
+
+        //MIND_MORGA
+
+        socket.On("START_MEMORY_GAME", MindMorgaGameStarted);
+        socket.On("MEMORY_GAME_CURRENT_TURN", MindMorgaOnPlayerTurn);
+        socket.On("OPEN_CARD", OpenCard);
+        socket.On("CLOSE_CARDS", CloseCard);
+        socket.On("CARDS_MATCHED", CardsMatched);
+        socket.On("END_GAME", EndGame);
     }
 
     public void onMatchMakingFailed(SocketIOResponse res)
@@ -905,6 +916,164 @@ public class SocketManager : MonoBehaviour
     }
 
 
+    // MIND_MORGA
+
+    public void MindMorgaGameStarted(SocketIOResponse res)
+    {
+        string responseData = res.GetValue<string>();
+        Debug.Log("Game Started Response Data: " + responseData);
+        Debug.Log("My Socket Id " + socket.Id);
+
+        GameStartData gameStartData;
+        try
+        {
+            gameStartData = JsonConvert.DeserializeObject<GameStartData>(responseData);
+            if (gameStartData == null)
+            {
+                Debug.LogError("GameStartData is null after deserialization.");
+                return;
+            }
+
+            if (gameStartData.roomId == null)
+            {
+                Debug.LogError("No roomId found");
+                return;
+            }
+
+            if (gameStartData.users == null)
+            {
+                Debug.LogError("Users array is null.");
+                return;
+            }
+            roomId = gameStartData.roomId;
+            prizePool = gameStartData.prizePool;
+            Debug.Log($"Number of users: {gameStartData.users.Length}");
+            users = new User[gameStartData.users.Length];
+            for (int i = 0; i < gameStartData.users.Length; i++)
+            {
+                Debug.Log($"User {i}: Socket ID = {gameStartData.users[i]}");
+                User user;
+                string socketId = gameStartData.users[i].socketId;
+                string username = gameStartData.users[i].username;
+                if (socket.Id != socketId)
+                {
+                    user = new User(socketId, username);
+                }
+                else
+                {
+                    user = new User(gameStartData.users[i].socketId, username, true);
+                }
+                //Debug.Log("userId " + user.userId);
+                Debug.Log("socketId " + user.socketId);
+                users[i] = user;
+                Debug.Log("User pushed to array");
+            }
+
+            MainThreadDispatcher.Enqueue(() =>
+            {
+                Debug.Log("MindMorgaGameManager " + MindMorgaGameController.Mindgame);
+                //GM.Instance.InitializePlayers(users);
+                Debug.Log("Starting player initialization...");
+                //MindMorgaGameController = GameObject.FindObjectOfType<MindMorgaGameController>();
+                MindMorgaGameController.Mindgame.InitializePlayers(users);
+                //SearchingScriptfor2Players.Searching.StopSearching();
+            });
+            //LudoGameManager.InitializePlayers(users);
+            Debug.Log("Player initialization completed.");
+            //Debug.Log("Search stopped, starting the game!");
+
+
+        }
+        catch (JsonException jsonEx)
+        {
+            Debug.LogError("JSON Parsing Error: " + jsonEx.Message);
+            return;
+        }
+
+        // Load the desired scene
+        // SceneManager.LoadScene("classicludo");
+    }
+
+    public void MindMorgaOnPlayerTurn(SocketIOResponse res)
+    {
+        string socketId = res.GetValue<string>();
+
+        // Log the event for debugging purposes
+        Debug.Log("Received Player Turn for socketId: " + socketId);
+
+
+        MainThreadDispatcher.Enqueue(() =>
+        {
+            MindMorgaGameController.Mindgame.HandlePlayerTurn(socketId);
+        });
+    }
+
+    public void OpenCard(SocketIOResponse res)
+    {
+        string cardData = res.GetValue<string>();
+        Debug.Log("Card data received: " + cardData);
+        var jsonData = JsonUtility.FromJson<OpenCardData>(cardData.ToString());
+
+        // Load and display the card
+        //OpenCard(jsonData.index, jsonData.card);
+        MainThreadDispatcher.Enqueue(() =>
+        {
+            MindMorgaGameController.Mindgame.LoadCardSprite(jsonData.index, jsonData.card);
+            Debug.Log("Card data Received");
+        });
+    }
+
+    public void CloseCard(SocketIOResponse res)
+    {
+        string cardData = res.GetValue<string>();
+        Debug.Log("Close card data received: " + cardData);
+        var jsonData = JsonUtility.FromJson<CloseCardsData>(cardData.ToString());
+        MainThreadDispatcher.Enqueue(() =>
+        {
+            MindMorgaGameController.Mindgame.CloseCardSprite(jsonData.index1, jsonData.index2);
+            Debug.Log("Closing card data Received");
+        });
+    }
+
+    public void CardsMatched(SocketIOResponse res)
+    {
+        string cardData = res.GetValue<string>();
+        Debug.Log("Card matched data received: " + cardData);
+        var jsonData = JsonUtility.FromJson<MatchCardsData>(cardData.ToString());
+        MainThreadDispatcher.Enqueue(() =>
+        {
+            MindMorgaGameController.Mindgame.DisableMatchedCards(jsonData.index1, jsonData.index2);
+            Debug.Log("Match card data Received");
+        });
+    }
+
+    public void EndGame(SocketIOResponse res)
+    {
+        string cardData = res.GetValue<string>();
+        Debug.Log("Card matched data received: " + cardData);
+    }
+
+    [System.Serializable]
+    public class OpenCardData
+    {
+        public int index;      // The index of the card to be opened
+        public string card;    // The name of the card sprite to load
+    }
+
+    [System.Serializable]
+    public class CloseCardsData
+    {
+        public int index1;  // Index of the first card
+        public int index2;  // Index of the second card
+    }
+
+    [System.Serializable]
+    public class MatchCardsData
+    {
+        public int index1;  // Index of the first matched card
+        public int index2;  // Index of the second matched card
+    }
+
 
     public string GetRoomId()
     {
@@ -922,6 +1091,15 @@ public class SocketManager : MonoBehaviour
     {
         return diceValue;
     }
+
+    internal string cardValue;
+
+    public void SetcardValue(string value)
+    {
+        cardValue = value;
+    }
+
+   
 
     public int GetSteps()
     {
@@ -979,7 +1157,7 @@ public class SocketManager : MonoBehaviour
         }
     }
 
-
+    
 
 
     [Serializable]
@@ -1363,4 +1541,7 @@ public class SocketManager : MonoBehaviour
             DrawPanel.SetActive(true);
         }
     }
+
+    
+
 }

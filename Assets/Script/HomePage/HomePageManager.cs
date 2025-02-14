@@ -37,6 +37,9 @@ public class HomePageManager : MonoBehaviour
     [SerializeField]
     private GameObject CricketLoadingPanel;
 
+    [SerializeField]
+    private GameObject MindMorgaLoadingPanel;
+
     public GameObject HomeMark;
     public GameObject WalletMark;
     public GameObject LeaderBoardMark;
@@ -44,8 +47,8 @@ public class HomePageManager : MonoBehaviour
     [SerializeField]
     GameFetcherScript gameFetcher;
 
-    //private const string baseUrl = "http://localhost:3000/";
-    private const string baseUrl = "https://backend-production-2509b.up.railway.app/";
+    private const string baseUrl = "http://localhost:3000/";
+    //private const string baseUrl = "https://backend-production-2509b.up.railway.app/";
     public TMP_Text userCountText;
 
     void Start()
@@ -154,6 +157,19 @@ public class HomePageManager : MonoBehaviour
         if (gameFetcher != null)
         {
             StartCoroutine(gameFetcher.GetGameData("LUDO"));
+        }
+        else
+        {
+            Debug.LogError("GameFetcherScript reference is missing!");
+        }
+    }
+
+    public void OnMindMorga()
+    {
+        ShowPanel(MindMorgaLoadingPanel);
+        if (gameFetcher != null)
+        {
+            StartCoroutine(gameFetcher.GetGameData("MEMORYGAME"));
         }
         else
         {

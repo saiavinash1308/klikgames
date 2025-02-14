@@ -428,6 +428,14 @@ public class GameFetcherScript : MonoBehaviour
             }
         }
 
+        else if (selectedGame.gameType == "MEMORYGAME")
+        {
+            if (selectedGame.maxPlayers == 2)
+            {
+                sceneToLoad = "MindMorgaLoadingScene";         // SOCKET TEST SCENE
+            }
+        }
+
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
             SceneManager.LoadScene(sceneToLoad);
