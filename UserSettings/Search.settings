@@ -14,10 +14,10 @@ scopes = {
 	"last_search.310DEAF1" = "Received Player Turn for socketId:"
 	"OpenInspectorPreview.310DEAF1" = "0"
 	"currentGroup.310DEAF1" = "all"
-	"last_search.E8DA15E5" = "classic"
+	"last_search.E8DA15E5" = "home"
 	"OpenInspectorPreview.E8DA15E5" = "0"
 	"currentGroup.E8DA15E5" = "all"
-	"last_search.110DEAF1" = "classic"
+	"last_search.110DEAF1" = "home"
 	"OpenInspectorPreview.110DEAF1" = "0"
 	"currentGroup.110DEAF1" = "asset"
 }

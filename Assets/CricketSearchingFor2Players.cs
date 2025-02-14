@@ -10,6 +10,7 @@ public class CricketSearchingFor2Players : MonoBehaviour
     public static CricketSearchingFor2Players Searching { get; private set; }
     private SocketManager socketManager;
     public GameController gamecontroller;
+    public GameObject Loading;
 
     void Awake()
     {
@@ -32,7 +33,7 @@ public class CricketSearchingFor2Players : MonoBehaviour
     private IEnumerator SearchAndLoadCoroutine()
     {
         loadingImage.gameObject.SetActive(true); // Show loading image
-
+        Loading.SetActive(true);
         while (socketManager != null && socketManager.stopSearch)
         {
             loadingImage.fillAmount = Mathf.PingPong(Time.time, 1f); // Smooth fill between 0 and 1
@@ -41,7 +42,7 @@ public class CricketSearchingFor2Players : MonoBehaviour
         }
 
         loadingImage.gameObject.SetActive(false);
-
+        Loading.SetActive(false);
         //  SceneManager.LoadScene("PLAYER1BAT");           // CRICKET TEST
         gamecontroller.PlayButton();        // PLAYER1BAT OR PLAYER2BAT
     }

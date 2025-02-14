@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ImageAnimator : MonoBehaviour
+public class SpriteAnimator : MonoBehaviour
 {
     [Header("Animation Settings")]
     public List<Sprite> sprites; // List of sprites for the animation
