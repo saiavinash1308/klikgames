@@ -7,45 +7,42 @@ using SimpleJSON;
 
 public class Bat : MonoBehaviour
 {
-    [SerializeField] private Collider batcol;
-    [SerializeField] private float hitduration = 1f;
-    [SerializeField] private Vector2 minMaxhitVel = new Vector2(5f, 20f);
+    [SerializeField] private Collider batcol; // bat collider 
+    [SerializeField] private float hitduration = 1f; // bat timer 
+    [SerializeField] private Vector2 minMaxhitVel = new Vector2(5f, 20f); // values for hitting 
     public LayerMask ballMask; // Optional for additional checks
-    public static Action<Transform> onBallHit;
-    public Ball ball;
-    private SocketManager socketmanager;
-    private BatController batcontroller;
+    public static Action<Transform> onBallHit; // Evemt 
+    public Ball ball; // Ball reference
+    private SocketManager socketmanager; 
+
+    private BatsmanPlayer batsmanplayer;
 
     private float hitTimer;
 
     private void Start()
     {
         socketmanager = GameObject.FindObjectOfType<SocketManager>();
-        batcontroller = GameObject.FindObjectOfType<BatController>();
-        if(batcontroller==null)
-        {
-            Debug.LogWarning("NO BAT CONTROLLER");
-        }
-        if(socketmanager==null)
-        {
-            return;
-        }
+        batsmanplayer = GameObject.FindObjectOfType<BatsmanPlayer>();
+
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collider)
     {
 
-        if (collision.gameObject.tag == "Ball")
+        if (collider.gameObject.tag == "Ball")
         {
-            ball = collision.gameObject.GetComponent<Ball>();   // on touching ball 
+            ball = collider.gameObject.GetComponent<Ball>();   // on touching ball 
             if (ball != null)
             {
-                float random = Random.Range(-1f, 1f);
-                socketball = collision.transform;
-                if (batcontroller.enabled)
+                float random = Random.Range(-1f, 1f); // random direction 
+                socketball = collider.transform; // ball reference 
+                if (!socketmanager.isUsebots) // pvp       
                 {
-                    socketmanager.EmitEvent("BALL_HIT_POSITION", random.ToString());
+                    socketmanager.EmitEvent("BALL_HIT_POSITION", random.ToString()); //SocketManager BALLHITPOSITION Event
                 }
-            
+                else if(socketmanager.isUsebots) // normal 
+                {
+                    batsmanplayer.ShootBall(collider.gameObject.transform); 
+                }           
             }
         }
     }
@@ -53,7 +50,7 @@ public class Bat : MonoBehaviour
     [HideInInspector]
     public Transform socketball;
 
-    public void ShootBall(float random)
+    public void ShootBall(float random) 
     {
         Transform ball = socketball;
         Debug.Log("Ball is moving with force");
@@ -62,16 +59,16 @@ public class Bat : MonoBehaviour
         float hitvel = Mathf.Lerp(minMaxhitVel.y, minMaxhitVel.x, lerp);
 
         // Generate the hit velocity vector
-        Vector3 hitVelVector = (Vector3.back + Vector3.up + Vector3.right * random * hitvel);
-        float hitvelx = hitVelVector.x;
-        float hitvely = hitVelVector.y;
-        float hitvelz = hitVelVector.z;
-        ball.GetComponent<Ball>().TouchedBat(hitVelVector);
+        Vector3 hitVelVector = (Vector3.back + Vector3.up + Vector3.right * random * hitvel); // hitvel vector
+        float hitvelx = hitVelVector.x; // xpos
+        float hitvely = hitVelVector.y; // ypos
+        float hitvelz = hitVelVector.z; // zpos
+        ball.GetComponent<Ball>().TouchedBat(hitVelVector); 
 
         if (onBallHit != null)
         {
             Debug.Log($"Invoking onBallHit for: {ball.name}");
-            onBallHit.Invoke(ball);     
+            onBallHit.Invoke(ball); // switching Camera Event    
         }
         else
         {
@@ -79,7 +76,7 @@ public class Bat : MonoBehaviour
         }
         hitTimer = 0f;
 
-        StartCoroutine(UpdateBallPosition(ball));
+        StartCoroutine(UpdateBallPosition(ball)); //calculate ball position 
     }
 
 

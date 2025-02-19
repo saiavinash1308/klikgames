@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9A484336-88AD-0946-4E15-B8B8D04A900A}</ProjectGuid>
+    <ProjectGuid>{6B683973-3661-ADFD-7776-9858EA290EEB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -68,6 +68,7 @@
     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/Plugins/Android/AndroidManifest.xml" />
     <None Include="Assets/Plugins/Demigiant/DOTween/DOTween.XML" />
     <None Include="Assets/Plugins/Demigiant/DOTween/DOTween.dll" />
     <None Include="Assets/Plugins/Demigiant/DOTween/readme.txt" />
@@ -333,21 +334,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/VisionOSPlayer/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/VisionOSPlayer/UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.9f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
@@ -877,11 +863,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UniWebView-CSharp.csproj">
-      <Project>{6EB7A3F3-DC86-8CBF-BC8A-00D66C52FEBA}</Project>
+      <Project>{0E68CF68-E962-85EF-32AD-43A2AF3F08D7}</Project>
       <Name>UniWebView-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="UniWebView-CSharp.Editor.csproj">
-      <Project>{2CF06263-AC0D-ECD8-5DC4-6704CA8DB647}</Project>
+      <Project>{070B06C8-459D-4C40-FB81-44009999E66A}</Project>
       <Name>UniWebView-CSharp.Editor</Name>
     </ProjectReference>
   </ItemGroup>

@@ -75,15 +75,16 @@ public class ScoreManager : MonoBehaviour
         {
             playerScore += 2;       // ball is in more distance second radius
         }
-        if (!socketmanager.isUsebots)
+        if (!socketmanager.isUsebots) // pvp
         {
             socketmanager.EmitEvent("UPDATE_SCORE", playerScore.ToString());
             isScoreUpdate = true;
         }
 
-        else if(socketmanager.isUsebots)
+        else if(socketmanager.isUsebots) // normal
         {
             UpdateScore();
+           
         }
         
 
@@ -128,11 +129,11 @@ public class ScoreManager : MonoBehaviour
 
     public void BallMissed()
     {
-        if (!socketmanager.isUsebots)
+        if (!socketmanager.isUsebots)   // pvp
         {
             socketmanager.EmitEvent("UPDATE_SCORE", "0");
         }
-        else if(socketmanager.isUsebots)
+        else if(socketmanager.isUsebots) // normal
         {
             Debug.LogError("UPDATE_SCORE BALL MISSED");
             scoretexts[currentball].text = "0";     // dot ball 
@@ -143,7 +144,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public void BallMissedFromSocket()
+    public void BallMissedFromSocket() // SOCKET EVENT BALLMISSED
     {
         if (isScoreUpdate)
             return;
@@ -159,17 +160,17 @@ public class ScoreManager : MonoBehaviour
 
     public void StumpsHitted()
     {
-        if (!socketmanager.isUsebots)
+        if (!socketmanager.isUsebots)   // pvp
         {
             socketmanager.EmitEvent("WICKET", "");
         }
-        else if(socketmanager.isUsebots)
+        else if(socketmanager.isUsebots) // normal
         {
             scoretexts[currentball].text = "w";
         }
     }
 
-    public void HitStumpsFromSocket()
+    public void HitStumpsFromSocket() // SOCKET EVENT STUMPSHIT
     {
         scoretexts[currentball].text = "w";
     }
@@ -179,7 +180,7 @@ public class ScoreManager : MonoBehaviour
 
     public void playNewLevel()
     {
-        GameController.instance.StartNextGame();
+        GameController.instance.StartNextGame(); // start next mode 
     }
 
 

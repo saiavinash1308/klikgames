@@ -7,16 +7,16 @@ using Random = UnityEngine.Random;
 public class Ball : MonoBehaviour
 {
     [SerializeField]
-    private bool ishit;
+    private bool ishit; // check for ball touch
     [SerializeField]
-    private bool istouchbat;
-    private Rigidbody rb;
-    public static Action<Vector3> onTouchGround;
-    public static Action onBallMissed;
-    public static Action onStumpsHit;
-    public static Action onBallCaught;
-    private bool isFade;
-    private float trailduration=0.5f;
+    private bool istouchbat; // check for bat touch
+    private Rigidbody rb;    
+    public static Action<Vector3> onTouchGround;    // on ball hitting the ground 
+    public static Action onBallMissed;  // on ball missing
+    public static Action onStumpsHit;   // on ball hitting the stumps
+    public static Action onBallCaught;  // on ball getting caught 
+    private bool isFade;    
+    private float trailduration=0.5f;   // trail renderer time for the ball 
     // Start is called before the first frame update
     void Start()
     {
@@ -31,19 +31,17 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.tag=="Stumps")
+        if(col.gameObject.tag=="Stumps") // on ball hitting the stumps
         {
             col.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            StumpsCollided();
         }
-        if(col.gameObject.tag=="Field")
+        if(col.gameObject.tag=="Field") // on ball touching field 
         {
             DetectFieldGround();
             Debug.Log("ball is touching the ground");
         }     
-        if(col.gameObject.tag=="Stumps")
-        {
-            StumpsCollided();
-        }
+
         if (col.gameObject.tag == "Batsman")
         {
           //  DetectBallMiss();
@@ -53,14 +51,14 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionStay(Collision col)
     {
-        if(col.gameObject.tag=="SmallField")
+        if(col.gameObject.tag=="SmallField") // if ball stays near the pitch zone
         {
             Debug.Log("ball in small field");
             StartCoroutine(DotBall());
         }
     }
 
-    private IEnumerator DotBall()
+    private IEnumerator DotBall() 
     {
         yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
@@ -68,12 +66,12 @@ public class Ball : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag=="Crowd")
+        if(other.gameObject.tag=="Crowd") // if ball enters crowd area 
         {
             Destroy(this.gameObject, 2f);
             CrowdStands();
         }
-        if(other.gameObject.tag=="Missed")
+        if(other.gameObject.tag=="Missed") // ball is missed 
         {
             Destroy(this.gameObject, 1f);
             StartCoroutine(FadeBall());
@@ -82,9 +80,10 @@ public class Ball : MonoBehaviour
 
     }
 
-    private IEnumerator FadeBall()
+    private IEnumerator FadeBall()  
     {
-        isFade = true;
+       
+        isFade = true;  // DeActivate the trailrenderer 
         float startTime = Time.time;
         float initialTime = this.transform.GetChild(0).GetComponent<TrailRenderer>().time;
         while(Time.time-startTime<trailduration)
@@ -93,8 +92,8 @@ public class Ball : MonoBehaviour
             yield return null; 
         }
 
-        // Ensure that the trail time is set to 0 when fade-out completes
-       this.transform.GetChild(0).GetComponent<TrailRenderer>().time = 0f;
+       
+       this.transform.GetChild(0).GetComponent<TrailRenderer>().time = 0f;  // Ensure that the trail time is set to 0 when fadeout completes
         isFade = false;
 
     }
@@ -102,18 +101,18 @@ public class Ball : MonoBehaviour
 
     private void DetectFieldGround()
     {
-        float bounceForce = Random.Range(1f, 2.5f);
+        float bounceForce = Random.Range(1f, 2.5f); // set bounce force once touching field 
         rb.AddForce(Vector3.up * bounceForce, ForceMode.Impulse);       // bounce for pitch
         if (!istouchbat)         // Ball is touching field
         {
             return;
         }
-        if(ishit)
+        if(ishit)   
         {
             return;
         }
         ishit = true;
-        onTouchGround?.Invoke(transform.position);
+        onTouchGround?.Invoke(transform.position); // Event 
     }
 
     private void CrowdStands()
@@ -122,12 +121,12 @@ public class Ball : MonoBehaviour
         {
             return;
         }
-        if (ishit)
+        if (ishit)             
         {
             return;
         }
         ishit = true;
-        onTouchGround?.Invoke(transform.position);
+        onTouchGround?.Invoke(transform.position); // Event
     }
 
     public void DetectBallMiss()
@@ -159,7 +158,7 @@ public class Ball : MonoBehaviour
 
     public void CaughtBall()
     {
-        if(!istouchbat)
+        if(!istouchbat)       // Ball caught
         {
             return;
         }

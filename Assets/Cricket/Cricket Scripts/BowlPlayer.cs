@@ -31,7 +31,7 @@ public class BowlPlayer : MonoBehaviour
 
     
     // Start is called before the first frame update
-    void Start()
+    void Start() // Events Called 
     {
         socketmanager = GameObject.FindObjectOfType<SocketManager>();
         bowlmode = BowlMode.Idle;
@@ -48,7 +48,7 @@ public class BowlPlayer : MonoBehaviour
 
     private void Restart()
     {
-        if (socketmanager.isUsebots)
+        if (socketmanager.isUsebots)  // normal         
         {
             bowlmode = BowlMode.Idle;
             transform.position = initialpos;
@@ -56,13 +56,13 @@ public class BowlPlayer : MonoBehaviour
             anim.SetInteger("BowlState", 0);
             anim.Play("Idle");
         }
-        else
+        else                          // pvp
         {
-            socketmanager.EmitEvent("RESET_BOWLER", "");
+            socketmanager.EmitEvent("RESET_BOWLER", "");  
         }
     }
 
-    public void RestartFromSocket()
+    public void RestartFromSocket() // SOCKET EVENT RESETBOWLER
     {
         Debug.Log("Reset bowler from socket");
         bowlmode = BowlMode.Idle;
@@ -76,25 +76,25 @@ public class BowlPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BowlerAction();
+        BowlerAction(); // switch bowler mode 
     }
 
 
     public void BowlerAction()
     {
-        switch(bowlmode)
+        switch(bowlmode) 
         {
-            case BowlMode.Idle:
+            case BowlMode.Idle:             // idle state
                 break;
 
-            case BowlMode.Aim:
+            case BowlMode.Aim:              // aim state
                 break;
 
-            case BowlMode.Running:
+            case BowlMode.Running:          // running state
                 BeginRun();
                 break;
 
-            case BowlMode.BowlThrow:
+            case BowlMode.BowlThrow:        // throwing state
                 BowlingThrow();
                 break;
         }
@@ -102,11 +102,11 @@ public class BowlPlayer : MonoBehaviour
 
     public void StartRun(float bowlspeed)
     {
-        if (!socketmanager.isUsebots)
+        if (!socketmanager.isUsebots) // pvp
         {
             socketmanager.EmitEvent("BOWLER_RUN", bowlspeed.ToString());
         }
-        else if(socketmanager.isUsebots)
+        else if(socketmanager.isUsebots) // normal
         {
             runtime = 0;
             this.bowlingspeed = bowlspeed;
@@ -115,45 +115,45 @@ public class BowlPlayer : MonoBehaviour
         }
     }
 
-    public void StartRunFromSocket(float bowlspeed)
+    public void StartRunFromSocket(float bowlspeed) // SOCKET EVENT BOWLERRUN
     {
         runtime = 0;
         this.bowlingspeed = bowlspeed;
         bowlmode = BowlMode.Running;
         anim.SetInteger("BowlState", 1);
     }
-    public void BeginRun()
+    public void BeginRun()  
     {
-        transform.position+= Vector3.forward * runspeed*Time.deltaTime;
+        transform.position+= Vector3.forward * runspeed*Time.deltaTime; // move transform position 
         runtime += Time.deltaTime;
         if(runtime>duration)
         {
-            BowlingThrow();
+            BowlingThrow(); // throw ball 
         }
     }
 
     public void BowlingThrow()
     {
-        bowlmode = BowlMode.BowlThrow;
-        anim.SetInteger("BowlState", 2);
+        bowlmode = BowlMode.BowlThrow; // throwing mode
+        anim.SetInteger("BowlState", 2); // throw animation 
     }
 
     public void BowlBall()
     {
         cricball.SetActive(false);
-        Vector3 initial = cricball.transform.position;
-        Vector3 final = groundTarget.transform.position;
+        Vector3 initial = cricball.transform.position; // get ball position
+        Vector3 final = groundTarget.transform.position; // get groundtarget position 
 
         //duration and bowling speed 
-        float distance = Vector3.Distance(initial, final);
-        float velocity = bowlingspeed / 3.6f;
-        float duration = flightMultiplier*distance / velocity;
+        float distance = Vector3.Distance(initial, final); // get distance between ball and ground target
+        float velocity = bowlingspeed / 3.6f; // assign velocity
+        float duration = flightMultiplier*distance / velocity; // assign duration 
         print("Duration" + duration);
 
         float flightsecs = 1f;
-        ballthrower.ThrowFastBall(initial, final, flightsecs);
+        ballthrower.ThrowFastBall(initial, final, flightsecs); // throw ball 
 
-        OnThrownBall?.Invoke(duration);
+        OnThrownBall?.Invoke(duration); // call events 
     }
 
 }

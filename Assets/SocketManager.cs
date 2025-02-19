@@ -75,8 +75,9 @@ public class SocketManager : MonoBehaviour
 
     internal void InitializeSocket()
     {
-        var url = "http://localhost:3000/";
+        //var url = "http://localhost:3000/";
         //var url = "https://backend-production-2509b.up.railway.app/";
+        var url = "https://server.fivlog.space";
         var uri = new Uri(url);
         socket = new SocketIOUnity(uri, new SocketIOOptions
         {
@@ -87,7 +88,7 @@ public class SocketManager : MonoBehaviour
 
         socket.OnConnected += OnConnected;
         // socket.OnDisconnected += OnDisconnected; // Register for disconnection
-
+        Debug.LogError("Server");
         Debug.Log("Connecting to server...");
         socket.Connect();
     }
@@ -1505,7 +1506,7 @@ public class SocketManager : MonoBehaviour
         Debug.Log("This is winnerId: " + winnerId);
         MainThreadDispatcher.Enqueue(() =>
         {
-            StartCoroutine(ShowPanel(2f));
+            StartCoroutine(ShowPanel(2f));  
         });
     }
 

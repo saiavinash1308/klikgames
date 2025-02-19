@@ -37,12 +37,12 @@ public class GroundTarget : MonoBehaviour
 
     public void ClickTarget()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))     // clicked position taken as mouse position 
         {
             clickedPos = Input.mousePosition;
             clickedtargetPos = transform.position;
         }
-        else if(Input.GetMouseButton(0))
+        else if(Input.GetMouseButton(0)) // calculate mouse position and clicked position // Movement  ground target
         {
             Vector3 diff = Input.mousePosition - clickedPos;
 
@@ -50,8 +50,8 @@ public class GroundTarget : MonoBehaviour
             diff.y /= Screen.height;
 
             Vector3 targetPosition = clickedtargetPos + new Vector3(diff.x*movespeed.x, 0, diff.y*movespeed.y);
-            targetPosition.x = Mathf.Clamp(targetPosition.x, xval.x, xval.y);
-            targetPosition.z = Mathf.Clamp(targetPosition.z, zval.x, zval.y);
+            targetPosition.x = Mathf.Clamp(targetPosition.x, xval.x, xval.y);   // clamp values of xpos
+            targetPosition.z = Mathf.Clamp(targetPosition.z, zval.x, zval.y);// clamp values of zpos
          //   transform.position = targetPosition;
             
             string positionString = $"{targetPosition.x},{targetPosition.y},{targetPosition.z}";
@@ -62,14 +62,14 @@ public class GroundTarget : MonoBehaviour
 
     public void updatePosition(float x, float y, float z)
     {
-        transform.position = new Vector3(x, y, z);
+        transform.position = new Vector3(x, y, z);  // send new position to socket manager
     }
 
     public void Move(Vector2 movement)
     {
-        float xpos = Mathf.Lerp(xval.x, xval.y, movement.x);
-        float zpos = Mathf.Lerp(zval.x, zval.y, movement.y);
-        transform.position = new Vector3(xpos, 0, zpos);
+        float xpos = Mathf.Lerp(xval.x, xval.y, movement.x);        // movement ground target
+        float zpos = Mathf.Lerp(zval.x, zval.y, movement.y);        
+        transform.position = new Vector3(xpos, 0, zpos);        
         
     }
 

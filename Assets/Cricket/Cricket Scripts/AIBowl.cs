@@ -35,7 +35,7 @@ public class AIBowl : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Start() //Events called 
     {
         bowlmode = BowlMode.Aim;
         ballthrower = FindObjectOfType<BallThrow>();
@@ -58,22 +58,22 @@ public class AIBowl : MonoBehaviour
     }
 
 
-    private void BowlerAction()
+    private void BowlerAction() // switch bowler modes 
     {
         switch (bowlmode)
         {
-            case BowlMode.Idle:
+            case BowlMode.Idle: // Idle State
                 break;
 
-            case BowlMode.Aim:
+            case BowlMode.Aim:  // Aim State
                 Aim();
                 break;
 
-            case BowlMode.Running:
+            case BowlMode.Running:  // Run State
                 BeginRun();
                 break;
 
-            case BowlMode.BowlThrow:
+            case BowlMode.BowlThrow:    // Throw State
                 BowlingThrow();
                 break;
         }
@@ -81,7 +81,7 @@ public class AIBowl : MonoBehaviour
 
     private void StartAiming()
     {
-        bowlmode = BowlMode.Aim;
+        bowlmode = BowlMode.Aim;    // aiming mode 
     }
     private void Aim()
     {
@@ -90,60 +90,60 @@ public class AIBowl : MonoBehaviour
 
         Vector2 targetPos = new Vector2(x, y);
 
-        aitarget.Move(targetPos);
+        aitarget.Move(targetPos); // move ground target
 
-        aimingTimer += Time.deltaTime;
+        aimingTimer += Time.deltaTime; // set aiming timer seconds 
 
         if(aimingTimer>2)
         {
-            StartRun(this.bowlingspeed);
+            StartRun(this.bowlingspeed);    // start ai bowler run 
         }
     }
     public void StartRun(float bowlspeed)
     {
         runtime = 0;
-        this.bowlingspeed = Random.Range(20, 30);
+        this.bowlingspeed = Random.Range(20, 30);   // bowling speed
    
         bowlmode = BowlMode.Running;
-        anim.SetInteger("BowlState", 1);
+        anim.SetInteger("BowlState", 1);    // run animation 
     }
     public void BeginRun()
     {
-        transform.position += Vector3.forward * runspeed * Time.deltaTime;
+        transform.position += Vector3.forward * runspeed * Time.deltaTime; // move transform position 
         runtime += Time.deltaTime;
         if (runtime > duration)
         {
-            BowlingThrow();
+            BowlingThrow(); // throw ball 
         }
     }
 
     public void BowlingThrow()
     {
-        bowlmode = BowlMode.BowlThrow;
-        anim.SetInteger("BowlState", 2);
+        bowlmode = BowlMode.BowlThrow; // throw mode 
+        anim.SetInteger("BowlState", 2); // throw animation 
     }
 
     public void BowlBall()
     {
-        cricball.SetActive(false);
-        Vector3 initial = cricball.transform.position;
-        Vector3 final = groundTarget.transform.position;
+        cricball.SetActive(false); // disable bowl ball 
+        Vector3 initial = cricball.transform.position; // get ball position 
+        Vector3 final = groundTarget.transform.position; // get ground target position 
 
         //duration and bowling speed 
-        float distance = Vector3.Distance(initial, final);
-        float velocity = bowlingspeed / 1.6f;
-        float duration = flightMultiplier * distance / velocity;
+        float distance = Vector3.Distance(initial, final);  // get distance between ball and ground target 
+        float velocity = bowlingspeed / 1.6f; // assign velocity
+        float duration = flightMultiplier * distance / velocity; // assign duration 
 
         float flightsecs = 1f;
-        ballthrower.ThrowFastBall(initial, final, flightsecs);
+        ballthrower.ThrowFastBall(initial, final, flightsecs);  // instantiate ball from ballthrower 
 
-        OnThrownBall?.Invoke(duration);
+        OnThrownBall?.Invoke(duration); // switching camera event 
     }
 
-    private void Restart()
+    private void Restart() // Restart AI Bowler 
     {
        
-        bowlmode = BowlMode.Idle;
+        bowlmode = BowlMode.Idle; // bowler Idle State
         transform.position = initialpos;
         cricball.SetActive(true);
         anim.SetInteger("BowlState", 0);

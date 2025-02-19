@@ -19,25 +19,29 @@ public class InitGame : MonoBehaviour
     public SocketManager socketmanager;
     public GameObject PopUp;
 
-
+     
     // Start is called before the first frame update
     void Start()
     {
+        // Find References 
         cricnetmanager = GameObject.FindObjectOfType<CricNetManager>();
         socketmanager = GameObject.FindObjectOfType<SocketManager>();
         StartCoroutine(ShowText());
     }
     public void EnablePopUp()
     {
+        // UI BACK BUTTON
         PopUp.SetActive(true);
     }
 
     public void QuitToHome()
     {
+        // QUIT BUTTON
         SceneManager.LoadScene("Home"); // Change "HomeScene" to your actual scene name
     }
     public void ClosePopup()
     {
+        
         if (PopUp != null)
         {
             PopUp.SetActive(false);
@@ -67,6 +71,7 @@ public class InitGame : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         MainThreadDispatcher.Enqueue(() =>
         {
+            // Display Socket Id Texts
             Debug.Log("Handling player turn for socketId on the main thread.");
             cricnetmanager.Player1Text = DispPlayer1Text;
             cricnetmanager.DisplayPlayer1Text();
@@ -97,7 +102,7 @@ public class InitGame : MonoBehaviour
     public void QuitRoom()
     {
         socketmanager.isUsebots = false;
-        SceneManager.LoadScene("Home");
+        SceneManager.LoadScene("Home");         //Socket Event on room quit 
     }
 
     // Update is called once per frame

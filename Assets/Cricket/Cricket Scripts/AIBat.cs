@@ -37,20 +37,20 @@ public class AIBat : MonoBehaviour
     public bool hasMissedBall;
 
     // Start is called before the first frame update
-    void Start()
+    void Start()    // Events called
     {
         batstate = BatState.moving;
         BowlPlayer.OnThrownBall += ThrownBallCallback;
         BowlController.OnStartNextBall += Restart;
     }
 
-    private void OnDestroy()
+    private void OnDestroy() 
     {
         BowlPlayer.OnThrownBall -= ThrownBallCallback;
         BowlController.OnStartNextBall -= Restart;
     }
 
-    public void Restart()
+    public void Restart()   // Resetting bat State
     {
         batstate = BatState.moving;
         anim.Play("Idle");
@@ -61,7 +61,7 @@ public class AIBat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SwitchState();
+        SwitchState(); // AI Batsman Idle and hit 
     }
 
     private void SwitchState()
@@ -69,21 +69,21 @@ public class AIBat : MonoBehaviour
         switch(batstate)
         {
             case BatState.moving:
-                Moving();
+                Moving();       //movement state
                 break;
             case BatState.hitting:
                 if (canDetectHit)
-                    CheckForHits();
+                    CheckForHits(); // hitting state
                 break;
         }
     }
 
-    public void Moving()
+    public void Moving() // AI MOVEMENT 
     {
         Vector3 targetPos = transform.position;                 // ai batsman position
-        targetPos.x = groundtarget.transform.position.x+1f;     
+        targetPos.x = groundtarget.transform.position.x+1f;     // Based on ground target 
         // Clamp the target position
-        targetPos.x = Mathf.Clamp(targetPos.x, 21f, 25f);
+        targetPos.x = Mathf.Clamp(targetPos.x, 21f, 25f);   // Clamp ai batsman 
 
         // Calculate the difference
         float difference = targetPos.x - transform.position.x;
@@ -91,15 +91,15 @@ public class AIBat : MonoBehaviour
         // Handle the animation based on the movement direction
         if (difference == 0)
         {
-            anim.Play("Idle");
+            anim.Play("Idle");  // Idle State
         }
         else if (difference > 0)
         {
-            anim.Play("Left");
+            anim.Play("Left");  // Left Animation 
         }
         else if (difference < 0)
         {
-            anim.Play("Right");
+            anim.Play("Right");     // Right Animation  
         }
 
 
@@ -122,14 +122,14 @@ public class AIBat : MonoBehaviour
     private void ThrownBallCallback(float ballduration)
     {
         Debug.LogError("BALL THROWN BABY");
-        ballduration = flightduration;
-        batstate = BatState.hitting;
+        ballduration = flightduration; // ball time 
+        batstate = BatState.hitting; // hit state 
         StartCoroutine(BatHitting());     
     }
 
     private IEnumerator BatHitting()
     {
-        float delay = flightduration - 0.4f;
+        float delay = flightduration - 0.4f; // Calculate Bat hit for ai based on time 
         float newdelay = Random.Range(delay-0.1f,delay+0.1f);
         yield return new WaitForSeconds(newdelay);
         anim.Play("Hit");
@@ -137,6 +137,7 @@ public class AIBat : MonoBehaviour
 
     private float GetTarget()
     {
+        // Get bowler shoot position
         Vector3 bowlershootpos = new Vector3(-1, 0, -9.5f);
         Vector3 shootdirection = (groundtarget.transform.position - bowlershootpos).normalized;
         float shootAngle = Vector3.Angle(Vector3.right, shootdirection);
@@ -149,12 +150,14 @@ public class AIBat : MonoBehaviour
 
     public void StartDetectingHits()
 {
+        //Detecting hits [Animation Event]
     canDetectHit = true;
     hitTimer = 0;
 }
 
 public void StopDetectingHits()
 {
+        // Stop Detection [Animation Event]
         canDetectHit = false;
         batstate = BatState.moving;
 }
@@ -164,14 +167,14 @@ public void StopDetectingHits()
         // Set the center of the sphere
         Vector3 center = batcol.transform.TransformPoint(batcol.center);
         // Detect balls within the sphere
-        detectballs = Physics.OverlapSphere(center, batradius, ballmask);
+        detectballs = Physics.OverlapSphere(center, batradius, ballmask); // based on radius detecting the ball if in radius 
 
         if (detectballs.Length > 0)
         {
             foreach (var ball in detectballs)
             {
                 Debug.Log("Ball detected: " + ball.gameObject.name);
-                BallDetectedCallback(ball);
+                BallDetectedCallback(ball); // called when ball enters radius and touches bat
             }
             hasMissedBall = false;
         }
@@ -181,7 +184,7 @@ public void StopDetectingHits()
             {
                 Debug.Log("Ball is not detected");          
                 hasMissedBall = true;
-                Restart();
+                Restart();  // Reset 
             }
         }
         hitTimer += Time.deltaTime;
@@ -190,21 +193,21 @@ public void StopDetectingHits()
     private void BallDetectedCallback(Collider ballcollider)
 {
     canDetectHit = false;
-    ShootBall(ballcollider.transform);
+    ShootBall(ballcollider.transform);  // Touching bat 
 }
 
 private void ShootBall(Transform ball)
 {
 
-  float lerp = Mathf.Clamp01(hitTimer / hitduration);
-  float hitvel = Mathf.Lerp(minMaxhitVel.y, minMaxhitVel.x, lerp);
-  Vector3 hitVelVector = (Vector3.back + Vector3.up + Vector3.right * Random.Range(-1f, 1f)) * hitvel;
-  ball.GetComponent<Ball>().TouchedBat(hitVelVector);
-  onBallHit?.Invoke(ball);
+  float lerp = Mathf.Clamp01(hitTimer / hitduration);   // value from timer and duration
+  float hitvel = Mathf.Lerp(minMaxhitVel.y, minMaxhitVel.x, lerp);  
+  Vector3 hitVelVector = (Vector3.back + Vector3.up + Vector3.right * Random.Range(-1f, 1f)) * hitvel; // send the ball in vector3 direction randomly
+  ball.GetComponent<Ball>().TouchedBat(hitVelVector); // ball reference 
+  onBallHit?.Invoke(ball); // Event called for camera switching 
 
  }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmos() //Showing in scene mode 
     {
         if (batcol != null)
         {

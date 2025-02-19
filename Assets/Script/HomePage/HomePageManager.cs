@@ -47,8 +47,8 @@ public class HomePageManager : MonoBehaviour
     [SerializeField]
     GameFetcherScript gameFetcher;
 
-    private const string baseUrl = "http://localhost:3000/";
-    //private const string baseUrl = "https://backend-production-2509b.up.railway.app/";
+    //private const string baseUrl = "http://localhost:3000/";
+    private const string baseUrl = "https://backend-production-2509b.up.railway.app/";
     public TMP_Text userCountText;
 
     void Start()

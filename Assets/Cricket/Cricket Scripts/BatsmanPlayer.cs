@@ -79,7 +79,7 @@ public class BatsmanPlayer : MonoBehaviour
     public SocketManager socketmanager;
 
     // Start is called before the first frame update
-    void Start()
+    void Start() // EVENTS CALLED
     {
         batstate = BatState.moving;
         BowlPlayer.OnThrownBall += ThrownBallCallback;
@@ -95,7 +95,7 @@ public class BatsmanPlayer : MonoBehaviour
 
     }
 
-    private void OnDestroy()
+    private void OnDestroy() 
     {
         BowlPlayer.OnThrownBall -= ThrownBallCallback;
         BowlController.OnStartNextBall -= Restart;
@@ -127,11 +127,11 @@ public class BatsmanPlayer : MonoBehaviour
             {
 
                 isHolding = true;
-                touchStartPos = Input.mousePosition;
+                touchStartPos = Input.mousePosition; // get initial mouse position 
                 if (dragrect != null)
                 {
                     dragrect.gameObject.SetActive(true);
-                    dragrect.position = touchStartPos;
+                    dragrect.position = touchStartPos;  // set drag position 
                 }
 
                 if (swiperect != null)
@@ -142,8 +142,8 @@ public class BatsmanPlayer : MonoBehaviour
 
             if (Input.GetMouseButton(0) && isHolding)
             {
-                Vector3 currentPosition = Input.mousePosition;
-                Vector3 dragDirection = currentPosition - touchStartPos;
+                Vector3 currentPosition = Input.mousePosition;   // on drag 
+                Vector3 dragDirection = currentPosition - touchStartPos; // direction of mousepos and initial mousepos
 
 
                 // Update drag indicator
@@ -212,6 +212,7 @@ public class BatsmanPlayer : MonoBehaviour
 
     void ResetSwipeValues()
     {
+        //RESET ALL SWIPE VALUES
         touchStartPos = Vector2.zero;
         touchEndPos = Vector2.zero;
         swipeDirection = Vector2.zero;
@@ -221,7 +222,7 @@ public class BatsmanPlayer : MonoBehaviour
 
     private void HandleSwipeAction(Vector3 swipeDir)
     {
-        batstate = BatState.hitting;
+        batstate = BatState.hitting; // Batsman mode 
         if (swipeDir.y > 0) // Upward swipe
         {
             HittingBat();
@@ -275,11 +276,11 @@ public class BatsmanPlayer : MonoBehaviour
             predictedX = transform.position.x + (adjustedValue * movespeed * Time.deltaTime);
             if (!isIdle)
             {
-                if (socketmanager.isUsebots)
+                if (socketmanager.isUsebots)    // normal 
                 {
                  MoveBatsman2(predictedX);
                 }
-                else if (!socketmanager.isUsebots)
+                else if (!socketmanager.isUsebots) // pvp
                 {
                     socketmanager.EmitEvent("MOVE_BATSMAN", predictedX.ToString()); // Only send predictedX
                 }
@@ -298,12 +299,12 @@ public class BatsmanPlayer : MonoBehaviour
             // When no movement, ensure Idle is played immediately
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
             {
-                if (socketmanager.isUsebots)
+                if (socketmanager.isUsebots) // normal 
                 {
                     isIdle = true;
                     anim.Play("Idle");
                 }
-                else if(!socketmanager.isUsebots)
+                else if(!socketmanager.isUsebots) // pvp
                 {
                     socketmanager.EmitEvent("CRICKET_IDLE", "");
                 }
@@ -312,7 +313,7 @@ public class BatsmanPlayer : MonoBehaviour
     }
 
 
-    public void OnMoveLeftPressed()
+    public void OnMoveLeftPressed() // Left Button 
     {
         Debug.LogError("LEFT");
         ismove = true;
@@ -323,17 +324,17 @@ public class BatsmanPlayer : MonoBehaviour
 
     }
 
-    public void OnMoveRightPressed()
+    public void OnMoveRightPressed() // Right Button
     {
         Debug.LogError("RIGHT");
         ismove = true;
         batstate = BatState.moving;
         moveRight = true;
-        moveLeft = false; // Disable the opposite direction
+        moveLeft = false; 
         isIdle = false;
     }
 
-    public void OnButtonReleased()
+    public void OnButtonReleased()  // Button Released Event trigger 
     {
         ismove = false;
         moveLeft = false;
@@ -349,11 +350,11 @@ public class BatsmanPlayer : MonoBehaviour
     }
 
 
-    public void MoveBatsman2(float predictedX)
+    public void MoveBatsman2(float predictedX) 
     {
 
-        float clampedX = Mathf.Clamp(predictedX, 22f, 25f);
-        Vector3 targetPosition = new Vector3(clampedX, transform.position.y, transform.position.z);
+        float clampedX = Mathf.Clamp(predictedX, 22f, 25f); // clamp batsman position 
+        Vector3 targetPosition = new Vector3(clampedX, transform.position.y, transform.position.z); // set target position based on clamped values
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * movespeed);
     }
 
@@ -362,12 +363,12 @@ public class BatsmanPlayer : MonoBehaviour
         switch (batstate)
         {
             case BatState.moving:
-                ControlMovement();
+                ControlMovement(); // batsman movement
 
                 break;
             case BatState.hitting:
                 if (canDetectHit)
-                    CheckForHits();
+                    CheckForHits(); // batsman hitting
                 break;
         }
     }
@@ -377,12 +378,14 @@ public class BatsmanPlayer : MonoBehaviour
 
     public void StartDetectingHits()
     {
+        // ANIMATION EVENT
         canDetectHit = true;
         hitTimer = 0;
     }
 
     public void StopDetectingHits()
     {
+        // ANIMATION EVENT
         canDetectHit = false;
         batstate = BatState.moving;
     }
@@ -417,10 +420,10 @@ public class BatsmanPlayer : MonoBehaviour
 
 
 
-    private void BallDetectedCallback(Collider ballcollider)
+    private void BallDetectedCallback(Collider ballcollider) // detect ball collision
     {
         canDetectHit = false;
-        ShootBall(ballcollider.transform);
+        ShootBall(ballcollider.transform);  // set ball in direction after it touches bat 
     }
     private void ThrownBallCallback(float ballduration)
     {
@@ -441,12 +444,12 @@ public class BatsmanPlayer : MonoBehaviour
     public void HittingBat()
     {
         //Hit event batsman
-        if (!socketmanager.isUsebots)
+        if (!socketmanager.isUsebots) // pvp
         {
             socketmanager.EmitEvent("BATSMAN_HIT", "");
         }
 
-        else if(socketmanager.isUsebots)
+        else if(socketmanager.isUsebots) // normal 
         {
             Debug.LogError("HittingBat method triggered");
             batstate = BatState.hitting;
@@ -455,21 +458,22 @@ public class BatsmanPlayer : MonoBehaviour
         }
     }
 
-    public void HittingBatFromSocket()
+    public void HittingBatFromSocket() // Socket Event 
     {
         Debug.LogError("HittingBat method triggered");
-        batstate = BatState.hitting;
-        anim.Play("Hit");
+        batstate = BatState.hitting; // batsman mode
+        anim.Play("Hit"); // hit animation 
         StartCoroutine(ResetBatting());
     }
 
     private IEnumerator ResetBatting()
     {
+        // RESET STATE 
         yield return new WaitForSeconds(3f);
         Restart();
     }
 
-    private void ShootBall(Transform ball)  // push ball after touching bat
+    public void ShootBall(Transform ball)  // push ball after touching bat
     {
         float lerp = Mathf.Clamp01(hitTimer / hitduration);
         float hitvel = Mathf.Lerp(minMaxhitVel.y, minMaxhitVel.x, lerp);
@@ -486,11 +490,11 @@ public class BatsmanPlayer : MonoBehaviour
     }
     private void Restart()
     {
-        if (!socketmanager.isUsebots)
+        if (!socketmanager.isUsebots) // pvp
         {
             socketmanager.EmitEvent("RESET_BATSMAN", "");
         }
-        else if(socketmanager.isUsebots)
+        else if(socketmanager.isUsebots) // normal
         {
             Debug.Log("Setting batsman to idle");
             batstate = BatState.moving;
@@ -498,7 +502,7 @@ public class BatsmanPlayer : MonoBehaviour
         }
     }
 
-    public void ResetBatsmanFromSocket()
+    public void ResetBatsmanFromSocket() // Socket Event
     {
         Debug.Log("Setting batsman to idle");
         batstate = BatState.moving;
@@ -506,7 +510,7 @@ public class BatsmanPlayer : MonoBehaviour
     }
 
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmos() 
     {
         if (batcol != null)
         {

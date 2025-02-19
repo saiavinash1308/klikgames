@@ -43,7 +43,6 @@ public class CricketSearchingFor2Players : MonoBehaviour
                 socketManager.EmitEvent("MATCH_MAKING_FAILED", ""); //BAT_AI OR BOWL_AI
                 isSet = false; // Stop the loop
                 isSearching = false; // Update searching state
-                socketManager.isUsebots = true;
                 gamecontroller.PlayButton();
 
             }

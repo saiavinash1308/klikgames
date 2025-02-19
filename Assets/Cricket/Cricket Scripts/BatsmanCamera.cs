@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class BatsmanCamera : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject batsmanCam;
+    private GameObject batsmanCam;   // ref bat cam   
     [SerializeField]
-    private GameObject ballCam;
+    private GameObject ballCam; // ref ball cam
     [SerializeField]
     private string PlayerId;
-    public CricNetManager networkmanager;
+    public CricNetManager networkmanager; // ref cricnetmanager
     // Start is called before the first frame update
 
-    private void Awake()
+    private void Awake()    // Events Called
     {
         BatController.OnAimStarted += EnableBatCam;
         BatsmanPlayer.onBallHit += ActivateBallCam;
@@ -22,7 +23,7 @@ public class BatsmanCamera : MonoBehaviour
         Ball.onTouchGround += StopCamtoBall;
         networkmanager = GameObject.FindObjectOfType<CricNetManager>();
     }
-    private void Start()
+    private void Start() 
     {
         //INITIALISE CAMERAS
         PlayerId = networkmanager.PlayerId;
@@ -31,7 +32,7 @@ public class BatsmanCamera : MonoBehaviour
         ballCam.SetActive(false);
     }
 
-    private void OnDestroy()
+    private void OnDestroy() 
     {
         BatController.OnAimStarted -= EnableBatCam;
         BatsmanPlayer.onBallHit -= ActivateBallCam;
@@ -39,7 +40,7 @@ public class BatsmanCamera : MonoBehaviour
         Ball.onTouchGround -= StopCamtoBall;
     }
 
-    public void EnableBatCam()
+    public void EnableBatCam()  
     {
         batsmanCam.SetActive(true);
         ballCam.SetActive(false);
@@ -48,15 +49,17 @@ public class BatsmanCamera : MonoBehaviour
     public void ActivateBallCam(Transform ball)     // Activate BALL CAMERA SOCKET EVENT
     {
         Debug.Log("Cam is activated");
-        ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = ball;
-        ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().LookAt = ball;   
+        ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = ball; // follow transform ball 
+        ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().LookAt = ball; // look transform ball 
+        CinemachineVirtualCamera cineCam = ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>();
+        cineCam.m_Lens.FieldOfView = 60f; // set camera field of view 
         ballCam.SetActive(true);
         batsmanCam.SetActive(false);
     }
 
-    private void StopCamtoBall(Vector3 hitpos)
+    private void StopCamtoBall(Vector3 hitpos) // stop camera 
     {
-        ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = null;
+        ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = null; 
         ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().LookAt = null;
     }
 }

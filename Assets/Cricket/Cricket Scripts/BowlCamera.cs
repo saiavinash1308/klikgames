@@ -5,24 +5,24 @@ using UnityEngine;
 public class BowlCamera : MonoBehaviour
 {
     [SerializeField]
-    private GameObject bowlCam;
+    private GameObject bowlCam; // bowler cam
     [SerializeField]
-    private GameObject aimCam;
+    private GameObject aimCam; // bowler aim cam
     [SerializeField]
-    private GameObject ballCam;
+    private GameObject ballCam; // ball cam
     [SerializeField]
-    private string PlayerId;
-    public CricNetManager networkmanager;
+    private string PlayerId; // 
+    public CricNetManager networkmanager; // ref cricnetmanager
     // Start is called before the first frame update
 
-    private void Awake()
+    private void Awake() // EVENTS CALLED 
     {
         BowlController.OnAimStarted += ActivateAimCam;
         BowlController.OnBowlingStarted += ActivateBowlCam;
         Ball.onTouchGround += StopCamtoBall;
         networkmanager = GameObject.FindObjectOfType<CricNetManager>();
     }
-    private void Start()
+    private void Start() // EVENTS CALLED 
     {
 
         //INITIALISE CAMERAS
@@ -37,14 +37,14 @@ public class BowlCamera : MonoBehaviour
 
 
 
-    public void ActivateAimCam()
+    public void ActivateAimCam() // Activate Aim Camera 
     {
         aimCam.SetActive(true);
         bowlCam.SetActive(false);
         ballCam.SetActive(false);
     }
 
-    public void ActivateBowlCam()
+    public void ActivateBowlCam() // Activate Bowler Camera 
     {
         bowlCam.SetActive(true);
         aimCam.SetActive(false);
@@ -61,7 +61,7 @@ public class BowlCamera : MonoBehaviour
         ballCam.SetActive(true);
     }
 
-    private void StopCamtoBall(Vector3 hitpos)
+    private void StopCamtoBall(Vector3 hitpos) // Stop Camera 
     {
         ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = null;
         ballCam.GetComponent<Cinemachine.CinemachineVirtualCamera>().LookAt = null;

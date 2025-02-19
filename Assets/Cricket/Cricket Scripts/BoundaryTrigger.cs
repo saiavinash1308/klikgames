@@ -16,7 +16,6 @@ public class BoundaryTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Ball")
         {
-          
             cricball = GameObject.FindGameObjectWithTag("Ball");
             Debug.Log("ball destroyed at the boundary area");
             Destroy(cricball);

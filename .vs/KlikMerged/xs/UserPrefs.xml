@@ -1,47 +1,29 @@
 ﻿<Properties StartupConfiguration="{294AAB73-4ECA-7398-DB39-65C0877F9F63}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cricket/Cricket Scripts/ScoreManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cricket/Cricket Scripts/PowerSlider.cs">
     <Files>
-      <File FileName="Assets/Cricket/Cricket Scripts/BatsmanPlayer.cs" Line="491" Column="37" />
-      <File FileName="Assets/Classic Ludo/Scripts/Yellow.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/Bat.cs" />
-      <File FileName="Assets/CricketSearchingFor2Players.cs" Line="47" Column="45" />
-      <File FileName="Assets/searchingScriptforCricket.cs" Line="66" Column="10" />
-      <File FileName="Assets/Script/Home/GreenHome.cs" />
-      <File FileName="Assets/Script/Home/LudoHome.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/ScoreManager.cs" Line="80" Column="39" />
-      <File FileName="Assets/Cricket/Cricket Scripts/GameController.cs" Line="94" Column="6" />
-      <File FileName="Assets/Cricket/Cricket Scripts/BatController.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/BowlController.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/InitGame.cs" Line="82" Column="13" />
-      <File FileName="Assets/Cricket/Cricket Scripts/Backbuttonquickselectscreen.cs" />
-      <File FileName="Assets/Script/OTP/OTPManager.cs" />
-      <File FileName="Assets/WithdrawPayment.cs" />
-      <File FileName="Assets/FooterScript.cs" />
-      <File FileName="Assets/SocketManager.cs" Line="177" Column="33" />
-      <File FileName="Assets/Script/Sign Up/SignUpController.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/Ball.cs" Line="104" Column="43" />
-      <File FileName="Assets/Cricket/Cricket Scripts/Network/CricNetManager.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/MenuController.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/LoadPanels.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/AIBowl.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/AIBat.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/BowlPlayer.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/Cards.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/BallThrow.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/UIButton.cs" />
-      <File FileName="Assets/Cricket/Cricket Scripts/SoundManager.cs" />
-      <File FileName="Assets/SearchingScriptfor2Players.cs" Line="1" Column="1" />
-      <File FileName="Assets/ClassicSearchingScriptfor2Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cricket/Cricket Scripts/PowerSlider.cs" Line="48" Column="87" />
+      <File FileName="Assets/Cricket/Cricket Scripts/BatsmanCamera.cs" Line="62" Column="85" />
+      <File FileName="Assets/Cricket/Cricket Scripts/BatsmanAnimator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cricket/Cricket Scripts/AudioManagerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cricket/Cricket Scripts/CricketLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets/Audience/AudienceAnims.cs" />
+      <File FileName="Assets/ClassicSearchingScript.cs" />
+      <File FileName="Assets/Cricket/Cricket Scripts/BoundaryTrigger.cs" Line="19" Column="65" />
+      <File FileName="Assets/Cricket/Cricket Scripts/BowlCamera.cs" Line="64" Column="63" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="KlikMerged" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Audience" expanded="True" />
               <Node name="Cricket" expanded="True">
                 <Node name="Cricket Scripts" expanded="True">
-                  <Node name="ScoreManager.cs" selected="True" />
+                  <Node name="PowerSlider.cs" selected="True" />
                 </Node>
+              </Node>
+              <Node name="Script" expanded="True">
+                <Node name="HomePage" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -51,7 +33,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="03df336b-ab6a-4bd4-bfbc-bde9ec9d5ec2" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fac1d478-504e-4ae5-b4b1-613fddba63a7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

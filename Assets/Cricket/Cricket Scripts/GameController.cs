@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Start()
+    void Start() // CALCULATE SCORE 
     {
         
         ResetScore();
@@ -51,9 +51,9 @@ public class GameController : MonoBehaviour
 
     private void ScoreCalculated(int score)
     {
-        if(GameController.instance.isBowler())
+        if(GameController.instance.isBowler()) // bowler mode 
         {
-            player2score += score;
+            player2score += score; 
         }
         else
         {
@@ -76,6 +76,7 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
+        // Play First Innings
         if (!socketmanager.isUsebots)
         {
             if (firststate == GameMode.Batsman)
@@ -111,6 +112,7 @@ public class GameController : MonoBehaviour
 
     public void StartNextMode()
     {
+        // Play Second Innings
         if (!socketmanager.isUsebots)
         {
             if (firststate == GameMode.Bowler)
@@ -172,21 +174,22 @@ public class GameController : MonoBehaviour
     {
         SetGameMode(GameMode.Menu);
         SceneManager.LoadScene("Home");
+        Debug.LogError("Next Button");
     }
 
     public int GetPlayer1Score()
     {
-        return player1score;
+        return player1score;    // get player1 score
     }
 
     public int GetPlayer2Score()
     {
-        return player2score;
+        return player2score;    // get player2 score
     }
 
     public bool isBowler()
     {
-        return gamemode == GameMode.Bowler;
+        return gamemode == GameMode.Bowler;  
     }
 
     public bool isBatsman()
@@ -196,21 +199,22 @@ public class GameController : MonoBehaviour
 
     public bool isPlayer1Win()
     {
-        return player1score > player2score;
+        return player1score > player2score; // returns true if player1 has more score
     }
 
     public bool isPlayer2Win()
     {
-        return player1score < player2score;
+        return player1score < player2score; // returns true if player2 has more score 
     }
 
     public bool isDraw()
     {
-        return player1score == player2score;
+        return player1score == player2score; // returns true if player1 and player 2 are equal 
     }
 
-    public void ResetScore()
+    public void ResetScore() 
     {
+        // Reset Scores
         player1score = 0;
         player2score = 0;
     }

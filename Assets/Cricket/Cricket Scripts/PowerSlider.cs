@@ -41,10 +41,10 @@ public class PowerSlider : MonoBehaviour
         }
 
         canPower = false;
-        OnPowerSliderStopped?.Invoke(powerslider.value);
+        OnPowerSliderStopped?.Invoke(powerslider.value); // call events
     }
     private void Move()
     {
-        powerslider.value = (Mathf.Sin(Time.time * speed) + 1) / 2;
+        powerslider.value = (Mathf.Sin(Time.time * speed) + 1) / 2; // returns a value
     }
 }

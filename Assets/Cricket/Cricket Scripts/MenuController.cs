@@ -29,6 +29,7 @@ public class MenuController : MonoBehaviour
 
     private void GameSet()
     {
+        // Show Game Mode at Start
         if(GameController.instance.isBowler())
         {
             GameModeText.text = "PLAYER2BAT";

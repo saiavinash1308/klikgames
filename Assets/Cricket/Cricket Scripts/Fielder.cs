@@ -33,7 +33,7 @@ public class Fielder : MonoBehaviour
     private bool isballair;
 
     // Start is called before the first frame update
-    void Start()
+    void Start() //EVENTS CALLED 
     {
         Ball.onBallCaught += FielderCatched;
         Ball.onTouchGround += PlayBall;
@@ -42,7 +42,7 @@ public class Fielder : MonoBehaviour
         initialPos.rotation = this.transform.rotation;
     }
 
-    private void OnDestroy()
+    private void OnDestroy() // EVENTS DESTROYED 
     {
         Ball.onBallCaught -= FielderCatched;
         Ball.onTouchGround -= PlayBall;
@@ -65,18 +65,18 @@ public class Fielder : MonoBehaviour
         Debug.LogWarning("FIELDER RESET");
         transform.position = initialPos.position;
         transform.rotation = initialPos.rotation;
-        fieldmode = FieldMode.idle;
+        fieldmode = FieldMode.idle; // idle mode 
     }
 
     private void DetectAndMoveTowardsBall()
     {
-            Collider[] collidersInRange = Physics.OverlapSphere(transform.position, detectionRadius);
+            Collider[] collidersInRange = Physics.OverlapSphere(transform.position, detectionRadius); // check if ball is in overlapsphere
             foreach (Collider col in collidersInRange)
             {
             if (col.CompareTag("Ball"))
             {
                 ball = col.gameObject; 
-                MoveTowardsBall(); 
+                MoveTowardsBall();  // fielder movement 
                 return;
             }
             }
@@ -133,28 +133,28 @@ public class Fielder : MonoBehaviour
         {
             if (distance > 0.4f)    // distance to ball 
             {
-                fieldmode = FieldMode.running;
+                fieldmode = FieldMode.running; // running mode
                 if (fieldmode == FieldMode.running)
                 {
-                    transform.LookAt(ball.transform);
-                    SwitchAnimStates();
-                    transform.position += direction * fielderspeed * Time.deltaTime;
+                    transform.LookAt(ball.transform); // fielder looks at ball 
+                    SwitchAnimStates(); 
+                    transform.position += direction * fielderspeed * Time.deltaTime;    // move transform position
                 }
             }
             else
             {
-                FieldBall();
+                FieldBall(); // activate fielding 
             }
         }
         if(isnearball && isballinair(ball.GetComponent<Rigidbody>()))
         {       
-            Catchball();
+            Catchball(); // activate catching
         }
     }
 
     public void Catchball()
     {
-            float catchdistance = Vector3.Distance(ball.transform.position, this.transform.position);
+            float catchdistance = Vector3.Distance(ball.transform.position, this.transform.position); // distance between ball and fielder
             
             if(catchdistance<0.1f)
             {
@@ -162,7 +162,7 @@ public class Fielder : MonoBehaviour
                 ball.GetComponent<Rigidbody>().isKinematic = true;
                 ball.transform.position = transform.position + Vector3.up * 1.0f;  // Position above the fielder               
                 ball.transform.SetParent(transform);
-                FielderCatched();
+                FielderCatched(); 
             }
             else
             {
@@ -172,7 +172,7 @@ public class Fielder : MonoBehaviour
 
     public void FielderCatched()
     {
-        if (isballinair(ball.GetComponent<Rigidbody>()))
+        if (isballinair(ball.GetComponent<Rigidbody>())) // check for ball in air 
         {
             fieldmode = FieldMode.catching;
             anim.Play("Catching");
@@ -182,7 +182,7 @@ public class Fielder : MonoBehaviour
 
     public void FielderMissCatch()
     {
-        if (isballinair(ball.GetComponent<Rigidbody>()))
+        if (isballinair(ball.GetComponent<Rigidbody>())) // check for ball in air 
         {
             fieldmode = FieldMode.catching;
             Debug.Log("Fielder missed the ball");
@@ -190,17 +190,17 @@ public class Fielder : MonoBehaviour
     }
 
 
-    public void FieldBall()
+    public void FieldBall() 
     {
-        if (!isballinair(ball.GetComponent<Rigidbody>()))
+        if (!isballinair(ball.GetComponent<Rigidbody>())) // check for ball in air 
         {
             if (Vector3.Distance(transform.position, ball.transform.position) < 1f)
             {
                 isnearball = true;
-                fieldmode = FieldMode.fieldthrow;
+                fieldmode = FieldMode.fieldthrow;        // throw mode 
                 SwitchAnimStates();
                 transform.LookAt(bowlerPos.transform);
-                ThrowBall();
+                ThrowBall();                            // activating throw 
             }
         }
     }

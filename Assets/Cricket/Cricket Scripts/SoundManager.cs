@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource stumpshitaudio;
 
     // Start is called before the first frame update
-    void Start()
+    void Start() // EVENTS CALLED 
     {
         BowlPlayer.OnThrownBall += PlayBowlerSound;
         AIBowl.OnThrownBall += PlayBowlerSound;

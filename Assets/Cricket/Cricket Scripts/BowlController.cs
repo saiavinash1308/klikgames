@@ -8,15 +8,15 @@ public class BowlController : MonoBehaviour
 {
     [Header("Script References")]
     [SerializeField]
-    private GroundTarget groundtarget;
+    private GroundTarget groundtarget; // ref groundtarget
     [SerializeField]
-    private PowerSlider powerslider;
+    private PowerSlider powerslider; // ref powerslider
     [SerializeField]
-    private BowlPlayer bowlplayer;
+    private BowlPlayer bowlplayer; // ref bowlplayer
     [SerializeField]
-    private ScoreManager scoremanager;
+    private ScoreManager scoremanager; // ref scoremanager
     [SerializeField]
-    private SocketManager socketmanager;
+    private SocketManager socketmanager; // ref socketmanager
 
     [Header("UI")]
     [SerializeField]
@@ -38,13 +38,13 @@ public class BowlController : MonoBehaviour
 
     [Header("Speed")]
     [SerializeField]
-    private Vector2 BowlingSpeedPos;
+    private Vector2 BowlingSpeedPos; // ref bowlingpos
     [SerializeField]
-    private AnimationCurve bowlingspeedcurve;
+    private AnimationCurve bowlingspeedcurve; // set bowling animationcurve 
     public int currentBall;
 
 
-    public static Action OnAimStarted;
+    public static Action OnAimStarted;  // Events 
     public static Action OnBowlingStarted;
     public static Action OnStartNextBall;
     // Start is called before the first frame update
@@ -55,9 +55,9 @@ public class BowlController : MonoBehaviour
         socketmanager.bowlcontroller = this.GetComponent<BowlController>();
     }
 
-    void Start()
+    void Start() // EVENTS CALLED
     {
-        StartAiming();
+        StartAiming(); 
         Time.timeScale = 1f;
         powerslider.OnPowerSliderStopped += PowerSliderStopped;
         Ball.onTouchGround += PlayBall;
@@ -67,7 +67,7 @@ public class BowlController : MonoBehaviour
         GameController.onGameModeChanged += GameModeChanged;
     }
 
-    private void OnDestroy()
+    private void OnDestroy() // Events Destroyed
     {
         powerslider.OnPowerSliderStopped -= PowerSliderStopped;
         Ball.onTouchGround -= PlayBall;
@@ -82,7 +82,7 @@ public class BowlController : MonoBehaviour
         
     }
 
-    public void PlayBall(Vector3 ballhitpos)
+    public void PlayBall(Vector3 ballhitpos) // update after every ball
     {
         currentBall++;
 
@@ -92,18 +92,18 @@ public class BowlController : MonoBehaviour
             if (GameController.instance.StartNextGame())
             {
 
-                UpdateScorePanel();
-                ShowTransitionPanel();
+                UpdateScorePanel(); // show score panel
+                ShowTransitionPanel(); // show initial panel at start
             }
             else
             {
-                UpdateFinalPanel();
+                UpdateFinalPanel(); // show final panel
             }
             // switch players for bowling and batting
         }
         else
         {
-           ResetBall();
+           ResetBall(); // reset 
         }
     }
 
@@ -111,12 +111,13 @@ public class BowlController : MonoBehaviour
 
     private void UpdateScorePanel()
     {
+        //GET PLAYER1SCORE AND PLAYER2SCORE
         scoreText.text="<color #00aaff>"+GameController.instance.GetPlayer1Score()+"</color> - <color #ffaa00>"+GameController.instance.GetPlayer2Score()+"</color>";
     }
 
     public void ShowTransitionPanel()
     {
-        LeanTween.alphaCanvas(transitioncg, 1, 0.5f);
+        LeanTween.alphaCanvas(transitioncg, 1, 0.5f);   // fadein the panel
         transitioncg.interactable = true;
         transitioncg.blocksRaycasts = true;
     }
@@ -125,6 +126,7 @@ public class BowlController : MonoBehaviour
     {
        for(int i=0;i<finalscoreText.Length;i++)
         {
+            // GET FINAL PLAYER1SCORE AND PLAYER2SCORE
             finalscoreText[i].text= "<color #00aaff>" + GameController.instance.GetPlayer1Score() + "</color> - <color #ffaa00>" + GameController.instance.GetPlayer2Score() + "</color>";
         }
     }
@@ -133,26 +135,26 @@ public class BowlController : MonoBehaviour
 
     public void BallMissed()
     {
-        PlayBall(Vector3.zero);
+        PlayBall(Vector3.zero); // ball missed bat 
     }
 
     public void ResetBall()
     {
-        StartCoroutine(Restarted());
+        StartCoroutine(Restarted()); 
     }
 
     private IEnumerator Restarted()     // RESTART NEXT BALL 
     {
         bowlspeedtext.text = "";
         yield return new WaitForSeconds(2f);
-        OnStartNextBall?.Invoke();
-        StartAiming();
+        OnStartNextBall?.Invoke(); // call Events 
+        StartAiming(); // Begin Aiming
     }
 
 
     public void StumpsCollided()
     {
-        Debug.Log("Wicket");
+        Debug.Log("Wicket"); // wicket
         currentBall = 2;
         PlayBall(Vector3.zero);
         StartCoroutine(OpenWicketPanel());
@@ -162,15 +164,15 @@ public class BowlController : MonoBehaviour
     private IEnumerator OpenWicketPanel()
     {
         yield return new WaitForSeconds(2f);
-        if (GameController.instance.StartNextGame())
+        if (GameController.instance.StartNextGame())    // Wicket taken 
         {
 
-            UpdateScorePanel();
-            ShowTransitionPanel();
+            UpdateScorePanel(); // show score panel 
+            ShowTransitionPanel(); // show initial panel at start 
         }
         else
         {          
-            UpdateFinalPanel();
+            UpdateFinalPanel(); // show final panel 
         }
       
     }
@@ -215,8 +217,8 @@ public class BowlController : MonoBehaviour
     public void GameModeChanged(GameMode gamemode)
     {
 
-            switch (gamemode)
-            {
+            switch (gamemode)    // show gamemodes and final condition 
+        {
                 case GameMode.Win:
                    // ShowWinPanel();
                     break;
@@ -232,21 +234,21 @@ public class BowlController : MonoBehaviour
 
     public void ShowWinPanel()
     {
-        WinPanel.SetActive(true);
+        WinPanel.SetActive(true); // display win panel
     }
 
     public void ShowDrawPanel()
     {
-        DrawPanel.SetActive(true);
+        DrawPanel.SetActive(true); // display draw panel
     }
 
     public void ShowLosePanel()
     {
-        LosePanel.SetActive(true);
+        LosePanel.SetActive(true); // display lose panel
     }
 
     public void NextButton()
     {
-        GameController.instance.NextButton();
+        GameController.instance.NextButton(); // Return back to Home Page
     }
 }
